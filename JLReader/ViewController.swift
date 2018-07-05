@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
-
+    
     private var gumboDocument: OCGumboDocument! = nil
     
     override func viewDidLoad() {
@@ -20,13 +21,14 @@ class ViewController: UIViewController {
         print(menu())
         print(list())
         print(down())
+        downloadFile(url: "http://dt.80txt.com/52314/极品乖乖女之嫁个腹黑王爷.txt")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func gumboDocument(url: String) -> OCGumboDocument! {
         do {
             let htmlString = try String(contentsOf: URL(string: url)!, encoding: String.Encoding.utf8)
@@ -51,7 +53,7 @@ class ViewController: UIViewController {
             //print(span.text()!)
             
             var values = [[String: String]]()
-
+            
             let li = nav.query("li") as! [OCGumboNode]
             for node in li {
                 let a = node.query("a") as! [OCGumboNode]
@@ -75,11 +77,11 @@ class ViewController: UIViewController {
         let list = gumboDocument.query("#list_art_2013") as! [OCGumboNode]
         for book in list {
             var dic = [String: String]()
-
+            
             let bookName = book.query(".list_box")?.find(".title_box")?.find(".book_bg")?.find("a")?.first()?.text()
             print(bookName!)
             dic["book_name"] = bookName!.components(separatedBy: " ")[0]
-
+            
             let bookDown = book.query(".list_box")?.find(".title_box")?.find(".book_bg")?.find("a")?.first()?.attr("href")
             print(bookDown!)
             dic["book_down"] = bookDown!
@@ -151,5 +153,33 @@ class ViewController: UIViewController {
     func readUrl(url: String) -> String {
         return url.replacingOccurrences(of: "/txtxz/", with: "/txtml_")
     }
+    // http://dt.80txt.com/52314/极品乖乖女之嫁个腹黑王爷.txt
+    // http://nt.80txt.com/52314/极品乖乖女之嫁个腹黑王爷.txt
+    // http://txt.80txt.com/52314/极品乖乖女之嫁个腹黑王爷.txt
+    func downloadFile(url: String) {
+        
+//        let destination: DownloadRequest.DownloadFileDestination = { _, response in
+//            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//            let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
+//            
+//            return (fileURL, [.createIntermediateDirectories, .removePreviousFile])
+//        }
+        
+        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        Alamofire.download(urlRequest, to: destination)
+            .downloadProgress { progress in
+                print("已下载：\(progress.completedUnitCount/1024)KB")
+                print("总大小：\(progress.totalUnitCount/1024)KB")
+            }
+            .response { response in
+                print(response)
+                
+                if let filePath = response.destinationURL?.path {
+                    print("文件路径：\(filePath)")
+                }
+            }
+    }
 }
+
 
