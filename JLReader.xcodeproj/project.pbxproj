@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500820EDAA7B00CE2442 /* AppDelegate.swift */; };
+		22C3500B20EDAA7B00CE2442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500A20EDAA7B00CE2442 /* ViewController.swift */; };
+		22C3500E20EDAA7B00CE2442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3500C20EDAA7B00CE2442 /* Main.storyboard */; };
+		22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C3500F20EDAA7E00CE2442 /* Assets.xcassets */; };
+		22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */; };
+		22C3509820EDB3A500CE2442 /* string_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507520EDB3A500CE2442 /* string_buffer.c */; };
+		22C3509920EDB3A500CE2442 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507820EDB3A500CE2442 /* util.c */; };
+		22C3509A20EDB3A500CE2442 /* char_ref.rl in Resources */ = {isa = PBXBuildFile; fileRef = 22C3507920EDB3A500CE2442 /* char_ref.rl */; };
+		22C3509B20EDB3A500CE2442 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507C20EDB3A500CE2442 /* vector.c */; };
+		22C3509C20EDB3A500CE2442 /* attribute.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507D20EDB3A500CE2442 /* attribute.c */; };
+		22C3509D20EDB3A500CE2442 /* char_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507E20EDB3A500CE2442 /* char_ref.c */; };
+		22C3509E20EDB3A500CE2442 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3508020EDB3A500CE2442 /* utf8.c */; };
+		22C3509F20EDB3A500CE2442 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3508620EDB3A500CE2442 /* error.c */; };
+		22C350A020EDB3A500CE2442 /* tag.in in Resources */ = {isa = PBXBuildFile; fileRef = 22C3508720EDB3A500CE2442 /* tag.in */; };
+		22C350A120EDB3A500CE2442 /* tag.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3508920EDB3A500CE2442 /* tag.c */; };
+		22C350A220EDB3A500CE2442 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3508D20EDB3A500CE2442 /* parser.c */; };
+		22C350A320EDB3A500CE2442 /* tokenizer.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509120EDB3A500CE2442 /* tokenizer.c */; };
+		22C350A420EDB3A500CE2442 /* string_piece.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509220EDB3A500CE2442 /* string_piece.c */; };
+		22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */; };
+		22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509720EDB3A500CE2442 /* OCGumbo.m */; };
+		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22C3501A20EDAA7E00CE2442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22C34FFD20EDAA7B00CE2442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22C3500420EDAA7B00CE2442;
+			remoteInfo = JLReader;
+		};
+		22C3502520EDAA7E00CE2442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22C34FFD20EDAA7B00CE2442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22C3500420EDAA7B00CE2442;
+			remoteInfo = JLReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22C3500520EDAA7B00CE2442 /* JLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C3500820EDAA7B00CE2442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22C3500A20EDAA7B00CE2442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22C3500D20EDAA7B00CE2442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22C3500F20EDAA7E00CE2442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22C3501220EDAA7E00CE2442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22C3501420EDAA7E00CE2442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C3506E20EDB38F00CE2442 /* JLReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JLReader-Bridging-Header.h"; sourceTree = "<group>"; };
+		22C3507520EDB3A500CE2442 /* string_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string_buffer.c; sourceTree = "<group>"; };
+		22C3507620EDB3A500CE2442 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		22C3507720EDB3A500CE2442 /* tag_enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tag_enum.h; sourceTree = "<group>"; };
+		22C3507820EDB3A500CE2442 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		22C3507920EDB3A500CE2442 /* char_ref.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char_ref.rl; sourceTree = "<group>"; };
+		22C3507A20EDB3A500CE2442 /* insertion_mode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertion_mode.h; sourceTree = "<group>"; };
+		22C3507B20EDB3A500CE2442 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		22C3507C20EDB3A500CE2442 /* vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector.c; sourceTree = "<group>"; };
+		22C3507D20EDB3A500CE2442 /* attribute.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = attribute.c; sourceTree = "<group>"; };
+		22C3507E20EDB3A500CE2442 /* char_ref.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = char_ref.c; sourceTree = "<group>"; };
+		22C3507F20EDB3A500CE2442 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
+		22C3508020EDB3A500CE2442 /* utf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf8.c; sourceTree = "<group>"; };
+		22C3508120EDB3A500CE2442 /* string_piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_piece.h; sourceTree = "<group>"; };
+		22C3508220EDB3A500CE2442 /* tokenizer_states.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer_states.h; sourceTree = "<group>"; };
+		22C3508320EDB3A500CE2442 /* token_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = token_type.h; sourceTree = "<group>"; };
+		22C3508420EDB3A500CE2442 /* tag_gperf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tag_gperf.h; sourceTree = "<group>"; };
+		22C3508520EDB3A500CE2442 /* string_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_buffer.h; sourceTree = "<group>"; };
+		22C3508620EDB3A500CE2442 /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = error.c; sourceTree = "<group>"; };
+		22C3508720EDB3A500CE2442 /* tag.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tag.in; sourceTree = "<group>"; };
+		22C3508820EDB3A500CE2442 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		22C3508920EDB3A500CE2442 /* tag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tag.c; sourceTree = "<group>"; };
+		22C3508A20EDB3A500CE2442 /* char_ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = char_ref.h; sourceTree = "<group>"; };
+		22C3508B20EDB3A500CE2442 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		22C3508C20EDB3A500CE2442 /* attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = attribute.h; sourceTree = "<group>"; };
+		22C3508D20EDB3A500CE2442 /* parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		22C3508E20EDB3A500CE2442 /* tag_sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tag_sizes.h; sourceTree = "<group>"; };
+		22C3508F20EDB3A500CE2442 /* tag_strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tag_strings.h; sourceTree = "<group>"; };
+		22C3509020EDB3A500CE2442 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
+		22C3509120EDB3A500CE2442 /* tokenizer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tokenizer.c; sourceTree = "<group>"; };
+		22C3509220EDB3A500CE2442 /* string_piece.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string_piece.c; sourceTree = "<group>"; };
+		22C3509320EDB3A500CE2442 /* gumbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gumbo.h; sourceTree = "<group>"; };
+		22C3509420EDB3A500CE2442 /* OCGumbo+Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCGumbo+Query.h"; sourceTree = "<group>"; };
+		22C3509520EDB3A500CE2442 /* OCGumbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGumbo.h; sourceTree = "<group>"; };
+		22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCGumbo+Query.m"; sourceTree = "<group>"; };
+		22C3509720EDB3A500CE2442 /* OCGumbo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGumbo.m; sourceTree = "<group>"; };
+		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
+		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22C3500220EDAA7B00CE2442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C3501620EDAA7E00CE2442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C3502120EDAA7E00CE2442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22C34FFC20EDAA7B00CE2442 = {
+			isa = PBXGroup;
+			children = (
+				22C3500720EDAA7B00CE2442 /* JLReader */,
+				22C3500620EDAA7B00CE2442 /* Products */,
+				D67DB263D20F833134CC0FAC /* Pods */,
+				B3345690989A7A4FF465CA17 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22C3500620EDAA7B00CE2442 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22C3500520EDAA7B00CE2442 /* JLReader.app */,
+				22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */,
+				22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22C3500720EDAA7B00CE2442 /* JLReader */ = {
+			isa = PBXGroup;
+			children = (
+				22C3507220EDB3A500CE2442 /* Classes */,
+				22C3500820EDAA7B00CE2442 /* AppDelegate.swift */,
+				22C3500A20EDAA7B00CE2442 /* ViewController.swift */,
+				22C3500C20EDAA7B00CE2442 /* Main.storyboard */,
+				22C3500F20EDAA7E00CE2442 /* Assets.xcassets */,
+				22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */,
+				22C3501420EDAA7E00CE2442 /* Info.plist */,
+				22C3506E20EDB38F00CE2442 /* JLReader-Bridging-Header.h */,
+			);
+			path = JLReader;
+			sourceTree = "<group>";
+		};
+		22C3507220EDB3A500CE2442 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				22C3507320EDB3A500CE2442 /* OCGumbo */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		22C3507320EDB3A500CE2442 /* OCGumbo */ = {
+			isa = PBXGroup;
+			children = (
+				22C3507420EDB3A500CE2442 /* Gumbo */,
+				22C3509420EDB3A500CE2442 /* OCGumbo+Query.h */,
+				22C3509520EDB3A500CE2442 /* OCGumbo.h */,
+				22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */,
+				22C3509720EDB3A500CE2442 /* OCGumbo.m */,
+			);
+			path = OCGumbo;
+			sourceTree = "<group>";
+		};
+		22C3507420EDB3A500CE2442 /* Gumbo */ = {
+			isa = PBXGroup;
+			children = (
+				22C3507520EDB3A500CE2442 /* string_buffer.c */,
+				22C3507620EDB3A500CE2442 /* error.h */,
+				22C3507720EDB3A500CE2442 /* tag_enum.h */,
+				22C3507820EDB3A500CE2442 /* util.c */,
+				22C3507920EDB3A500CE2442 /* char_ref.rl */,
+				22C3507A20EDB3A500CE2442 /* insertion_mode.h */,
+				22C3507B20EDB3A500CE2442 /* parser.h */,
+				22C3507C20EDB3A500CE2442 /* vector.c */,
+				22C3507D20EDB3A500CE2442 /* attribute.c */,
+				22C3507E20EDB3A500CE2442 /* char_ref.c */,
+				22C3507F20EDB3A500CE2442 /* tokenizer.h */,
+				22C3508020EDB3A500CE2442 /* utf8.c */,
+				22C3508120EDB3A500CE2442 /* string_piece.h */,
+				22C3508220EDB3A500CE2442 /* tokenizer_states.h */,
+				22C3508320EDB3A500CE2442 /* token_type.h */,
+				22C3508420EDB3A500CE2442 /* tag_gperf.h */,
+				22C3508520EDB3A500CE2442 /* string_buffer.h */,
+				22C3508620EDB3A500CE2442 /* error.c */,
+				22C3508720EDB3A500CE2442 /* tag.in */,
+				22C3508820EDB3A500CE2442 /* util.h */,
+				22C3508920EDB3A500CE2442 /* tag.c */,
+				22C3508A20EDB3A500CE2442 /* char_ref.h */,
+				22C3508B20EDB3A500CE2442 /* vector.h */,
+				22C3508C20EDB3A500CE2442 /* attribute.h */,
+				22C3508D20EDB3A500CE2442 /* parser.c */,
+				22C3508E20EDB3A500CE2442 /* tag_sizes.h */,
+				22C3508F20EDB3A500CE2442 /* tag_strings.h */,
+				22C3509020EDB3A500CE2442 /* utf8.h */,
+				22C3509120EDB3A500CE2442 /* tokenizer.c */,
+				22C3509220EDB3A500CE2442 /* string_piece.c */,
+				22C3509320EDB3A500CE2442 /* gumbo.h */,
+			);
+			path = Gumbo;
+			sourceTree = "<group>";
+		};
+		B3345690989A7A4FF465CA17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D67DB263D20F833134CC0FAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */,
+				C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22C3500420EDAA7B00CE2442 /* JLReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C3502D20EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReader" */;
+			buildPhases = (
+				7C2D215EEBA394B11D4D99EE /* [CP] Check Pods Manifest.lock */,
+				22C3500120EDAA7B00CE2442 /* Sources */,
+				22C3500220EDAA7B00CE2442 /* Frameworks */,
+				22C3500320EDAA7B00CE2442 /* Resources */,
+				773049556DDE09DD60D5950A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JLReader;
+			productName = JLReader;
+			productReference = 22C3500520EDAA7B00CE2442 /* JLReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22C3501820EDAA7E00CE2442 /* JLReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C3503020EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderTests" */;
+			buildPhases = (
+				22C3501520EDAA7E00CE2442 /* Sources */,
+				22C3501620EDAA7E00CE2442 /* Frameworks */,
+				22C3501720EDAA7E00CE2442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C3501B20EDAA7E00CE2442 /* PBXTargetDependency */,
+			);
+			name = JLReaderTests;
+			productName = JLReaderTests;
+			productReference = 22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22C3502320EDAA7E00CE2442 /* JLReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C3503320EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderUITests" */;
+			buildPhases = (
+				22C3502020EDAA7E00CE2442 /* Sources */,
+				22C3502120EDAA7E00CE2442 /* Frameworks */,
+				22C3502220EDAA7E00CE2442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C3502620EDAA7E00CE2442 /* PBXTargetDependency */,
+			);
+			name = JLReaderUITests;
+			productName = JLReaderUITests;
+			productReference = 22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22C34FFD20EDAA7B00CE2442 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = JasonLiu;
+				TargetAttributes = {
+					22C3500420EDAA7B00CE2442 = {
+						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
+					};
+					22C3501820EDAA7E00CE2442 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 22C3500420EDAA7B00CE2442;
+					};
+					22C3502320EDAA7E00CE2442 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 22C3500420EDAA7B00CE2442;
+					};
+				};
+			};
+			buildConfigurationList = 22C3500020EDAA7B00CE2442 /* Build configuration list for PBXProject "JLReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22C34FFC20EDAA7B00CE2442;
+			productRefGroup = 22C3500620EDAA7B00CE2442 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22C3500420EDAA7B00CE2442 /* JLReader */,
+				22C3501820EDAA7E00CE2442 /* JLReaderTests */,
+				22C3502320EDAA7E00CE2442 /* JLReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22C3500320EDAA7B00CE2442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C350A020EDB3A500CE2442 /* tag.in in Resources */,
+				22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */,
+				22C3509A20EDB3A500CE2442 /* char_ref.rl in Resources */,
+				22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */,
+				22C3500E20EDAA7B00CE2442 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C3501720EDAA7E00CE2442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C3502220EDAA7E00CE2442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		773049556DDE09DD60D5950A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JLReader/Pods-JLReader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLReader/Pods-JLReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C2D215EEBA394B11D4D99EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JLReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22C3500120EDAA7B00CE2442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C350A120EDB3A500CE2442 /* tag.c in Sources */,
+				22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */,
+				22C3500B20EDAA7B00CE2442 /* ViewController.swift in Sources */,
+				22C350A220EDB3A500CE2442 /* parser.c in Sources */,
+				22C350A320EDB3A500CE2442 /* tokenizer.c in Sources */,
+				22C3509920EDB3A500CE2442 /* util.c in Sources */,
+				22C3509D20EDB3A500CE2442 /* char_ref.c in Sources */,
+				22C3509F20EDB3A500CE2442 /* error.c in Sources */,
+				22C3509C20EDB3A500CE2442 /* attribute.c in Sources */,
+				22C350A420EDB3A500CE2442 /* string_piece.c in Sources */,
+				22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */,
+				22C3509B20EDB3A500CE2442 /* vector.c in Sources */,
+				22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */,
+				22C3509E20EDB3A500CE2442 /* utf8.c in Sources */,
+				22C3509820EDB3A500CE2442 /* string_buffer.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C3501520EDAA7E00CE2442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C3502020EDAA7E00CE2442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22C3501B20EDAA7E00CE2442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22C3500420EDAA7B00CE2442 /* JLReader */;
+			targetProxy = 22C3501A20EDAA7E00CE2442 /* PBXContainerItemProxy */;
+		};
+		22C3502620EDAA7E00CE2442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22C3500420EDAA7B00CE2442 /* JLReader */;
+			targetProxy = 22C3502520EDAA7E00CE2442 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22C3500C20EDAA7B00CE2442 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22C3500D20EDAA7B00CE2442 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22C3501220EDAA7E00CE2442 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22C3502B20EDAA7E00CE2442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22C3502C20EDAA7E00CE2442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22C3502E20EDAA7E00CE2442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JLReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22C3502F20EDAA7E00CE2442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JLReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22C3503120EDAA7E00CE2442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JLReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLReader.app/JLReader";
+			};
+			name = Debug;
+		};
+		22C3503220EDAA7E00CE2442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JLReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLReader.app/JLReader";
+			};
+			name = Release;
+		};
+		22C3503420EDAA7E00CE2442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JLReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JLReader;
+			};
+			name = Debug;
+		};
+		22C3503520EDAA7E00CE2442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JLReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JLReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22C3500020EDAA7B00CE2442 /* Build configuration list for PBXProject "JLReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C3502B20EDAA7E00CE2442 /* Debug */,
+				22C3502C20EDAA7E00CE2442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C3502D20EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C3502E20EDAA7E00CE2442 /* Debug */,
+				22C3502F20EDAA7E00CE2442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C3503020EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C3503120EDAA7E00CE2442 /* Debug */,
+				22C3503220EDAA7E00CE2442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C3503320EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C3503420EDAA7E00CE2442 /* Debug */,
+				22C3503520EDAA7E00CE2442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22C34FFD20EDAA7B00CE2442 /* Project object */;
+}
