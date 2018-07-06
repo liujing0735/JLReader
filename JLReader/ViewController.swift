@@ -158,25 +158,34 @@ class ViewController: UIViewController {
     // http://txt.80txt.com/52314/极品乖乖女之嫁个腹黑王爷.txt
     func downloadFile(url: String) {
         
-//        let destination: DownloadRequest.DownloadFileDestination = { _, response in
-//            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-//            let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
-//            
-//            return (fileURL, [.createIntermediateDirectories, .removePreviousFile])
-//        }
+        let destination: DownloadRequest.DownloadFileDestination = { _, response in
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            //let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
+            let fileName: String = "txt/" + (url.components(separatedBy: "/").last)!
+            let fileURL = documentsURL.appendingPathComponent(fileName)
+            
+            return (fileURL, [.createIntermediateDirectories, .removePreviousFile])
+        }
         
-        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
-        let urlRequest = URLRequest(url: URL(string: url)!)
+        let urlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlRequest = URLRequest(url: URL(string: urlString!)!)
         Alamofire.download(urlRequest, to: destination)
             .downloadProgress { progress in
                 print("已下载：\(progress.completedUnitCount/1024)KB")
                 print("总大小：\(progress.totalUnitCount/1024)KB")
             }
             .response { response in
-                print(response)
-                
                 if let filePath = response.destinationURL?.path {
                     print("文件路径：\(filePath)")
+                }
+            }
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    print("success")
+                case .failure:
+                    //response.resumeData
+                    print("failure")
                 }
             }
     }
