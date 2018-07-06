@@ -27,6 +27,23 @@
 		22C350A420EDB3A500CE2442 /* string_piece.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509220EDB3A500CE2442 /* string_piece.c */; };
 		22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */; };
 		22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509720EDB3A500CE2442 /* OCGumbo.m */; };
+		22C350C020EF6EED00CE2442 /* DUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350A920EF6EED00CE2442 /* DUAUtils.swift */; };
+		22C350C120EF6EED00CE2442 /* UIView+subScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AA20EF6EED00CE2442 /* UIView+subScript.swift */; };
+		22C350C220EF6EED00CE2442 /* DUAPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AC20EF6EED00CE2442 /* DUAPageViewController.swift */; };
+		22C350C320EF6EED00CE2442 /* DUAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AD20EF6EED00CE2442 /* DUAReader.swift */; };
+		22C350C420EF6EED00CE2442 /* DUABackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AE20EF6EED00CE2442 /* DUABackViewController.swift */; };
+		22C350C520EF6EED00CE2442 /* DUAtranslationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AF20EF6EED00CE2442 /* DUAtranslationController.swift */; };
+		22C350C620EF6EED00CE2442 /* DUAConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B220EF6EED00CE2442 /* DUAConfiguration.swift */; };
+		22C350C720EF6EED00CE2442 /* DUADataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B420EF6EED00CE2442 /* DUADataParser.swift */; };
+		22C350C820EF6EED00CE2442 /* DUAEpubDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B520EF6EED00CE2442 /* DUAEpubDataParser.swift */; };
+		22C350C920EF6EED00CE2442 /* DUATextDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B620EF6EED00CE2442 /* DUATextDataParser.swift */; };
+		22C350CA20EF6EED00CE2442 /* DUAChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B820EF6EED00CE2442 /* DUAChapterModel.swift */; };
+		22C350CB20EF6EED00CE2442 /* DUAPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B920EF6EED00CE2442 /* DUAPageModel.swift */; };
+		22C350CC20EF6EED00CE2442 /* DUAAttributedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BB20EF6EED00CE2442 /* DUAAttributedView.swift */; };
+		22C350CD20EF6EED00CE2442 /* DUATableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BC20EF6EED00CE2442 /* DUATableView.swift */; };
+		22C350CE20EF6EED00CE2442 /* DUAConVexLensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */; };
+		22C350CF20EF6EED00CE2442 /* DUATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */; };
+		22C350D020EF6EED00CE2442 /* DUAStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +110,23 @@
 		22C3509520EDB3A500CE2442 /* OCGumbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGumbo.h; sourceTree = "<group>"; };
 		22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCGumbo+Query.m"; sourceTree = "<group>"; };
 		22C3509720EDB3A500CE2442 /* OCGumbo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGumbo.m; sourceTree = "<group>"; };
+		22C350A920EF6EED00CE2442 /* DUAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAUtils.swift; sourceTree = "<group>"; };
+		22C350AA20EF6EED00CE2442 /* UIView+subScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+subScript.swift"; sourceTree = "<group>"; };
+		22C350AC20EF6EED00CE2442 /* DUAPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAPageViewController.swift; sourceTree = "<group>"; };
+		22C350AD20EF6EED00CE2442 /* DUAReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAReader.swift; sourceTree = "<group>"; };
+		22C350AE20EF6EED00CE2442 /* DUABackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUABackViewController.swift; sourceTree = "<group>"; };
+		22C350AF20EF6EED00CE2442 /* DUAtranslationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAtranslationController.swift; sourceTree = "<group>"; };
+		22C350B220EF6EED00CE2442 /* DUAConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAConfiguration.swift; sourceTree = "<group>"; };
+		22C350B420EF6EED00CE2442 /* DUADataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUADataParser.swift; sourceTree = "<group>"; };
+		22C350B520EF6EED00CE2442 /* DUAEpubDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAEpubDataParser.swift; sourceTree = "<group>"; };
+		22C350B620EF6EED00CE2442 /* DUATextDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUATextDataParser.swift; sourceTree = "<group>"; };
+		22C350B820EF6EED00CE2442 /* DUAChapterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAChapterModel.swift; sourceTree = "<group>"; };
+		22C350B920EF6EED00CE2442 /* DUAPageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAPageModel.swift; sourceTree = "<group>"; };
+		22C350BB20EF6EED00CE2442 /* DUAAttributedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAAttributedView.swift; sourceTree = "<group>"; };
+		22C350BC20EF6EED00CE2442 /* DUATableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUATableView.swift; sourceTree = "<group>"; };
+		22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAConVexLensView.swift; sourceTree = "<group>"; };
+		22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUATableViewCell.swift; sourceTree = "<group>"; };
+		22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAStatusBar.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
 		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +196,7 @@
 		22C3507220EDB3A500CE2442 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				22C350A720EF6EED00CE2442 /* DUAReader */,
 				22C3507320EDB3A500CE2442 /* OCGumbo */,
 			);
 			path = Classes;
@@ -215,6 +250,86 @@
 				22C3509320EDB3A500CE2442 /* gumbo.h */,
 			);
 			path = Gumbo;
+			sourceTree = "<group>";
+		};
+		22C350A720EF6EED00CE2442 /* DUAReader */ = {
+			isa = PBXGroup;
+			children = (
+				22C350A820EF6EED00CE2442 /* Utils */,
+				22C350AB20EF6EED00CE2442 /* Controller */,
+				22C350B020EF6EED00CE2442 /* DataModel */,
+				22C350BA20EF6EED00CE2442 /* Views */,
+			);
+			path = DUAReader;
+			sourceTree = "<group>";
+		};
+		22C350A820EF6EED00CE2442 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				22C350A920EF6EED00CE2442 /* DUAUtils.swift */,
+				22C350AA20EF6EED00CE2442 /* UIView+subScript.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		22C350AB20EF6EED00CE2442 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22C350AC20EF6EED00CE2442 /* DUAPageViewController.swift */,
+				22C350AD20EF6EED00CE2442 /* DUAReader.swift */,
+				22C350AE20EF6EED00CE2442 /* DUABackViewController.swift */,
+				22C350AF20EF6EED00CE2442 /* DUAtranslationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22C350B020EF6EED00CE2442 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				22C350B120EF6EED00CE2442 /* config */,
+				22C350B320EF6EED00CE2442 /* parser */,
+				22C350B720EF6EED00CE2442 /* storage */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		22C350B120EF6EED00CE2442 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				22C350B220EF6EED00CE2442 /* DUAConfiguration.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		22C350B320EF6EED00CE2442 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				22C350B420EF6EED00CE2442 /* DUADataParser.swift */,
+				22C350B520EF6EED00CE2442 /* DUAEpubDataParser.swift */,
+				22C350B620EF6EED00CE2442 /* DUATextDataParser.swift */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+		22C350B720EF6EED00CE2442 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				22C350B820EF6EED00CE2442 /* DUAChapterModel.swift */,
+				22C350B920EF6EED00CE2442 /* DUAPageModel.swift */,
+			);
+			path = storage;
+			sourceTree = "<group>";
+		};
+		22C350BA20EF6EED00CE2442 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22C350BB20EF6EED00CE2442 /* DUAAttributedView.swift */,
+				22C350BC20EF6EED00CE2442 /* DUATableView.swift */,
+				22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */,
+				22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */,
+				22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B3345690989A7A4FF465CA17 /* Frameworks */ = {
@@ -409,18 +524,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C350D020EF6EED00CE2442 /* DUAStatusBar.swift in Sources */,
 				22C350A120EDB3A500CE2442 /* tag.c in Sources */,
+				22C350C120EF6EED00CE2442 /* UIView+subScript.swift in Sources */,
 				22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */,
+				22C350CD20EF6EED00CE2442 /* DUATableView.swift in Sources */,
 				22C3500B20EDAA7B00CE2442 /* ViewController.swift in Sources */,
+				22C350C420EF6EED00CE2442 /* DUABackViewController.swift in Sources */,
 				22C350A220EDB3A500CE2442 /* parser.c in Sources */,
+				22C350C520EF6EED00CE2442 /* DUAtranslationController.swift in Sources */,
+				22C350CC20EF6EED00CE2442 /* DUAAttributedView.swift in Sources */,
+				22C350C920EF6EED00CE2442 /* DUATextDataParser.swift in Sources */,
+				22C350C020EF6EED00CE2442 /* DUAUtils.swift in Sources */,
+				22C350C720EF6EED00CE2442 /* DUADataParser.swift in Sources */,
 				22C350A320EDB3A500CE2442 /* tokenizer.c in Sources */,
 				22C3509920EDB3A500CE2442 /* util.c in Sources */,
 				22C3509D20EDB3A500CE2442 /* char_ref.c in Sources */,
 				22C3509F20EDB3A500CE2442 /* error.c in Sources */,
+				22C350C320EF6EED00CE2442 /* DUAReader.swift in Sources */,
+				22C350C620EF6EED00CE2442 /* DUAConfiguration.swift in Sources */,
+				22C350CA20EF6EED00CE2442 /* DUAChapterModel.swift in Sources */,
+				22C350C820EF6EED00CE2442 /* DUAEpubDataParser.swift in Sources */,
+				22C350CF20EF6EED00CE2442 /* DUATableViewCell.swift in Sources */,
 				22C3509C20EDB3A500CE2442 /* attribute.c in Sources */,
 				22C350A420EDB3A500CE2442 /* string_piece.c in Sources */,
+				22C350C220EF6EED00CE2442 /* DUAPageViewController.swift in Sources */,
 				22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */,
 				22C3509B20EDB3A500CE2442 /* vector.c in Sources */,
+				22C350CB20EF6EED00CE2442 /* DUAPageModel.swift in Sources */,
+				22C350CE20EF6EED00CE2442 /* DUAConVexLensView.swift in Sources */,
 				22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */,
 				22C3509E20EDB3A500CE2442 /* utf8.c in Sources */,
 				22C3509820EDB3A500CE2442 /* string_buffer.c in Sources */,
