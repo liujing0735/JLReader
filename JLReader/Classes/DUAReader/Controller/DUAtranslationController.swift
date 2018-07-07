@@ -12,8 +12,8 @@ import UIKit
 
 let animationDuration = 0.2
 let limitRate: CGFloat = 0.5
-let screenWidth = UIScreen.main.bounds.width
-let screenHeight = UIScreen.main.bounds.height
+//let screenWidth = UIScreen.main.bounds.width
+//let screenHeight = UIScreen.main.bounds.height
 
 
 

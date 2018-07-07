@@ -44,6 +44,14 @@
 		22C350CE20EF6EED00CE2442 /* DUAConVexLensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */; };
 		22C350CF20EF6EED00CE2442 /* DUATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */; };
 		22C350D020EF6EED00CE2442 /* DUAStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */; };
+		22C350DA20F08CA200CE2442 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C350D220F08CA200CE2442 /* ZipArchive.framework */; };
+		22C350DB20F08CA200CE2442 /* DTCoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C350D320F08CA200CE2442 /* DTCoreText.framework */; };
+		22C350DC20F08CA200CE2442 /* TouchXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C350D420F08CA200CE2442 /* TouchXML.framework */; };
+		22C350DD20F08CA200CE2442 /* bottomMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C350D820F08CA200CE2442 /* bottomMenu.xib */; };
+		22C350DE20F08CA200CE2442 /* topMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C350D920F08CA200CE2442 /* topMenu.xib */; };
+		22C350E020F08CB800CE2442 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C350DF20F08CB800CE2442 /* libxml2.tbd */; };
+		22C350E220F0901000CE2442 /* JLExtensionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350E120F0900F00CE2442 /* JLExtensionSwift.swift */; };
+		22C350E420F0922D00CE2442 /* BookMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350E320F0922D00CE2442 /* BookMarkButton.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +135,15 @@
 		22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAConVexLensView.swift; sourceTree = "<group>"; };
 		22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUATableViewCell.swift; sourceTree = "<group>"; };
 		22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAStatusBar.swift; sourceTree = "<group>"; };
+		22C350D220F08CA200CE2442 /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = "<group>"; };
+		22C350D320F08CA200CE2442 /* DTCoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTCoreText.framework; sourceTree = "<group>"; };
+		22C350D420F08CA200CE2442 /* TouchXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TouchXML.framework; sourceTree = "<group>"; };
+		22C350D620F08CA200CE2442 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		22C350D820F08CA200CE2442 /* bottomMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bottomMenu.xib; sourceTree = "<group>"; };
+		22C350D920F08CA200CE2442 /* topMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = topMenu.xib; sourceTree = "<group>"; };
+		22C350DF20F08CB800CE2442 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		22C350E120F0900F00CE2442 /* JLExtensionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLExtensionSwift.swift; sourceTree = "<group>"; };
+		22C350E320F0922D00CE2442 /* BookMarkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkButton.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
 		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +154,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C350E020F08CB800CE2442 /* libxml2.tbd in Frameworks */,
 				6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */,
+				22C350DA20F08CA200CE2442 /* ZipArchive.framework in Frameworks */,
+				22C350DC20F08CA200CE2442 /* TouchXML.framework in Frameworks */,
+				22C350DB20F08CA200CE2442 /* DTCoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +205,7 @@
 				22C3507220EDB3A500CE2442 /* Classes */,
 				22C3500820EDAA7B00CE2442 /* AppDelegate.swift */,
 				22C3500A20EDAA7B00CE2442 /* ViewController.swift */,
+				22C350E320F0922D00CE2442 /* BookMarkButton.swift */,
 				22C3500C20EDAA7B00CE2442 /* Main.storyboard */,
 				22C3500F20EDAA7E00CE2442 /* Assets.xcassets */,
 				22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */,
@@ -196,6 +218,7 @@
 		22C3507220EDB3A500CE2442 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				22C350E120F0900F00CE2442 /* JLExtensionSwift.swift */,
 				22C350A720EF6EED00CE2442 /* DUAReader */,
 				22C3507320EDB3A500CE2442 /* OCGumbo */,
 			);
@@ -255,6 +278,9 @@
 		22C350A720EF6EED00CE2442 /* DUAReader */ = {
 			isa = PBXGroup;
 			children = (
+				22C350D120F08CA200CE2442 /* framework */,
+				22C350D520F08CA200CE2442 /* SwiftLibXML2 */,
+				22C350D720F08CA200CE2442 /* xib */,
 				22C350A820EF6EED00CE2442 /* Utils */,
 				22C350AB20EF6EED00CE2442 /* Controller */,
 				22C350B020EF6EED00CE2442 /* DataModel */,
@@ -332,9 +358,37 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		22C350D120F08CA200CE2442 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				22C350D220F08CA200CE2442 /* ZipArchive.framework */,
+				22C350D320F08CA200CE2442 /* DTCoreText.framework */,
+				22C350D420F08CA200CE2442 /* TouchXML.framework */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		22C350D520F08CA200CE2442 /* SwiftLibXML2 */ = {
+			isa = PBXGroup;
+			children = (
+				22C350D620F08CA200CE2442 /* module.modulemap */,
+			);
+			path = SwiftLibXML2;
+			sourceTree = "<group>";
+		};
+		22C350D720F08CA200CE2442 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				22C350D820F08CA200CE2442 /* bottomMenu.xib */,
+				22C350D920F08CA200CE2442 /* topMenu.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
 		B3345690989A7A4FF465CA17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22C350DF20F08CB800CE2442 /* libxml2.tbd */,
 				BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */,
 			);
 			name = Frameworks;
@@ -459,7 +513,9 @@
 				22C350A020EDB3A500CE2442 /* tag.in in Resources */,
 				22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */,
 				22C3509A20EDB3A500CE2442 /* char_ref.rl in Resources */,
+				22C350DD20F08CA200CE2442 /* bottomMenu.xib in Resources */,
 				22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */,
+				22C350DE20F08CA200CE2442 /* topMenu.xib in Resources */,
 				22C3500E20EDAA7B00CE2442 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,12 +581,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C350D020EF6EED00CE2442 /* DUAStatusBar.swift in Sources */,
+				22C350E420F0922D00CE2442 /* BookMarkButton.swift in Sources */,
 				22C350A120EDB3A500CE2442 /* tag.c in Sources */,
 				22C350C120EF6EED00CE2442 /* UIView+subScript.swift in Sources */,
 				22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */,
 				22C350CD20EF6EED00CE2442 /* DUATableView.swift in Sources */,
 				22C3500B20EDAA7B00CE2442 /* ViewController.swift in Sources */,
 				22C350C420EF6EED00CE2442 /* DUABackViewController.swift in Sources */,
+				22C350E220F0901000CE2442 /* JLExtensionSwift.swift in Sources */,
 				22C350A220EDB3A500CE2442 /* parser.c in Sources */,
 				22C350C520EF6EED00CE2442 /* DUAtranslationController.swift in Sources */,
 				22C350CC20EF6EED00CE2442 /* DUAAttributedView.swift in Sources */,
@@ -729,6 +787,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JLReader/Classes/DUAReader/framework",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(SRCROOT)/JLReader/Classes/SwiftLibXML2",
+				);
 				INFOPLIST_FILE = JLReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -750,6 +816,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JLReader/Classes/DUAReader/framework",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(SRCROOT)/JLReader/Classes/SwiftLibXML2",
+				);
 				INFOPLIST_FILE = JLReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -104,7 +104,7 @@ class DUAReader: UIViewController, UIPageViewControllerDelegate, UIPageViewContr
         }
     }
     
-    // MARK:-- 以下为私有方法
+    // MARK:--以下为私有方法
     private func readWith(chapter: DUAChapterModel, pageIndex: Int) -> Void {
         
         chapterModels[String(chapter.chapterIndex)] = chapter
