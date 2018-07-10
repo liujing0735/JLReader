@@ -28,7 +28,6 @@
 		22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */; };
 		22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509720EDB3A500CE2442 /* OCGumbo.m */; };
 		22C350E020F08CB800CE2442 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C350DF20F08CB800CE2442 /* libxml2.tbd */; };
-		22C350E220F0901000CE2442 /* JLExtensionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350E120F0900F00CE2442 /* JLExtensionSwift.swift */; };
 		22C3512920F4582100CE2442 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350E920F4582100CE2442 /* NSObject+Extension.swift */; };
 		22C3512A20F4582100CE2442 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EA20F4582100CE2442 /* UIView+Extension.swift */; };
 		22C3512B20F4582100CE2442 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EB20F4582100CE2442 /* String+Extension.swift */; };
@@ -73,6 +72,14 @@
 		22C3515220F4582100CE2442 /* DZMReadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512620F4582100CE2442 /* DZMReadViewCell.swift */; };
 		22C3515320F4582100CE2442 /* DZMCursorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512720F4582100CE2442 /* DZMCursorView.swift */; };
 		22C3515420F4582100CE2442 /* DZMReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512820F4582100CE2442 /* DZMReadView.swift */; };
+		22C3515720F4BD0700CE2442 /* JLExtensionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */; };
+		22C3515920F4BD4300CE2442 /* JLParsingHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */; };
+		22C3515B20F4C10600CE2442 /* JLParsing80Txt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */; };
+		22C3516020F4C80900CE2442 /* JLBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */; };
+		22C3516120F4C80900CE2442 /* JLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515E20F4C80900CE2442 /* JLBaseViewController.swift */; };
+		22C3516220F4C80900CE2442 /* JLBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515F20F4C80900CE2442 /* JLBaseTabBarController.swift */; };
+		22C3516620F4C91800CE2442 /* JLBookcaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516520F4C91800CE2442 /* JLBookcaseTableViewController.swift */; };
+		22C3516820F4C93100CE2442 /* JLBookcityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,7 +147,6 @@
 		22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCGumbo+Query.m"; sourceTree = "<group>"; };
 		22C3509720EDB3A500CE2442 /* OCGumbo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGumbo.m; sourceTree = "<group>"; };
 		22C350DF20F08CB800CE2442 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		22C350E120F0900F00CE2442 /* JLExtensionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLExtensionSwift.swift; sourceTree = "<group>"; };
 		22C350E720F4582100CE2442 /* DZMeBookRead-Bridging-Pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DZMeBookRead-Bridging-Pch.h"; sourceTree = "<group>"; };
 		22C350E920F4582100CE2442 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		22C350EA20F4582100CE2442 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -192,6 +198,14 @@
 		22C3512620F4582100CE2442 /* DZMReadViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadViewCell.swift; sourceTree = "<group>"; };
 		22C3512720F4582100CE2442 /* DZMCursorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMCursorView.swift; sourceTree = "<group>"; };
 		22C3512820F4582100CE2442 /* DZMReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadView.swift; sourceTree = "<group>"; };
+		22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLExtensionSwift.swift; sourceTree = "<group>"; };
+		22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLParsingHTML.swift; sourceTree = "<group>"; };
+		22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLParsing80Txt.swift; sourceTree = "<group>"; };
+		22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBaseTableViewController.swift; sourceTree = "<group>"; };
+		22C3515E20F4C80900CE2442 /* JLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBaseViewController.swift; sourceTree = "<group>"; };
+		22C3515F20F4C80900CE2442 /* JLBaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBaseTabBarController.swift; sourceTree = "<group>"; };
+		22C3516520F4C91800CE2442 /* JLBookcaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookcaseTableViewController.swift; sourceTree = "<group>"; };
+		22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookcityTableViewController.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
 		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +261,9 @@
 		22C3500720EDAA7B00CE2442 /* JLReader */ = {
 			isa = PBXGroup;
 			children = (
+				22C3516320F4C8E100CE2442 /* Bookcase */,
+				22C3516420F4C8E100CE2442 /* Bookcity */,
+				22C3515C20F4C80900CE2442 /* Base */,
 				22C3507220EDB3A500CE2442 /* Classes */,
 				22C3500820EDAA7B00CE2442 /* AppDelegate.swift */,
 				22C3500A20EDAA7B00CE2442 /* ViewController.swift */,
@@ -262,7 +279,7 @@
 		22C3507220EDB3A500CE2442 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22C350E120F0900F00CE2442 /* JLExtensionSwift.swift */,
+				22C3515520F4BD0700CE2442 /* Utility */,
 				22C350E520F4582100CE2442 /* DZMeBookRead */,
 				22C3507320EDB3A500CE2442 /* OCGumbo */,
 			);
@@ -505,6 +522,42 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		22C3515520F4BD0700CE2442 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */,
+				22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */,
+				22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		22C3515C20F4C80900CE2442 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */,
+				22C3515E20F4C80900CE2442 /* JLBaseViewController.swift */,
+				22C3515F20F4C80900CE2442 /* JLBaseTabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		22C3516320F4C8E100CE2442 /* Bookcase */ = {
+			isa = PBXGroup;
+			children = (
+				22C3516520F4C91800CE2442 /* JLBookcaseTableViewController.swift */,
+			);
+			path = Bookcase;
+			sourceTree = "<group>";
+		};
+		22C3516420F4C8E100CE2442 /* Bookcity */ = {
+			isa = PBXGroup;
+			children = (
+				22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */,
+			);
+			path = Bookcity;
+			sourceTree = "<group>";
+		};
 		B3345690989A7A4FF465CA17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,16 +751,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C3516220F4C80900CE2442 /* JLBaseTabBarController.swift in Sources */,
 				22C3514920F4582100CE2442 /* DZMReadMenu.swift in Sources */,
+				22C3515720F4BD0700CE2442 /* JLExtensionSwift.swift in Sources */,
 				22C3513620F4582100CE2442 /* ASValuePopUpView.m in Sources */,
 				22C3513520F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				22C3514420F4582100CE2442 /* DZMRMSettingView.swift in Sources */,
+				22C3516120F4C80900CE2442 /* JLBaseViewController.swift in Sources */,
 				22C3514820F4582100CE2442 /* DZMRMLeftView.swift in Sources */,
+				22C3516020F4C80900CE2442 /* JLBaseTableViewController.swift in Sources */,
 				22C350A120EDB3A500CE2442 /* tag.c in Sources */,
+				22C3516620F4C91800CE2442 /* JLBookcaseTableViewController.swift in Sources */,
 				22C3513B20F4582100CE2442 /* DZMViewController.swift in Sources */,
 				22C3513A20F4582100CE2442 /* DZMBatteryView.swift in Sources */,
 				22C3513D20F4582100CE2442 /* DZMReadParser.swift in Sources */,
 				22C3514B20F4582100CE2442 /* DZMRMBaseView.swift in Sources */,
+				22C3515B20F4C10600CE2442 /* JLParsing80Txt.swift in Sources */,
 				22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */,
 				22C3514C20F4582100CE2442 /* DZMRMLightView.swift in Sources */,
 				22C3515420F4582100CE2442 /* DZMReadView.swift in Sources */,
@@ -717,7 +776,6 @@
 				22C3512F20F4582100CE2442 /* DZMSegmentedControl.swift in Sources */,
 				22C3513F20F4582100CE2442 /* DZMReadConfigure.swift in Sources */,
 				22C3514A20F4582100CE2442 /* DZMRMTopView.swift in Sources */,
-				22C350E220F0901000CE2442 /* JLExtensionSwift.swift in Sources */,
 				22C3514020F4582100CE2442 /* DZMReadAuxiliary.swift in Sources */,
 				22C3512D20F4582100CE2442 /* UIPageViewController+Extension.swift in Sources */,
 				22C350A220EDB3A500CE2442 /* parser.c in Sources */,
@@ -744,6 +802,8 @@
 				22C3514520F4582100CE2442 /* DZMRMFuncView.swift in Sources */,
 				22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */,
 				22C3513920F4582100CE2442 /* DZMMagnifierView.m in Sources */,
+				22C3515920F4BD4300CE2442 /* JLParsingHTML.swift in Sources */,
+				22C3516820F4C93100CE2442 /* JLBookcityTableViewController.swift in Sources */,
 				22C3513720F4582100CE2442 /* ASValueTrackingSlider.m in Sources */,
 				22C3514F20F4582100CE2442 /* DZMReadChapterListModel.swift in Sources */,
 				22C3513C20F4582100CE2442 /* DZMReadOperation.swift in Sources */,
@@ -940,6 +1000,7 @@
 					"$(SRCROOT)/JLReader/Classes/SwiftLibXML2",
 				);
 				INFOPLIST_FILE = JLReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -969,6 +1030,7 @@
 					"$(SRCROOT)/JLReader/Classes/SwiftLibXML2",
 				);
 				INFOPLIST_FILE = JLReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
