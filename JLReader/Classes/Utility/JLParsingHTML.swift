@@ -13,6 +13,12 @@ enum JLWebsite: String {
     case Web80txt = "https://www.80txt.com"
 }
 
+protocol JLParsingHTMLDelegate {
+    func downloadProgress(parsing: JLParsingHTML, completed: Int64, total: Int64) -> Void
+    func downloadSuccess(parsing: JLParsingHTML, fileURL: URL) -> Void
+    func downloadFailure(parsing: JLParsingHTML, fileURL: URL) -> Void
+}
+
 class JLParsingHTML: NSObject {
     
     private var website: JLWebsite = .Web80txt
@@ -24,15 +30,19 @@ class JLParsingHTML: NSObject {
         parsing80Txt = JLParsing80Txt(url: self.website.rawValue)
     }
     
-    init(website: JLWebsite, url: String) {
+    init(website: JLWebsite, url: String!) {
         super.init()
         switch website {
         case .Web80txt:
             do {
-                if url.hasPrefix(website.rawValue) {
-                    parsing80Txt = JLParsing80Txt(url: url)
+                if url != nil {
+                    if url.hasPrefix(website.rawValue) {
+                        parsing80Txt = JLParsing80Txt(url: url)
+                    }else {
+                        parsing80Txt = JLParsing80Txt(url: website.rawValue + url)
+                    }
                 }else {
-                    parsing80Txt = JLParsing80Txt(url: website.rawValue + url)
+                    parsing80Txt = JLParsing80Txt(url: website.rawValue)
                 }
             }
         }
@@ -50,16 +60,53 @@ class JLParsingHTML: NSObject {
         return nil
     }
     
-    func lists() -> [[String: String]]! {
+    // 首页
+    func firstLists() -> [[String: String]] {
         switch website {
         case .Web80txt:
             do {
                 if parsing80Txt != nil {
-                    return parsing80Txt.lists()
+                    return parsing80Txt.firstLists()
                 }
             }
         }
-        return nil
+        return [[String: String]]()
+    }
+    // 上一页
+    func prevLists() -> [[String: String]] {
+        switch website {
+        case .Web80txt:
+            do {
+                if parsing80Txt != nil {
+                    return parsing80Txt.prevLists()
+                }
+            }
+        }
+        return [[String: String]]()
+    }
+    // 下一页
+    func nextLists() -> [[String: String]] {
+        switch website {
+        case .Web80txt:
+            do {
+                if parsing80Txt != nil {
+                    return parsing80Txt.nextLists()
+                }
+            }
+        }
+        return [[String: String]]()
+    }
+    // 最后一页
+    func lastLists() -> [[String: String]] {
+        switch website {
+        case .Web80txt:
+            do {
+                if parsing80Txt != nil {
+                    return parsing80Txt.lastLists()
+                }
+            }
+        }
+        return [[String: String]]()
     }
     
     func downloadFile(url: String) {
@@ -81,19 +128,14 @@ class JLParsingHTML: NSObject {
                 print("总大小：\(progress.totalUnitCount/1024)KB")
             }
             .response { response in
+                if response.error != nil {
+                    print("download failure: \(String(describing: response.error?.localizedDescription))")
+                }
                 if let filePath = response.destinationURL?.path {
                     print("文件路径 str：\(filePath)")
                     //self.readTXT(path: filePath)
                 }
-            }
-            .responseJSON { response in
-                switch response.result {
-                case .success:
-                    print("success")
-                case .failure:
-                    //response.resumeData
-                    print("failure")
-                }
         }
     }
 }
+

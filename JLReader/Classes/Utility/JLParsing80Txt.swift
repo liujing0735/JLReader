@@ -11,10 +11,15 @@ import UIKit
 class JLParsing80Txt: NSObject {
 
     private var gumboDocument: OCGumboDocument! = nil
+    private var firstPageUrl: String!
+    private var prevPageUrl: String!
+    private var nextPageUrl: String!
+    private var lastPageUrl: String!
+    private var currentPage: Int = 0
+    private var totalPage: Int = 0
     
     init(url: String) {
         super.init()
-        
         gumboDocument = gumboDocument(url: url)
     }
     
@@ -51,10 +56,42 @@ class JLParsing80Txt: NSObject {
         }
         return array
     }
+    // 首页
+    func firstLists() -> [[String: String]] {
+        if firstPageUrl == nil {
+            return [[String: String]]()
+        }
+        gumboDocument = gumboDocument(url: firstPageUrl)
+        return lists()
+    }
+    // 上一页
+    func prevLists() -> [[String: String]] {
+        if prevPageUrl == nil {
+            return [[String: String]]()
+        }
+        gumboDocument = gumboDocument(url: prevPageUrl)
+        return lists()
+    }
+    // 下一页
+    func nextLists() -> [[String: String]] {
+        if nextPageUrl == nil {
+            return [[String: String]]()
+        }
+        gumboDocument = gumboDocument(url: nextPageUrl)
+        return lists()
+    }
+    // 最后一页
+    func lastLists() -> [[String: String]] {
+        if lastPageUrl == nil {
+            return [[String: String]]()
+        }
+        gumboDocument = gumboDocument(url: lastPageUrl)
+        return lists()
+    }
     
-    func lists() -> [[String: String]]! {
+    func lists() -> [[String: String]] {
         if gumboDocument == nil {
-            return nil
+            return [[String: String]]()
         }
         
         var books = [[String: String]]()
@@ -83,13 +120,26 @@ class JLParsing80Txt: NSObject {
             print(bookUpdatedDate!)
             dic["book_updated_date"] = bookUpdatedDate!
             
-            let bookIntroduction = book.query(".list_box")?.find(".book_jj")?.first()?.text()
-            print(bookIntroduction!)
-            dic["book_introduction"] = bookIntroduction!
+            var bookIntroduction: String = (book.query(".list_box")?.find(".book_jj")?.first()?.text())!
+            bookIntroduction = bookIntroduction.trimmingCharacters(in: .whitespacesAndNewlines)
+            bookIntroduction = bookIntroduction.replacing(pattern: " ", template: "")
+            print(bookIntroduction)
+            dic["book_introduction"] = bookIntroduction
             
-            let bookCont = book.query(".list_box")?.find(".book_cont")?.find(".parag_2013")?.first()?.text()
-            print(bookCont!)
-            dic["book_cont"] = bookCont!
+            var bookCont: String = (book.query(".list_box")?.find(".book_cont")?.find(".parag_2013")?.first()?.text())!
+            bookCont = bookCont.replacing(pattern: "\n", template: " ")
+            print(bookCont)
+            let components1 = bookCont.components(separatedBy: " ")
+            if components1.count > 2 {
+                dic["book_author"] = components1[0]
+                dic["book_size"] = components1[1]
+            }
+            let components2 = bookCont.components(separatedBy: "\n")
+            if components2.count > 4 {
+                dic["book_today_downloads"] = components1[1]
+                dic["book_month_downloads"] = components1[2]
+                dic["book_total_downloads"] = components1[3]
+            }
             
             let bookImg = book.query(".book_pic")?.find("img")?.first()?.attr("src")
             print(bookImg!)
@@ -138,11 +188,48 @@ class JLParsing80Txt: NSObject {
         return url.replacingOccurrences(of: "/txtxz/", with: "/txtml_")
     }
 
+    private func pageUrl(document: OCGumboDocument!) -> Void {
+        if document == nil {
+            return
+        }
+        
+        firstPageUrl = nil
+        prevPageUrl = nil
+        nextPageUrl = nil
+        lastPageUrl = nil
+        currentPage = 0
+        totalPage = 0
+
+        let pages = document.query("#pagelink")?.find("a") as! [OCGumboNode]
+        for page in pages {
+            if page.attr("class") == "first" {
+                firstPageUrl = page.attr("href")
+            }
+            if page.attr("class") == "prev" {
+                prevPageUrl = page.attr("href")
+            }
+            if page.attr("class") == "next" {
+                nextPageUrl = page.attr("href")
+                print("下一页：\(nextPageUrl)")
+            }
+            if page.attr("class") == "last" {
+                lastPageUrl = page.attr("href")
+                totalPage = (page.text()?.toInt)!
+            }
+        }
+        
+        let text = document.query("#pagelink")?.find("strong")?.first()?.text()
+        if text != nil {
+            currentPage = (text?.toInt)!
+        }
+    }
+    
     // MARK:--OCGumboDocument
     func gumboDocument(url: String) -> OCGumboDocument! {
         do {
             let htmlString = try String(contentsOf: URL(string: url)!, encoding: String.Encoding.utf8)
             let document = OCGumboDocument(htmlString: htmlString)
+            pageUrl(document: document)
             return document
         } catch let error as NSError {
             print(error.domain)

@@ -94,6 +94,11 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
         
         updateViewFrame()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

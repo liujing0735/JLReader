@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.viewControllers = [bookcaseTable,bookcityTable]
         
         let navigation = UINavigationController(rootViewController: tabBar)
-        //navigation.setNavigationBarHidden(true, animated: false)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigation

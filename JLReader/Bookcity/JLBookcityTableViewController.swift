@@ -42,7 +42,7 @@ class JLBookcityTableViewController: JLBaseTableViewController {
 
     private func reloadData() {
         rowDatas = parsingHTML.menus()
-        print(rowDatas)
+        //print(rowDatas)
         self.tableView.reloadData()
     }
 
@@ -80,6 +80,12 @@ class JLBookcityTableViewController: JLBaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let value = (rowDatas[indexPath.section]["value"] as! [[String : String]])[indexPath.row]
+        let controller = JLBooklistTableViewController()
+        controller.controllerTitle = value["name"]
+        controller.urlString = value["html"]
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     /*

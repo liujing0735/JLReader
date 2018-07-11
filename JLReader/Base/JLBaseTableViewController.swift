@@ -36,6 +36,7 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
         }
         self.tableView = UITableView(frame: CGRect(), style: self.tableViewStyle)
         self.tableView.tableFooterView = UIView()
+        //self.tableView.separatorInset = UIEdgeInsets()
         self.view.addSubview(self.tableView)
         
         updateTableViewFrame()
