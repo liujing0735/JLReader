@@ -8,9 +8,16 @@ source 'https://github.com/CocoaPods/Specs.git'
 inhibit_all_warnings!
 
 def common_pods
+    # -- Swift -- #
 	pod 'Alamofire', '~> 4.7'
+    pod 'Kingfisher', '~> 4.8.0' #图片加载、缓存
+    #pod 'Segmentio', '~> 3.0' #滑动分段选择器
+    #pod 'SlideMenuControllerSwift'
+    #pod 'IQKeyboardManagerSwift'
+    
+    # -- Objective-C -- #
+    pod 'MJRefresh' #下拉刷新
     #pod 'JLExtension', '~> 0.1.0'
-    #pod 'MJRefresh'
     #pod 'FSCalendar'
     #pod 'Popover.OC'
     #pod 'AFNetworking', '~> 2.6.3'
@@ -19,11 +26,8 @@ def common_pods
     #pod 'MQTTKit', '~> 0.1.0'
     #pod 'FMDB', '~> 2.6.2'
     #pod 'CocoaAsyncSocket', '~> 7.4.3'
-    #pod 'SDWebImage', '~>3.8'
-    #pod 'SlideMenuControllerSwift'
-    #pod 'IQKeyboardManagerSwift'
+    #pod 'SDWebImage', '~>3.8' #图片加载、缓存
     #pod 'PGDatePicker' #日期选择器
-    #pod 'Segmentio', '~> 3.0' #滑动分段选择器
     #pod 'HMSegmentedControl' #分段选择器
 end
 

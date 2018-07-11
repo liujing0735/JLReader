@@ -27,23 +27,61 @@
 		22C350A420EDB3A500CE2442 /* string_piece.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509220EDB3A500CE2442 /* string_piece.c */; };
 		22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */; };
 		22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509720EDB3A500CE2442 /* OCGumbo.m */; };
-		22C350C020EF6EED00CE2442 /* DUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350A920EF6EED00CE2442 /* DUAUtils.swift */; };
-		22C350C120EF6EED00CE2442 /* UIView+subScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AA20EF6EED00CE2442 /* UIView+subScript.swift */; };
-		22C350C220EF6EED00CE2442 /* DUAPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AC20EF6EED00CE2442 /* DUAPageViewController.swift */; };
-		22C350C320EF6EED00CE2442 /* DUAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AD20EF6EED00CE2442 /* DUAReader.swift */; };
-		22C350C420EF6EED00CE2442 /* DUABackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AE20EF6EED00CE2442 /* DUABackViewController.swift */; };
-		22C350C520EF6EED00CE2442 /* DUAtranslationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350AF20EF6EED00CE2442 /* DUAtranslationController.swift */; };
-		22C350C620EF6EED00CE2442 /* DUAConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B220EF6EED00CE2442 /* DUAConfiguration.swift */; };
-		22C350C720EF6EED00CE2442 /* DUADataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B420EF6EED00CE2442 /* DUADataParser.swift */; };
-		22C350C820EF6EED00CE2442 /* DUAEpubDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B520EF6EED00CE2442 /* DUAEpubDataParser.swift */; };
-		22C350C920EF6EED00CE2442 /* DUATextDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B620EF6EED00CE2442 /* DUATextDataParser.swift */; };
-		22C350CA20EF6EED00CE2442 /* DUAChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B820EF6EED00CE2442 /* DUAChapterModel.swift */; };
-		22C350CB20EF6EED00CE2442 /* DUAPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350B920EF6EED00CE2442 /* DUAPageModel.swift */; };
-		22C350CC20EF6EED00CE2442 /* DUAAttributedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BB20EF6EED00CE2442 /* DUAAttributedView.swift */; };
-		22C350CD20EF6EED00CE2442 /* DUATableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BC20EF6EED00CE2442 /* DUATableView.swift */; };
-		22C350CE20EF6EED00CE2442 /* DUAConVexLensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */; };
-		22C350CF20EF6EED00CE2442 /* DUATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */; };
-		22C350D020EF6EED00CE2442 /* DUAStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */; };
+		22C350E020F08CB800CE2442 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C350DF20F08CB800CE2442 /* libxml2.tbd */; };
+		22C3512920F4582100CE2442 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350E920F4582100CE2442 /* NSObject+Extension.swift */; };
+		22C3512A20F4582100CE2442 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EA20F4582100CE2442 /* UIView+Extension.swift */; };
+		22C3512B20F4582100CE2442 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EB20F4582100CE2442 /* String+Extension.swift */; };
+		22C3512C20F4582100CE2442 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EC20F4582100CE2442 /* UIScrollView+Extension.swift */; };
+		22C3512D20F4582100CE2442 /* UIPageViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350ED20F4582100CE2442 /* UIPageViewController+Extension.swift */; };
+		22C3512E20F4582100CE2442 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EE20F4582100CE2442 /* UITableView+Extension.swift */; };
+		22C3512F20F4582100CE2442 /* DZMSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350F020F4582100CE2442 /* DZMSegmentedControl.swift */; };
+		22C3513020F4582100CE2442 /* DZMHaloButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350F120F4582100CE2442 /* DZMHaloButton.swift */; };
+		22C3513120F4582100CE2442 /* DZMUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350F220F4582100CE2442 /* DZMUserDefaults.swift */; };
+		22C3513220F4582100CE2442 /* DZMGlobalMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350F420F4582100CE2442 /* DZMGlobalMethod.swift */; };
+		22C3513320F4582100CE2442 /* DZMGlobalProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350F520F4582100CE2442 /* DZMGlobalProperty.swift */; };
+		22C3513420F4582100CE2442 /* DZMCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C350F920F4582100CE2442 /* DZMCoverController.m */; };
+		22C3513520F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C350FC20F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		22C3513620F4582100CE2442 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510020F4582100CE2442 /* ASValuePopUpView.m */; };
+		22C3513720F4582100CE2442 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510120F4582100CE2442 /* ASValueTrackingSlider.m */; };
+		22C3513820F4582100CE2442 /* UIView+YGPulseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510320F4582100CE2442 /* UIView+YGPulseView.m */; };
+		22C3513920F4582100CE2442 /* DZMMagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510720F4582100CE2442 /* DZMMagnifierView.m */; };
+		22C3513A20F4582100CE2442 /* DZMBatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510820F4582100CE2442 /* DZMBatteryView.swift */; };
+		22C3513B20F4582100CE2442 /* DZMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510A20F4582100CE2442 /* DZMViewController.swift */; };
+		22C3513C20F4582100CE2442 /* DZMReadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510C20F4582100CE2442 /* DZMReadOperation.swift */; };
+		22C3513D20F4582100CE2442 /* DZMReadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510D20F4582100CE2442 /* DZMReadParser.swift */; };
+		22C3513E20F4582100CE2442 /* DZMReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510E20F4582100CE2442 /* DZMReadViewController.swift */; };
+		22C3513F20F4582100CE2442 /* DZMReadConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3510F20F4582100CE2442 /* DZMReadConfigure.swift */; };
+		22C3514020F4582100CE2442 /* DZMReadAuxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511020F4582100CE2442 /* DZMReadAuxiliary.swift */; };
+		22C3514120F4582100CE2442 /* DZMReadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511120F4582100CE2442 /* DZMReadController.swift */; };
+		22C3514220F4582100CE2442 /* DZMReadBGController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511220F4582100CE2442 /* DZMReadBGController.swift */; };
+		22C3514320F4582100CE2442 /* DZMRMColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511520F4582100CE2442 /* DZMRMColorView.swift */; };
+		22C3514420F4582100CE2442 /* DZMRMSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511620F4582100CE2442 /* DZMRMSettingView.swift */; };
+		22C3514520F4582100CE2442 /* DZMRMFuncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511720F4582100CE2442 /* DZMRMFuncView.swift */; };
+		22C3514620F4582100CE2442 /* DZMRMBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511820F4582100CE2442 /* DZMRMBottomView.swift */; };
+		22C3514720F4582100CE2442 /* DZMRMStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511920F4582100CE2442 /* DZMRMStatusView.swift */; };
+		22C3514820F4582100CE2442 /* DZMRMLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511A20F4582100CE2442 /* DZMRMLeftView.swift */; };
+		22C3514920F4582100CE2442 /* DZMReadMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511B20F4582100CE2442 /* DZMReadMenu.swift */; };
+		22C3514A20F4582100CE2442 /* DZMRMTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511C20F4582100CE2442 /* DZMRMTopView.swift */; };
+		22C3514B20F4582100CE2442 /* DZMRMBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511D20F4582100CE2442 /* DZMRMBaseView.swift */; };
+		22C3514C20F4582100CE2442 /* DZMRMLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3511E20F4582100CE2442 /* DZMRMLightView.swift */; };
+		22C3514D20F4582100CE2442 /* DZMReadRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512020F4582100CE2442 /* DZMReadRecordModel.swift */; };
+		22C3514E20F4582100CE2442 /* DZMReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512120F4582100CE2442 /* DZMReadModel.swift */; };
+		22C3514F20F4582100CE2442 /* DZMReadChapterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512220F4582100CE2442 /* DZMReadChapterListModel.swift */; };
+		22C3515020F4582100CE2442 /* DZMReadMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512320F4582100CE2442 /* DZMReadMarkModel.swift */; };
+		22C3515120F4582100CE2442 /* DZMReadChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512420F4582100CE2442 /* DZMReadChapterModel.swift */; };
+		22C3515220F4582100CE2442 /* DZMReadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512620F4582100CE2442 /* DZMReadViewCell.swift */; };
+		22C3515320F4582100CE2442 /* DZMCursorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512720F4582100CE2442 /* DZMCursorView.swift */; };
+		22C3515420F4582100CE2442 /* DZMReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512820F4582100CE2442 /* DZMReadView.swift */; };
+		22C3515720F4BD0700CE2442 /* JLExtensionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */; };
+		22C3515920F4BD4300CE2442 /* JLParsingHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */; };
+		22C3515B20F4C10600CE2442 /* JLParsing80Txt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */; };
+		22C3516020F4C80900CE2442 /* JLBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */; };
+		22C3516120F4C80900CE2442 /* JLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515E20F4C80900CE2442 /* JLBaseViewController.swift */; };
+		22C3516220F4C80900CE2442 /* JLBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515F20F4C80900CE2442 /* JLBaseTabBarController.swift */; };
+		22C3516620F4C91800CE2442 /* JLBookcaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516520F4C91800CE2442 /* JLBookcaseTableViewController.swift */; };
+		22C3516820F4C93100CE2442 /* JLBookcityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */; };
+		22C3516A20F58E0900CE2442 /* JLBooklistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */; };
+		22C3516C20F58FED00CE2442 /* JLBooklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,23 +148,68 @@
 		22C3509520EDB3A500CE2442 /* OCGumbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGumbo.h; sourceTree = "<group>"; };
 		22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCGumbo+Query.m"; sourceTree = "<group>"; };
 		22C3509720EDB3A500CE2442 /* OCGumbo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGumbo.m; sourceTree = "<group>"; };
-		22C350A920EF6EED00CE2442 /* DUAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAUtils.swift; sourceTree = "<group>"; };
-		22C350AA20EF6EED00CE2442 /* UIView+subScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+subScript.swift"; sourceTree = "<group>"; };
-		22C350AC20EF6EED00CE2442 /* DUAPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAPageViewController.swift; sourceTree = "<group>"; };
-		22C350AD20EF6EED00CE2442 /* DUAReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAReader.swift; sourceTree = "<group>"; };
-		22C350AE20EF6EED00CE2442 /* DUABackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUABackViewController.swift; sourceTree = "<group>"; };
-		22C350AF20EF6EED00CE2442 /* DUAtranslationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAtranslationController.swift; sourceTree = "<group>"; };
-		22C350B220EF6EED00CE2442 /* DUAConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAConfiguration.swift; sourceTree = "<group>"; };
-		22C350B420EF6EED00CE2442 /* DUADataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUADataParser.swift; sourceTree = "<group>"; };
-		22C350B520EF6EED00CE2442 /* DUAEpubDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAEpubDataParser.swift; sourceTree = "<group>"; };
-		22C350B620EF6EED00CE2442 /* DUATextDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUATextDataParser.swift; sourceTree = "<group>"; };
-		22C350B820EF6EED00CE2442 /* DUAChapterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAChapterModel.swift; sourceTree = "<group>"; };
-		22C350B920EF6EED00CE2442 /* DUAPageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAPageModel.swift; sourceTree = "<group>"; };
-		22C350BB20EF6EED00CE2442 /* DUAAttributedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAAttributedView.swift; sourceTree = "<group>"; };
-		22C350BC20EF6EED00CE2442 /* DUATableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUATableView.swift; sourceTree = "<group>"; };
-		22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAConVexLensView.swift; sourceTree = "<group>"; };
-		22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUATableViewCell.swift; sourceTree = "<group>"; };
-		22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUAStatusBar.swift; sourceTree = "<group>"; };
+		22C350DF20F08CB800CE2442 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		22C350E720F4582100CE2442 /* DZMeBookRead-Bridging-Pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DZMeBookRead-Bridging-Pch.h"; sourceTree = "<group>"; };
+		22C350E920F4582100CE2442 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		22C350EA20F4582100CE2442 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		22C350EB20F4582100CE2442 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		22C350EC20F4582100CE2442 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		22C350ED20F4582100CE2442 /* UIPageViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+Extension.swift"; sourceTree = "<group>"; };
+		22C350EE20F4582100CE2442 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		22C350F020F4582100CE2442 /* DZMSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMSegmentedControl.swift; sourceTree = "<group>"; };
+		22C350F120F4582100CE2442 /* DZMHaloButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMHaloButton.swift; sourceTree = "<group>"; };
+		22C350F220F4582100CE2442 /* DZMUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMUserDefaults.swift; sourceTree = "<group>"; };
+		22C350F420F4582100CE2442 /* DZMGlobalMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMGlobalMethod.swift; sourceTree = "<group>"; };
+		22C350F520F4582100CE2442 /* DZMGlobalProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMGlobalProperty.swift; sourceTree = "<group>"; };
+		22C350F820F4582100CE2442 /* DZMCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMCoverController.h; sourceTree = "<group>"; };
+		22C350F920F4582100CE2442 /* DZMCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZMCoverController.m; sourceTree = "<group>"; };
+		22C350FB20F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		22C350FC20F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		22C350FE20F4582100CE2442 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
+		22C350FF20F4582100CE2442 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		22C3510020F4582100CE2442 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		22C3510120F4582100CE2442 /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
+		22C3510320F4582100CE2442 /* UIView+YGPulseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YGPulseView.m"; sourceTree = "<group>"; };
+		22C3510420F4582100CE2442 /* UIView+YGPulseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YGPulseView.h"; sourceTree = "<group>"; };
+		22C3510620F4582100CE2442 /* DZMMagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMMagnifierView.h; sourceTree = "<group>"; };
+		22C3510720F4582100CE2442 /* DZMMagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZMMagnifierView.m; sourceTree = "<group>"; };
+		22C3510820F4582100CE2442 /* DZMBatteryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMBatteryView.swift; sourceTree = "<group>"; };
+		22C3510A20F4582100CE2442 /* DZMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMViewController.swift; sourceTree = "<group>"; };
+		22C3510C20F4582100CE2442 /* DZMReadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadOperation.swift; sourceTree = "<group>"; };
+		22C3510D20F4582100CE2442 /* DZMReadParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadParser.swift; sourceTree = "<group>"; };
+		22C3510E20F4582100CE2442 /* DZMReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadViewController.swift; sourceTree = "<group>"; };
+		22C3510F20F4582100CE2442 /* DZMReadConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadConfigure.swift; sourceTree = "<group>"; };
+		22C3511020F4582100CE2442 /* DZMReadAuxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadAuxiliary.swift; sourceTree = "<group>"; };
+		22C3511120F4582100CE2442 /* DZMReadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadController.swift; sourceTree = "<group>"; };
+		22C3511220F4582100CE2442 /* DZMReadBGController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadBGController.swift; sourceTree = "<group>"; };
+		22C3511520F4582100CE2442 /* DZMRMColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMColorView.swift; sourceTree = "<group>"; };
+		22C3511620F4582100CE2442 /* DZMRMSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMSettingView.swift; sourceTree = "<group>"; };
+		22C3511720F4582100CE2442 /* DZMRMFuncView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMFuncView.swift; sourceTree = "<group>"; };
+		22C3511820F4582100CE2442 /* DZMRMBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMBottomView.swift; sourceTree = "<group>"; };
+		22C3511920F4582100CE2442 /* DZMRMStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMStatusView.swift; sourceTree = "<group>"; };
+		22C3511A20F4582100CE2442 /* DZMRMLeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMLeftView.swift; sourceTree = "<group>"; };
+		22C3511B20F4582100CE2442 /* DZMReadMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadMenu.swift; sourceTree = "<group>"; };
+		22C3511C20F4582100CE2442 /* DZMRMTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMTopView.swift; sourceTree = "<group>"; };
+		22C3511D20F4582100CE2442 /* DZMRMBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMBaseView.swift; sourceTree = "<group>"; };
+		22C3511E20F4582100CE2442 /* DZMRMLightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMLightView.swift; sourceTree = "<group>"; };
+		22C3512020F4582100CE2442 /* DZMReadRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadRecordModel.swift; sourceTree = "<group>"; };
+		22C3512120F4582100CE2442 /* DZMReadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadModel.swift; sourceTree = "<group>"; };
+		22C3512220F4582100CE2442 /* DZMReadChapterListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadChapterListModel.swift; sourceTree = "<group>"; };
+		22C3512320F4582100CE2442 /* DZMReadMarkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadMarkModel.swift; sourceTree = "<group>"; };
+		22C3512420F4582100CE2442 /* DZMReadChapterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadChapterModel.swift; sourceTree = "<group>"; };
+		22C3512620F4582100CE2442 /* DZMReadViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadViewCell.swift; sourceTree = "<group>"; };
+		22C3512720F4582100CE2442 /* DZMCursorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMCursorView.swift; sourceTree = "<group>"; };
+		22C3512820F4582100CE2442 /* DZMReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadView.swift; sourceTree = "<group>"; };
+		22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLExtensionSwift.swift; sourceTree = "<group>"; };
+		22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLParsingHTML.swift; sourceTree = "<group>"; };
+		22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLParsing80Txt.swift; sourceTree = "<group>"; };
+		22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBaseTableViewController.swift; sourceTree = "<group>"; };
+		22C3515E20F4C80900CE2442 /* JLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBaseViewController.swift; sourceTree = "<group>"; };
+		22C3515F20F4C80900CE2442 /* JLBaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBaseTabBarController.swift; sourceTree = "<group>"; };
+		22C3516520F4C91800CE2442 /* JLBookcaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookcaseTableViewController.swift; sourceTree = "<group>"; };
+		22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookcityTableViewController.swift; sourceTree = "<group>"; };
+		22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBooklistTableViewController.swift; sourceTree = "<group>"; };
+		22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBooklistTableViewCell.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
 		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C350E020F08CB800CE2442 /* libxml2.tbd in Frameworks */,
 				6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +265,9 @@
 		22C3500720EDAA7B00CE2442 /* JLReader */ = {
 			isa = PBXGroup;
 			children = (
+				22C3516320F4C8E100CE2442 /* Bookcase */,
+				22C3516420F4C8E100CE2442 /* Bookcity */,
+				22C3515C20F4C80900CE2442 /* Base */,
 				22C3507220EDB3A500CE2442 /* Classes */,
 				22C3500820EDAA7B00CE2442 /* AppDelegate.swift */,
 				22C3500A20EDAA7B00CE2442 /* ViewController.swift */,
@@ -196,7 +283,8 @@
 		22C3507220EDB3A500CE2442 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22C350A720EF6EED00CE2442 /* DUAReader */,
+				22C3515520F4BD0700CE2442 /* Utility */,
+				22C350E520F4582100CE2442 /* DZMeBookRead */,
 				22C3507320EDB3A500CE2442 /* OCGumbo */,
 			);
 			path = Classes;
@@ -252,89 +340,234 @@
 			path = Gumbo;
 			sourceTree = "<group>";
 		};
-		22C350A720EF6EED00CE2442 /* DUAReader */ = {
+		22C350E520F4582100CE2442 /* DZMeBookRead */ = {
 			isa = PBXGroup;
 			children = (
-				22C350A820EF6EED00CE2442 /* Utils */,
-				22C350AB20EF6EED00CE2442 /* Controller */,
-				22C350B020EF6EED00CE2442 /* DataModel */,
-				22C350BA20EF6EED00CE2442 /* Views */,
+				22C350E620F4582100CE2442 /* other */,
+				22C3510B20F4582100CE2442 /* controller */,
+				22C3511320F4582100CE2442 /* menuUI */,
+				22C3511F20F4582100CE2442 /* model */,
+				22C3512520F4582100CE2442 /* view */,
 			);
-			path = DUAReader;
+			path = DZMeBookRead;
 			sourceTree = "<group>";
 		};
-		22C350A820EF6EED00CE2442 /* Utils */ = {
+		22C350E620F4582100CE2442 /* other */ = {
 			isa = PBXGroup;
 			children = (
-				22C350A920EF6EED00CE2442 /* DUAUtils.swift */,
-				22C350AA20EF6EED00CE2442 /* UIView+subScript.swift */,
+				22C350E720F4582100CE2442 /* DZMeBookRead-Bridging-Pch.h */,
+				22C350E820F4582100CE2442 /* extension */,
+				22C350EF20F4582100CE2442 /* custom */,
+				22C350F320F4582100CE2442 /* global */,
+				22C350F620F4582100CE2442 /* thirdParty */,
+				22C3510920F4582100CE2442 /* base */,
 			);
-			path = Utils;
+			path = other;
 			sourceTree = "<group>";
 		};
-		22C350AB20EF6EED00CE2442 /* Controller */ = {
+		22C350E820F4582100CE2442 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				22C350AC20EF6EED00CE2442 /* DUAPageViewController.swift */,
-				22C350AD20EF6EED00CE2442 /* DUAReader.swift */,
-				22C350AE20EF6EED00CE2442 /* DUABackViewController.swift */,
-				22C350AF20EF6EED00CE2442 /* DUAtranslationController.swift */,
+				22C350E920F4582100CE2442 /* NSObject+Extension.swift */,
+				22C350EA20F4582100CE2442 /* UIView+Extension.swift */,
+				22C350EB20F4582100CE2442 /* String+Extension.swift */,
+				22C350EC20F4582100CE2442 /* UIScrollView+Extension.swift */,
+				22C350ED20F4582100CE2442 /* UIPageViewController+Extension.swift */,
+				22C350EE20F4582100CE2442 /* UITableView+Extension.swift */,
 			);
-			path = Controller;
+			path = extension;
 			sourceTree = "<group>";
 		};
-		22C350B020EF6EED00CE2442 /* DataModel */ = {
+		22C350EF20F4582100CE2442 /* custom */ = {
 			isa = PBXGroup;
 			children = (
-				22C350B120EF6EED00CE2442 /* config */,
-				22C350B320EF6EED00CE2442 /* parser */,
-				22C350B720EF6EED00CE2442 /* storage */,
+				22C350F020F4582100CE2442 /* DZMSegmentedControl.swift */,
+				22C350F120F4582100CE2442 /* DZMHaloButton.swift */,
+				22C350F220F4582100CE2442 /* DZMUserDefaults.swift */,
 			);
-			path = DataModel;
+			path = custom;
 			sourceTree = "<group>";
 		};
-		22C350B120EF6EED00CE2442 /* config */ = {
+		22C350F320F4582100CE2442 /* global */ = {
 			isa = PBXGroup;
 			children = (
-				22C350B220EF6EED00CE2442 /* DUAConfiguration.swift */,
+				22C350F420F4582100CE2442 /* DZMGlobalMethod.swift */,
+				22C350F520F4582100CE2442 /* DZMGlobalProperty.swift */,
 			);
-			path = config;
+			path = global;
 			sourceTree = "<group>";
 		};
-		22C350B320EF6EED00CE2442 /* parser */ = {
+		22C350F620F4582100CE2442 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				22C350B420EF6EED00CE2442 /* DUADataParser.swift */,
-				22C350B520EF6EED00CE2442 /* DUAEpubDataParser.swift */,
-				22C350B620EF6EED00CE2442 /* DUATextDataParser.swift */,
+				22C350F720F4582100CE2442 /* DZMCoverController */,
+				22C350FA20F4582100CE2442 /* FDFullscreenPopGesture */,
+				22C350FD20F4582100CE2442 /* ASValueTrackingSlider */,
+				22C3510220F4582100CE2442 /* YGPulseView */,
+				22C3510520F4582100CE2442 /* DZMMagnifierView */,
+				22C3510820F4582100CE2442 /* DZMBatteryView.swift */,
 			);
-			path = parser;
+			path = thirdParty;
 			sourceTree = "<group>";
 		};
-		22C350B720EF6EED00CE2442 /* storage */ = {
+		22C350F720F4582100CE2442 /* DZMCoverController */ = {
 			isa = PBXGroup;
 			children = (
-				22C350B820EF6EED00CE2442 /* DUAChapterModel.swift */,
-				22C350B920EF6EED00CE2442 /* DUAPageModel.swift */,
+				22C350F820F4582100CE2442 /* DZMCoverController.h */,
+				22C350F920F4582100CE2442 /* DZMCoverController.m */,
 			);
-			path = storage;
+			path = DZMCoverController;
 			sourceTree = "<group>";
 		};
-		22C350BA20EF6EED00CE2442 /* Views */ = {
+		22C350FA20F4582100CE2442 /* FDFullscreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
-				22C350BB20EF6EED00CE2442 /* DUAAttributedView.swift */,
-				22C350BC20EF6EED00CE2442 /* DUATableView.swift */,
-				22C350BD20EF6EED00CE2442 /* DUAConVexLensView.swift */,
-				22C350BE20EF6EED00CE2442 /* DUATableViewCell.swift */,
-				22C350BF20EF6EED00CE2442 /* DUAStatusBar.swift */,
+				22C350FB20F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.h */,
+				22C350FC20F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
-			path = Views;
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		22C350FD20F4582100CE2442 /* ASValueTrackingSlider */ = {
+			isa = PBXGroup;
+			children = (
+				22C350FE20F4582100CE2442 /* ASValuePopUpView.h */,
+				22C350FF20F4582100CE2442 /* ASValueTrackingSlider.h */,
+				22C3510020F4582100CE2442 /* ASValuePopUpView.m */,
+				22C3510120F4582100CE2442 /* ASValueTrackingSlider.m */,
+			);
+			path = ASValueTrackingSlider;
+			sourceTree = "<group>";
+		};
+		22C3510220F4582100CE2442 /* YGPulseView */ = {
+			isa = PBXGroup;
+			children = (
+				22C3510320F4582100CE2442 /* UIView+YGPulseView.m */,
+				22C3510420F4582100CE2442 /* UIView+YGPulseView.h */,
+			);
+			path = YGPulseView;
+			sourceTree = "<group>";
+		};
+		22C3510520F4582100CE2442 /* DZMMagnifierView */ = {
+			isa = PBXGroup;
+			children = (
+				22C3510620F4582100CE2442 /* DZMMagnifierView.h */,
+				22C3510720F4582100CE2442 /* DZMMagnifierView.m */,
+			);
+			path = DZMMagnifierView;
+			sourceTree = "<group>";
+		};
+		22C3510920F4582100CE2442 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				22C3510A20F4582100CE2442 /* DZMViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		22C3510B20F4582100CE2442 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				22C3510C20F4582100CE2442 /* DZMReadOperation.swift */,
+				22C3510D20F4582100CE2442 /* DZMReadParser.swift */,
+				22C3510E20F4582100CE2442 /* DZMReadViewController.swift */,
+				22C3510F20F4582100CE2442 /* DZMReadConfigure.swift */,
+				22C3511020F4582100CE2442 /* DZMReadAuxiliary.swift */,
+				22C3511120F4582100CE2442 /* DZMReadController.swift */,
+				22C3511220F4582100CE2442 /* DZMReadBGController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		22C3511320F4582100CE2442 /* menuUI */ = {
+			isa = PBXGroup;
+			children = (
+				22C3511420F4582100CE2442 /* DZMRMSettingView */,
+				22C3511820F4582100CE2442 /* DZMRMBottomView.swift */,
+				22C3511920F4582100CE2442 /* DZMRMStatusView.swift */,
+				22C3511A20F4582100CE2442 /* DZMRMLeftView.swift */,
+				22C3511B20F4582100CE2442 /* DZMReadMenu.swift */,
+				22C3511C20F4582100CE2442 /* DZMRMTopView.swift */,
+				22C3511D20F4582100CE2442 /* DZMRMBaseView.swift */,
+				22C3511E20F4582100CE2442 /* DZMRMLightView.swift */,
+			);
+			path = menuUI;
+			sourceTree = "<group>";
+		};
+		22C3511420F4582100CE2442 /* DZMRMSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				22C3511520F4582100CE2442 /* DZMRMColorView.swift */,
+				22C3511620F4582100CE2442 /* DZMRMSettingView.swift */,
+				22C3511720F4582100CE2442 /* DZMRMFuncView.swift */,
+			);
+			path = DZMRMSettingView;
+			sourceTree = "<group>";
+		};
+		22C3511F20F4582100CE2442 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				22C3512020F4582100CE2442 /* DZMReadRecordModel.swift */,
+				22C3512120F4582100CE2442 /* DZMReadModel.swift */,
+				22C3512220F4582100CE2442 /* DZMReadChapterListModel.swift */,
+				22C3512320F4582100CE2442 /* DZMReadMarkModel.swift */,
+				22C3512420F4582100CE2442 /* DZMReadChapterModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		22C3512520F4582100CE2442 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				22C3512620F4582100CE2442 /* DZMReadViewCell.swift */,
+				22C3512720F4582100CE2442 /* DZMCursorView.swift */,
+				22C3512820F4582100CE2442 /* DZMReadView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		22C3515520F4BD0700CE2442 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */,
+				22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */,
+				22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		22C3515C20F4C80900CE2442 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */,
+				22C3515E20F4C80900CE2442 /* JLBaseViewController.swift */,
+				22C3515F20F4C80900CE2442 /* JLBaseTabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		22C3516320F4C8E100CE2442 /* Bookcase */ = {
+			isa = PBXGroup;
+			children = (
+				22C3516520F4C91800CE2442 /* JLBookcaseTableViewController.swift */,
+			);
+			path = Bookcase;
+			sourceTree = "<group>";
+		};
+		22C3516420F4C8E100CE2442 /* Bookcity */ = {
+			isa = PBXGroup;
+			children = (
+				22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */,
+				22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */,
+				22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */,
+			);
+			path = Bookcity;
 			sourceTree = "<group>";
 		};
 		B3345690989A7A4FF465CA17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22C350DF20F08CB800CE2442 /* libxml2.tbd */,
 				BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */,
 			);
 			name = Frameworks;
@@ -489,10 +722,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JLReader/Pods-JLReader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,38 +761,75 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C350D020EF6EED00CE2442 /* DUAStatusBar.swift in Sources */,
+				22C3516220F4C80900CE2442 /* JLBaseTabBarController.swift in Sources */,
+				22C3514920F4582100CE2442 /* DZMReadMenu.swift in Sources */,
+				22C3515720F4BD0700CE2442 /* JLExtensionSwift.swift in Sources */,
+				22C3513620F4582100CE2442 /* ASValuePopUpView.m in Sources */,
+				22C3513520F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				22C3514420F4582100CE2442 /* DZMRMSettingView.swift in Sources */,
+				22C3516120F4C80900CE2442 /* JLBaseViewController.swift in Sources */,
+				22C3514820F4582100CE2442 /* DZMRMLeftView.swift in Sources */,
+				22C3516020F4C80900CE2442 /* JLBaseTableViewController.swift in Sources */,
 				22C350A120EDB3A500CE2442 /* tag.c in Sources */,
-				22C350C120EF6EED00CE2442 /* UIView+subScript.swift in Sources */,
+				22C3516620F4C91800CE2442 /* JLBookcaseTableViewController.swift in Sources */,
+				22C3513B20F4582100CE2442 /* DZMViewController.swift in Sources */,
+				22C3513A20F4582100CE2442 /* DZMBatteryView.swift in Sources */,
+				22C3513D20F4582100CE2442 /* DZMReadParser.swift in Sources */,
+				22C3514B20F4582100CE2442 /* DZMRMBaseView.swift in Sources */,
+				22C3515B20F4C10600CE2442 /* JLParsing80Txt.swift in Sources */,
 				22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */,
-				22C350CD20EF6EED00CE2442 /* DUATableView.swift in Sources */,
+				22C3514C20F4582100CE2442 /* DZMRMLightView.swift in Sources */,
+				22C3515420F4582100CE2442 /* DZMReadView.swift in Sources */,
 				22C3500B20EDAA7B00CE2442 /* ViewController.swift in Sources */,
-				22C350C420EF6EED00CE2442 /* DUABackViewController.swift in Sources */,
+				22C3514120F4582100CE2442 /* DZMReadController.swift in Sources */,
+				22C3515020F4582100CE2442 /* DZMReadMarkModel.swift in Sources */,
+				22C3512F20F4582100CE2442 /* DZMSegmentedControl.swift in Sources */,
+				22C3513F20F4582100CE2442 /* DZMReadConfigure.swift in Sources */,
+				22C3514A20F4582100CE2442 /* DZMRMTopView.swift in Sources */,
+				22C3514020F4582100CE2442 /* DZMReadAuxiliary.swift in Sources */,
+				22C3512D20F4582100CE2442 /* UIPageViewController+Extension.swift in Sources */,
 				22C350A220EDB3A500CE2442 /* parser.c in Sources */,
-				22C350C520EF6EED00CE2442 /* DUAtranslationController.swift in Sources */,
-				22C350CC20EF6EED00CE2442 /* DUAAttributedView.swift in Sources */,
-				22C350C920EF6EED00CE2442 /* DUATextDataParser.swift in Sources */,
-				22C350C020EF6EED00CE2442 /* DUAUtils.swift in Sources */,
-				22C350C720EF6EED00CE2442 /* DUADataParser.swift in Sources */,
+				22C3514220F4582100CE2442 /* DZMReadBGController.swift in Sources */,
+				22C3515220F4582100CE2442 /* DZMReadViewCell.swift in Sources */,
+				22C3516C20F58FED00CE2442 /* JLBooklistTableViewCell.swift in Sources */,
 				22C350A320EDB3A500CE2442 /* tokenizer.c in Sources */,
+				22C3513020F4582100CE2442 /* DZMHaloButton.swift in Sources */,
+				22C3514620F4582100CE2442 /* DZMRMBottomView.swift in Sources */,
+				22C3512C20F4582100CE2442 /* UIScrollView+Extension.swift in Sources */,
 				22C3509920EDB3A500CE2442 /* util.c in Sources */,
+				22C3515120F4582100CE2442 /* DZMReadChapterModel.swift in Sources */,
+				22C3512B20F4582100CE2442 /* String+Extension.swift in Sources */,
 				22C3509D20EDB3A500CE2442 /* char_ref.c in Sources */,
+				22C3516A20F58E0900CE2442 /* JLBooklistTableViewController.swift in Sources */,
+				22C3513220F4582100CE2442 /* DZMGlobalMethod.swift in Sources */,
 				22C3509F20EDB3A500CE2442 /* error.c in Sources */,
-				22C350C320EF6EED00CE2442 /* DUAReader.swift in Sources */,
-				22C350C620EF6EED00CE2442 /* DUAConfiguration.swift in Sources */,
-				22C350CA20EF6EED00CE2442 /* DUAChapterModel.swift in Sources */,
-				22C350C820EF6EED00CE2442 /* DUAEpubDataParser.swift in Sources */,
-				22C350CF20EF6EED00CE2442 /* DUATableViewCell.swift in Sources */,
 				22C3509C20EDB3A500CE2442 /* attribute.c in Sources */,
+				22C3512920F4582100CE2442 /* NSObject+Extension.swift in Sources */,
+				22C3512A20F4582100CE2442 /* UIView+Extension.swift in Sources */,
+				22C3513320F4582100CE2442 /* DZMGlobalProperty.swift in Sources */,
 				22C350A420EDB3A500CE2442 /* string_piece.c in Sources */,
-				22C350C220EF6EED00CE2442 /* DUAPageViewController.swift in Sources */,
+				22C3512E20F4582100CE2442 /* UITableView+Extension.swift in Sources */,
+				22C3514320F4582100CE2442 /* DZMRMColorView.swift in Sources */,
+				22C3515320F4582100CE2442 /* DZMCursorView.swift in Sources */,
+				22C3514520F4582100CE2442 /* DZMRMFuncView.swift in Sources */,
 				22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */,
+				22C3513920F4582100CE2442 /* DZMMagnifierView.m in Sources */,
+				22C3515920F4BD4300CE2442 /* JLParsingHTML.swift in Sources */,
+				22C3516820F4C93100CE2442 /* JLBookcityTableViewController.swift in Sources */,
+				22C3513720F4582100CE2442 /* ASValueTrackingSlider.m in Sources */,
+				22C3514F20F4582100CE2442 /* DZMReadChapterListModel.swift in Sources */,
+				22C3513C20F4582100CE2442 /* DZMReadOperation.swift in Sources */,
+				22C3514D20F4582100CE2442 /* DZMReadRecordModel.swift in Sources */,
+				22C3513420F4582100CE2442 /* DZMCoverController.m in Sources */,
 				22C3509B20EDB3A500CE2442 /* vector.c in Sources */,
-				22C350CB20EF6EED00CE2442 /* DUAPageModel.swift in Sources */,
-				22C350CE20EF6EED00CE2442 /* DUAConVexLensView.swift in Sources */,
+				22C3514720F4582100CE2442 /* DZMRMStatusView.swift in Sources */,
 				22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */,
+				22C3514E20F4582100CE2442 /* DZMReadModel.swift in Sources */,
 				22C3509E20EDB3A500CE2442 /* utf8.c in Sources */,
+				22C3513120F4582100CE2442 /* DZMUserDefaults.swift in Sources */,
 				22C3509820EDB3A500CE2442 /* string_buffer.c in Sources */,
+				22C3513820F4582100CE2442 /* UIView+YGPulseView.m in Sources */,
+				22C3513E20F4582100CE2442 /* DZMReadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,7 +1003,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JLReader/Classes/DUAReader/framework",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(SRCROOT)/JLReader/Classes/SwiftLibXML2",
+				);
 				INFOPLIST_FILE = JLReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -750,7 +1033,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JLReader/Classes/DUAReader/framework",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(SRCROOT)/JLReader/Classes/SwiftLibXML2",
+				);
 				INFOPLIST_FILE = JLReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

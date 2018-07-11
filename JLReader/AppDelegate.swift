@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let bookcaseTable = JLBookcaseTableViewController()
+        bookcaseTable.tabBarItem.title = "书架"
+
+        let bookcityTable = JLBookcityTableViewController()
+        bookcityTable.tabBarItem.title = "书城"
+        
+        let tabBar = JLBaseTabBarController()
+        tabBar.viewControllers = [bookcaseTable,bookcityTable]
+        
+        let navigation = UINavigationController(rootViewController: tabBar)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigation
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
