@@ -14,7 +14,7 @@ class JLBooklistTableViewCell: UITableViewCell {
     var bookNameLabel: UILabel!
     var bookStateLabel: UILabel!
     var bookIntroductionLabel: UILabel!
-    var bookAuthorLabel: UILabel!
+    var bookAuthorLabel: JLLabel!
     
     func reloadData(dic: [String: Any]) -> Void {
         
@@ -41,9 +41,10 @@ class JLBooklistTableViewCell: UITableViewCell {
         bookIntroductionLabel.numberOfLines = 0
         self.addSubview(bookIntroductionLabel)
         
-        bookAuthorLabel = UILabel(frame: CGRect(x: 60, y: 68, width: screenWidth-60-10, height: 10))
+        bookAuthorLabel = JLLabel(frame: CGRect(x: 60, y: 68, width: screenWidth-60-10, height: 10))
         bookAuthorLabel.textColor = .darkGray
         bookAuthorLabel.font = UIFont.systemFont(ofSize: 13)
+        bookAuthorLabel.highlightedTextColor = .red
         self.addSubview(bookAuthorLabel)
     }
     

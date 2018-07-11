@@ -10,7 +10,7 @@ import UIKit
 import MJRefresh
 import Kingfisher
 
-class JLBooklistTableViewController: JLBaseTableViewController {
+class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate {
 
     var controllerTitle: String!
     var urlString: String!
@@ -78,11 +78,19 @@ class JLBooklistTableViewController: JLBaseTableViewController {
         cell.bookStateLabel.text = bookState
         cell.bookIntroductionLabel.text = bookIntroduction
         cell.bookAuthorLabel.text = bookAuthor.components(separatedBy: ":")[1]
+        cell.bookAuthorLabel.delegate = self
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: -
+    func didClickLabel(label: JLLabel) {
+        let cell = label.superview as! JLBooklistTableViewCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        let dic: [String: String] = rowDatas[indexPath!.row]
     }
     
     /*

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: DZMViewController {
+class ViewController: JLViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,8 @@ class ViewController: DZMViewController {
         if !(url.path.hasSuffix(".txt")) && !(url.path.hasSuffix(".TXT")) {
             return
         }
-        DZMReadParser.ParserLocalURL(url: url) {[weak self] (readModel) in
-            let readController = DZMReadController()
+        JLReadParser.ParserLocalURL(url: url) {[weak self] (readModel) in
+            let readController = JLReadController()
             readController.readModel = readModel
             self?.navigationController?.pushViewController(readController, animated: true)
         }
