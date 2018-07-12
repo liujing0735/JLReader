@@ -135,9 +135,9 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
     func readMenuSliderEndScroll(readMenu: JLReadMenu, slider: ASValueTrackingSlider) {
         
         if readModel != nil && readModel.readRecordModel.isRecord { // 有阅读记录
-   
+            
             let toPage = NSInteger(slider.value)
-     
+            
             if (readModel.readRecordModel.page.intValue + 1) != toPage { // 不是同一页
                 
                 let _ = readOperation.GoToChapter(chapterID: readModel.readRecordModel.readChapterModel!.id, toPage: toPage - 1)
@@ -149,7 +149,7 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
     func readMenuClickPreviousChapter(readMenu: JLReadMenu) {
         
         if readModel != nil && readModel.readRecordModel.isRecord { // 有阅读记录
-        
+            
             let _ = readOperation.GoToChapter(chapterID: "\(readModel.readRecordModel.readChapterModel!.id.integerValue() - 1)")
         }
     }

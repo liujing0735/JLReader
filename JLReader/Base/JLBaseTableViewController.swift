@@ -58,7 +58,7 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
             let left = self.view.safeAreaInsets.left
             let right = self.view.safeAreaInsets.right
             
-            if isIPhoneX() {
+            if isIPhoneX {
                 self.tableView.frame = CGRect(x: left, y: 44 + 44 + top, width: screenWidth - left - right, height: screenHeight - (44 + 44 + top) - bottom)
             }else {
                 self.tableView.frame = CGRect(x: left, y: 20 + 44 + top, width: screenWidth - left - right, height: screenHeight - (20 + 44 + top) - bottom)

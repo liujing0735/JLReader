@@ -6,8 +6,8 @@
 //  Copyright © 2018年 JasonLiu. All rights reserved.
 //
 
-#ifndef JLeBookRead_Bridging_Pch_h
-#define JLeBookRead_Bridging_Pch_h
+#ifndef JLBookRead_Bridging_Pch_h
+#define JLBookRead_Bridging_Pch_h
 
 /// 导航栏扩展
 #import "UINavigationController+FDFullscreenPopGesture.h"
@@ -27,4 +27,4 @@
 // 放大镜
 #import "JLMagnifierView.h"
 
-#endif /* JLeBookRead_Bridging_Pch_h */
+#endif /* JLBookRead_Bridging_Pch_h */

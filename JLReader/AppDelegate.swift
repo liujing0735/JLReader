@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let bookcaseTable = JLBookcaseTableViewController()
         bookcaseTable.tabBarItem.title = "书架"
+        bookcaseTable.tabBarItem.image = UIImage(named: "item_book_case")
 
         let bookcityTable = JLBookcityTableViewController()
         bookcityTable.tabBarItem.title = "书城"
+        bookcityTable.tabBarItem.image = UIImage(named: "item_book_city")
         
         let tabBar = JLBaseTabBarController()
         tabBar.viewControllers = [bookcaseTable,bookcityTable]

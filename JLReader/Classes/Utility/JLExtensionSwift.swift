@@ -8,12 +8,14 @@
 
 import UIKit
 
-func isIPhoneX() -> Bool {
-    if screenWidth == 375 && screenHeight == 812 {
-        return true
-    }
-    return false
-}
+// 设备屏幕宽
+let screenWidth: CGFloat = UIScreen.main.bounds.size.width
+
+// 设备屏幕高
+let screenHeight: CGFloat = UIScreen.main.bounds.size.height
+
+// iPhone X
+let isIPhoneX: Bool = (screenWidth == 375 && screenHeight == 812)
 
 func rgb(r: Float, g: Float, b: Float) -> UIColor {
     return rgba(r: r, g: g, b: b, a: 1.0)
@@ -30,20 +32,6 @@ func rgba(r: Float, g: Float, b: Float, a: Float) -> UIColor {
 
 func log(_ items: Any..., separator: String = " ", terminator: String = "\n", line: Int = #line, file: String = #file, functoin: String = #function) {
     print("\n在源文件\(String(file.components(separatedBy: "/").last!)) 第\(line)行 \(functoin)函数中: \(items)", separator, terminator)
-}
-
-/// 设备屏幕宽
-var screenWidth: CGFloat {
-    get {
-        return UIScreen.main.bounds.size.width
-    }
-}
-
-/// 设备屏幕高
-var screenHeight: CGFloat {
-    get {
-        return UIScreen.main.bounds.size.height
-    }
 }
 
 /// 时间戳

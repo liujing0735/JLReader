@@ -164,7 +164,7 @@ func GetFileName(_ url:URL) ->String {
 // MARK: -- 阅读页面获取文件方法
 
 /// 主文件夹名称
-private let ReadFolderName:String = "JLeBookRead"
+private let ReadFolderName:String = "JLBookRead"
 
 /// 归档阅读文件文件
 func ReadKeyedArchiver(folderName:String,fileName:String,object:AnyObject) {

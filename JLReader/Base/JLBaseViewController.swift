@@ -44,7 +44,7 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
         get {
             if baseNavigationBar != nil {
                 if #available(iOS 11.0, *) {
-                    if isIPhoneX() {
+                    if isIPhoneX {
                         return 44 + 44
                     }
                 }
@@ -60,7 +60,7 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
             let left = self.view.safeAreaInsets.left
             let right = self.view.safeAreaInsets.right
             
-            if isIPhoneX() {
+            if isIPhoneX {
                 self.statusBarView.frame = CGRect(x: left, y: 0, width: screenWidth - left - right, height: 44 + top)
                 self.baseNavigationBar.frame = CGRect(x: left, y: 44 + top, width: screenWidth - left - right, height: 44)
             }else {

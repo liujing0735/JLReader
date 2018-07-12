@@ -150,7 +150,7 @@
 		22C3509620EDB3A500CE2442 /* OCGumbo+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCGumbo+Query.m"; sourceTree = "<group>"; };
 		22C3509720EDB3A500CE2442 /* OCGumbo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGumbo.m; sourceTree = "<group>"; };
 		22C350DF20F08CB800CE2442 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		22C350E720F4582100CE2442 /* JLeBookRead-Bridging-Pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLeBookRead-Bridging-Pch.h"; sourceTree = "<group>"; };
+		22C350E720F4582100CE2442 /* JLBookRead-Bridging-Pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLBookRead-Bridging-Pch.h"; sourceTree = "<group>"; };
 		22C350E920F4582100CE2442 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		22C350EA20F4582100CE2442 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		22C350EB20F4582100CE2442 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -357,7 +357,7 @@
 		22C350E620F4582100CE2442 /* other */ = {
 			isa = PBXGroup;
 			children = (
-				22C350E720F4582100CE2442 /* JLeBookRead-Bridging-Pch.h */,
+				22C350E720F4582100CE2442 /* JLBookRead-Bridging-Pch.h */,
 				22C350E820F4582100CE2442 /* extension */,
 				22C350EF20F4582100CE2442 /* custom */,
 				22C350F320F4582100CE2442 /* global */,
