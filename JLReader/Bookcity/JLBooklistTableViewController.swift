@@ -91,6 +91,7 @@ class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate 
         let cell = label.superview as! JLBooklistTableViewCell
         let indexPath = self.tableView.indexPath(for: cell)
         let dic: [String: String] = rowDatas[indexPath!.row]
+        print(dic)
     }
     
     /*

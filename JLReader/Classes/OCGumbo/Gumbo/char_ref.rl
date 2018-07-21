@@ -88,13 +88,13 @@ static const CharReplacement kCharReplacements[] = {
 
 static int parse_digit(int c, bool allow_hex) {
   if (c >= '0' && c <= '9') {
-    return c - '0';
+    return (int)(c - '0');
   }
   if (allow_hex && c >= 'a' && c <= 'f') {
-    return c - 'a' + 10;
+    return (int)(c - 'a' + 10);
   }
   if (allow_hex && c >= 'A' && c <= 'F') {
-    return c - 'A' + 10;
+    return (int)(c - 'A' + 10);
   }
   return -1;
 }
@@ -136,7 +136,7 @@ static void add_named_reference_error(
 static int maybe_replace_codepoint(int codepoint) {
   for (int i = 0; kCharReplacements[i].from_char != -1; ++i) {
     if (kCharReplacements[i].from_char == codepoint) {
-      return kCharReplacements[i].to_char;
+      return (int)kCharReplacements[i].to_char;
     }
   }
   return -1;
@@ -2528,7 +2528,7 @@ bool consume_char_ref(
     OneOrTwoCodepoints* output) {
   utf8iterator_mark(input);
   utf8iterator_next(input);
-  int c = utf8iterator_current(input);
+  int c = (int)utf8iterator_current(input);
   output->first = kGumboNoChar;
   output->second = kGumboNoChar;
   if (c == additional_allowed_char) {

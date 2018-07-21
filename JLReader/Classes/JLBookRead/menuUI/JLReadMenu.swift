@@ -173,7 +173,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         
         // 初始化LightView
         initLightView()
-    
+        
         // 初始化NovelsSettingView
         initNovelsSettingView()
         
@@ -198,7 +198,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
     
     /// 初始化TapGestureRecognizer
     private func initTapGestureRecognizer() {
-    
+        
         // 单击手势
         singleTap = UITapGestureRecognizer(target: self, action: #selector(JLReadMenu.touchSingleTap))
         singleTap.numberOfTapsRequired = 1
@@ -392,10 +392,9 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
     func menuSH(isShow:Bool) {
         
         if isAnimateComplete {
-            
             UIApplication.shared.setStatusBarHidden(!isShow, with: .fade)
         }
-      
+        
         menu(isShow: isShow)
     }
     
@@ -471,7 +470,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         if topView.isHidden == !isShow {return}
         
         if isShow {topView.isHidden = false}
-       
+        
         UIView.animate(withDuration: animateDuration, animations: { [weak self] ()->Void in
             
             if isShow {
