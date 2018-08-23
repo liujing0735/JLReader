@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2232D5532103733E00BF0A36 /* char_ref.rl in Resources */ = {isa = PBXBuildFile; fileRef = 2232D5522103733E00BF0A36 /* char_ref.rl */; };
 		22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500820EDAA7B00CE2442 /* AppDelegate.swift */; };
 		22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C3500F20EDAA7E00CE2442 /* Assets.xcassets */; };
 		22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */; };
 		22C3509820EDB3A500CE2442 /* string_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507520EDB3A500CE2442 /* string_buffer.c */; };
 		22C3509920EDB3A500CE2442 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507820EDB3A500CE2442 /* util.c */; };
-		22C3509A20EDB3A500CE2442 /* char_ref.rl in Resources */ = {isa = PBXBuildFile; fileRef = 22C3507920EDB3A500CE2442 /* char_ref.rl */; };
 		22C3509B20EDB3A500CE2442 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507C20EDB3A500CE2442 /* vector.c */; };
 		22C3509C20EDB3A500CE2442 /* attribute.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507D20EDB3A500CE2442 /* attribute.c */; };
 		22C3509D20EDB3A500CE2442 /* char_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507E20EDB3A500CE2442 /* char_ref.c */; };
@@ -103,6 +103,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2232D5522103733E00BF0A36 /* char_ref.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char_ref.rl; sourceTree = "<group>"; };
 		22C3500520EDAA7B00CE2442 /* JLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C3500820EDAA7B00CE2442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22C3500F20EDAA7E00CE2442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		22C3507620EDB3A500CE2442 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
 		22C3507720EDB3A500CE2442 /* tag_enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tag_enum.h; sourceTree = "<group>"; };
 		22C3507820EDB3A500CE2442 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
-		22C3507920EDB3A500CE2442 /* char_ref.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char_ref.rl; sourceTree = "<group>"; };
 		22C3507A20EDB3A500CE2442 /* insertion_mode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertion_mode.h; sourceTree = "<group>"; };
 		22C3507B20EDB3A500CE2442 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
 		22C3507C20EDB3A500CE2442 /* vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector.c; sourceTree = "<group>"; };
@@ -303,11 +303,11 @@
 		22C3507420EDB3A500CE2442 /* Gumbo */ = {
 			isa = PBXGroup;
 			children = (
+				2232D5522103733E00BF0A36 /* char_ref.rl */,
 				22C3507520EDB3A500CE2442 /* string_buffer.c */,
 				22C3507620EDB3A500CE2442 /* error.h */,
 				22C3507720EDB3A500CE2442 /* tag_enum.h */,
 				22C3507820EDB3A500CE2442 /* util.c */,
-				22C3507920EDB3A500CE2442 /* char_ref.rl */,
 				22C3507A20EDB3A500CE2442 /* insertion_mode.h */,
 				22C3507B20EDB3A500CE2442 /* parser.h */,
 				22C3507C20EDB3A500CE2442 /* vector.c */,
@@ -690,8 +690,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C350A020EDB3A500CE2442 /* tag.in in Resources */,
+				2232D5532103733E00BF0A36 /* char_ref.rl in Resources */,
 				22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */,
-				22C3509A20EDB3A500CE2442 /* char_ref.rl in Resources */,
 				22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

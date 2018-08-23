@@ -23,7 +23,7 @@ class JLReadParser: NSObject {
      - returns: ReadModel
      */
     @objc class func ParserLocalURL(url:URL,complete:((_ readModel:JLReadModel) ->Void)?) {
-       
+        
         DispatchQueue.global().async {
             
             let readModel = JLReadParser.ParserLocalURL(url: url)
@@ -48,7 +48,7 @@ class JLReadParser: NSObject {
         let bookID = GetFileName(url)
         
         if !JLReadModel.IsExistReadModel(bookID: bookID) { // 不存在
-           
+            
             // 阅读模型
             let readModel = JLReadModel.readModel(bookID: bookID)
             
@@ -277,10 +277,10 @@ class JLReadParser: NSObject {
      - returns: 每一页的起始位置数组
      */
     @objc class func ParserPageRange(string:String, rect:CGRect, attrs:[NSAttributedStringKey:Any]?) ->[NSRange] {
-
+        
         // 记录
         var rangeArray:[NSRange] = []
-
+        
         // 拼接字符串
         let attrString = NSMutableAttributedString(string: string, attributes: attrs)
         
@@ -311,7 +311,7 @@ class JLReadParser: NSObject {
     
     /// 内容排版整理
     @objc class func ContentTypesetting(content:String) ->String {
-
+        
         // 替换单换行
         var content = content.replacingOccurrences(of: "\r", with: "")
         

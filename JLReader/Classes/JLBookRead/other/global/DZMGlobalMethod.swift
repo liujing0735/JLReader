@@ -199,7 +199,7 @@ func ReadKeyedRemoveArchiver(folderName:String,fileName:String? = nil) {
     }catch{}
 }
 
-/// 是否存在了改归档文件
+/// 是否存在了该归档文件
 func ReadKeyedIsExistArchiver(folderName:String,fileName:String? = nil) ->Bool {
     
     var path = ((NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last! as String) + "/\(ReadFolderName)/\(folderName)")
