@@ -84,6 +84,11 @@ class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let dic: [String: String] = rowDatas[indexPath.row]
+        let controller = JLBookdetailTableViewController()
+        controller.bookName = dic["book_name"]
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: -
@@ -91,6 +96,7 @@ class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate 
         let cell = label.superview as! JLBooklistTableViewCell
         let indexPath = self.tableView.indexPath(for: cell)
         let dic: [String: String] = rowDatas[indexPath!.row]
+        log(dic)
     }
     
     /*

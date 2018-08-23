@@ -88,13 +88,13 @@ static const CharReplacement kCharReplacements[] = {
 
 static int parse_digit(int c, bool allow_hex) {
   if (c >= '0' && c <= '9') {
-    return c - '0';
+    return (int)(c - '0');
   }
   if (allow_hex && c >= 'a' && c <= 'f') {
-    return c - 'a' + 10;
+    return (int)(c - 'a' + 10);
   }
   if (allow_hex && c >= 'A' && c <= 'F') {
-    return c - 'A' + 10;
+    return (int)(c - 'A' + 10);
   }
   return -1;
 }
@@ -136,7 +136,7 @@ static void add_named_reference_error(
 static int maybe_replace_codepoint(int codepoint) {
   for (int i = 0; kCharReplacements[i].from_char != -1; ++i) {
     if (kCharReplacements[i].from_char == codepoint) {
-      return kCharReplacements[i].to_char;
+      return (int)kCharReplacements[i].to_char;
     }
   }
   return -1;
@@ -146,14 +146,14 @@ static bool consume_numeric_ref(
     struct GumboInternalParser* parser, Utf8Iterator* input, int* output) {
   utf8iterator_next(input);
   bool is_hex = false;
-  int c = utf8iterator_current(input);
+  int c = (int)utf8iterator_current(input);
   if (c == 'x' || c == 'X') {
     is_hex = true;
     utf8iterator_next(input);
     c = utf8iterator_current(input);
   }
 
-  int digit = parse_digit(c, is_hex);
+  int digit = (int)parse_digit(c, is_hex);
   if (digit == -1) {
     // First digit was invalid; add a parse error and return.
     add_no_digit_error(parser, input);
@@ -178,7 +178,7 @@ static bool consume_numeric_ref(
     utf8iterator_next(input);
   }
 
-  int replacement = maybe_replace_codepoint(codepoint);
+  int replacement = (int)maybe_replace_codepoint(codepoint);
   if (replacement != -1) {
     add_codepoint_error(
         parser, input, GUMBO_ERR_NUMERIC_CHAR_REF_INVALID, codepoint);
@@ -208,7 +208,7 @@ static bool maybe_add_invalid_named_reference(
   // The iterator will always be reset in this code path, so we don't need to
   // worry about consuming characters.
   const char* start = utf8iterator_get_char_pointer(input);
-  int c = utf8iterator_current(input);
+  int c = (int)utf8iterator_current(input);
   while ((c >= 'a' && c <= 'z') ||
          (c >= 'A' && c <= 'Z') ||
          (c >= '0' && c <= '9')) {
@@ -2493,7 +2493,7 @@ static bool consume_named_ref(
   if (cs >= %%{ write first_final; }%%) {
     assert(output->first != kGumboNoChar);
     char last_char = *(te - 1);
-    int len = te - start;
+    int len = (int)(te - start);
     if (last_char == ';') {
       bool matched = utf8iterator_maybe_consume_match(input, start, len, true);
       assert(matched);
@@ -2528,7 +2528,7 @@ bool consume_char_ref(
     OneOrTwoCodepoints* output) {
   utf8iterator_mark(input);
   utf8iterator_next(input);
-  int c = utf8iterator_current(input);
+  int c = (int)utf8iterator_current(input);
   output->first = kGumboNoChar;
   output->second = kGumboNoChar;
   if (c == additional_allowed_char) {

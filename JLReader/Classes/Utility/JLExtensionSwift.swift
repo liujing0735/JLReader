@@ -17,6 +17,12 @@ let screenHeight: CGFloat = UIScreen.main.bounds.size.height
 // iPhone X
 let isIPhoneX: Bool = (screenWidth == 375 && screenHeight == 812)
 
+// 时间戳
+var timeStampInt: Int  = Int(Date().timeIntervalSince1970)
+
+// 时间戳
+let timeStampString: String = timeStampInt.toString
+
 func rgb(r: Float, g: Float, b: Float) -> UIColor {
     return rgba(r: r, g: g, b: b, a: 1.0)
 }
@@ -32,25 +38,6 @@ func rgba(r: Float, g: Float, b: Float, a: Float) -> UIColor {
 
 func log(_ items: Any..., separator: String = " ", terminator: String = "\n", line: Int = #line, file: String = #file, functoin: String = #function) {
     print("\n在源文件\(String(file.components(separatedBy: "/").last!)) 第\(line)行 \(functoin)函数中: \(items)", separator, terminator)
-}
-
-/// 时间戳
-var timeStampString: String {
-    get {
-        let now = Date()
-        let timeInterval = now.timeIntervalSince1970
-        let timeStamp = String(timeInterval)
-        return timeStamp
-    }
-}
-/// 时间戳
-var timeStampInt: Int {
-    get {
-        let now = Date()
-        let timeInterval = now.timeIntervalSince1970
-        let timeStamp = Int(timeInterval)
-        return timeStamp
-    }
 }
 
 extension Int {

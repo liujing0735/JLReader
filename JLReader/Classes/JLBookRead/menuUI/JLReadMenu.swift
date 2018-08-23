@@ -138,7 +138,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         self.delegate = delegate
         
         // 隐藏状态栏
-        UIApplication.shared.setStatusBarHidden(!menuShow, with: .fade)
+        //UIApplication.shared.setStatusBarHidden(!menuShow, with: .fade)
         
         // 允许获取电量信息
         UIDevice.current.isBatteryMonitoringEnabled = true
@@ -393,7 +393,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         
         if isAnimateComplete {
             
-            UIApplication.shared.setStatusBarHidden(!isShow, with: .fade)
+            //UIApplication.shared.setStatusBarHidden(!isShow, with: .fade)
         }
       
         menu(isShow: isShow)
