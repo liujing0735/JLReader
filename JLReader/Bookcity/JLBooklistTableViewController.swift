@@ -87,7 +87,8 @@ class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate 
         
         let dic: [String: String] = rowDatas[indexPath.row]
         let controller = JLBookdetailTableViewController()
-        controller.bookName = dic["book_name"]
+        controller.controllerTitle = dic["book_name"]
+        controller.urlString = dic["book_down"]
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

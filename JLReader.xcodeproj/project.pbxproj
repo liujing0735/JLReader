@@ -82,6 +82,7 @@
 		22C3516C20F58FED00CE2442 /* JLBooklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */; };
 		22D77B2E20F635B600EB02D7 /* JLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B2D20F635B600EB02D7 /* JLLabel.swift */; };
 		22EB6923212E86A800126494 /* JLBookdetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */; };
+		22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +211,7 @@
 		22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBooklistTableViewCell.swift; sourceTree = "<group>"; };
 		22D77B2D20F635B600EB02D7 /* JLLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLLabel.swift; sourceTree = "<group>"; };
 		22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewController.swift; sourceTree = "<group>"; };
+		22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewCell.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
 		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 				22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */,
 				22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */,
 				22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */,
+				22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */,
 			);
 			path = Bookcity;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				22C3513720F4582100CE2442 /* ASValueTrackingSlider.m in Sources */,
 				22C3514F20F4582100CE2442 /* JLReadChapterListModel.swift in Sources */,
 				22C3513C20F4582100CE2442 /* JLReadOperation.swift in Sources */,
+				22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */,
 				22C3514D20F4582100CE2442 /* JLReadRecordModel.swift in Sources */,
 				22C3513420F4582100CE2442 /* JLCoverController.m in Sources */,
 				22C3509B20EDB3A500CE2442 /* vector.c in Sources */,

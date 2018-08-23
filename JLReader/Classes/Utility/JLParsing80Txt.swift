@@ -151,6 +151,25 @@ class JLParsing80Txt: NSObject {
         return books
     }
     
+    func detail() -> [String: String] {
+        if gumboDocument == nil {
+            return [String: String]()
+        }
+        
+        var dic = [String: String]()
+        
+        let detail = gumboDocument.query("#show_container")?.find(".soft_info_r")?.first()
+        let bookImg = detail?.query("img")?.first()?.attr("src")
+        dic["book_img"] = bookImg
+        
+        let lis = detail?.query("li") as! [OCGumboNode]
+        for li in lis {
+            
+        }
+        
+        return dic
+    }
+    
     // http://www.80txt.com/txtxz/52314.html
     // http://www.80txt.com/txtxz/52314/down.html
     // http://www.80txt.com/txtml_52314.html

@@ -10,15 +10,20 @@ import UIKit
 
 class JLBookdetailTableViewController: JLBaseTableViewController {
 
-    var bookName: String!
+    var controllerTitle: String!
+    var urlString: String!
+    private var parsingHTML: JLParsingHTML!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.title = bookName
+        self.title = controllerTitle
         addLeftItem(title: "返回")
+        // Do any additional setup after loading the view.
+        parsingHTML = JLParsingHTML(website: .Web80txt, url: urlString)
         
+        self.tableViewStyle = .grouped
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.01))
         self.tableView.separatorStyle = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
