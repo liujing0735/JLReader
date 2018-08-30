@@ -86,23 +86,6 @@
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		22C3501A20EDAA7E00CE2442 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22C34FFD20EDAA7B00CE2442 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22C3500420EDAA7B00CE2442;
-			remoteInfo = JLReader;
-		};
-		22C3502520EDAA7E00CE2442 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22C34FFD20EDAA7B00CE2442 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22C3500420EDAA7B00CE2442;
-			remoteInfo = JLReader;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		2232D5522103733E00BF0A36 /* char_ref.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char_ref.rl; sourceTree = "<group>"; };
 		22C3500520EDAA7B00CE2442 /* JLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +93,6 @@
 		22C3500F20EDAA7E00CE2442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C3501220EDAA7E00CE2442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C3501420EDAA7E00CE2442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C3506E20EDB38F00CE2442 /* JLReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JLReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		22C3507520EDB3A500CE2442 /* string_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string_buffer.c; sourceTree = "<group>"; };
 		22C3507620EDB3A500CE2442 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
@@ -227,20 +208,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22C3501620EDAA7E00CE2442 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3502120EDAA7E00CE2442 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -258,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				22C3500520EDAA7B00CE2442 /* JLReader.app */,
-				22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */,
-				22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -607,42 +572,6 @@
 			productReference = 22C3500520EDAA7B00CE2442 /* JLReader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		22C3501820EDAA7E00CE2442 /* JLReaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22C3503020EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderTests" */;
-			buildPhases = (
-				22C3501520EDAA7E00CE2442 /* Sources */,
-				22C3501620EDAA7E00CE2442 /* Frameworks */,
-				22C3501720EDAA7E00CE2442 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22C3501B20EDAA7E00CE2442 /* PBXTargetDependency */,
-			);
-			name = JLReaderTests;
-			productName = JLReaderTests;
-			productReference = 22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		22C3502320EDAA7E00CE2442 /* JLReaderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22C3503320EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderUITests" */;
-			buildPhases = (
-				22C3502020EDAA7E00CE2442 /* Sources */,
-				22C3502120EDAA7E00CE2442 /* Frameworks */,
-				22C3502220EDAA7E00CE2442 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22C3502620EDAA7E00CE2442 /* PBXTargetDependency */,
-			);
-			name = JLReaderUITests;
-			productName = JLReaderUITests;
-			productReference = 22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -655,15 +584,7 @@
 				TargetAttributes = {
 					22C3500420EDAA7B00CE2442 = {
 						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 0940;
-					};
-					22C3501820EDAA7E00CE2442 = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 22C3500420EDAA7B00CE2442;
-					};
-					22C3502320EDAA7E00CE2442 = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 22C3500420EDAA7B00CE2442;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -681,8 +602,6 @@
 			projectRoot = "";
 			targets = (
 				22C3500420EDAA7B00CE2442 /* JLReader */,
-				22C3501820EDAA7E00CE2442 /* JLReaderTests */,
-				22C3502320EDAA7E00CE2442 /* JLReaderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -696,20 +615,6 @@
 				2232D5532103733E00BF0A36 /* char_ref.rl in Resources */,
 				22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */,
 				22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3501720EDAA7E00CE2442 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3502220EDAA7E00CE2442 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,34 +742,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22C3501520EDAA7E00CE2442 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3502020EDAA7E00CE2442 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		22C3501B20EDAA7E00CE2442 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22C3500420EDAA7B00CE2442 /* JLReader */;
-			targetProxy = 22C3501A20EDAA7E00CE2442 /* PBXContainerItemProxy */;
-		};
-		22C3502620EDAA7E00CE2442 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22C3500420EDAA7B00CE2442 /* JLReader */;
-			targetProxy = 22C3502520EDAA7E00CE2442 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */ = {
@@ -1014,7 +892,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1040,86 +918,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		22C3503120EDAA7E00CE2442 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLReader.app/JLReader";
-			};
-			name = Debug;
-		};
-		22C3503220EDAA7E00CE2442 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLReader.app/JLReader";
-			};
-			name = Release;
-		};
-		22C3503420EDAA7E00CE2442 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JLReader;
-			};
-			name = Debug;
-		};
-		22C3503520EDAA7E00CE2442 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JLReader;
 			};
 			name = Release;
 		};
@@ -1140,24 +940,6 @@
 			buildConfigurations = (
 				22C3502E20EDAA7E00CE2442 /* Debug */,
 				22C3502F20EDAA7E00CE2442 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		22C3503020EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22C3503120EDAA7E00CE2442 /* Debug */,
-				22C3503220EDAA7E00CE2442 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		22C3503320EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22C3503420EDAA7E00CE2442 /* Debug */,
-				22C3503520EDAA7E00CE2442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

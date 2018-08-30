@@ -159,7 +159,7 @@ class JLSegmentedControl: UIView {
             
             if !normalImages.isEmpty && !normalTitles.isEmpty {
                 
-                button.titleEdgeInsets = UIEdgeInsetsMake(0, buttonCenterSpaceW, 0, 0)
+                button.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: buttonCenterSpaceW, bottom: 0, right: 0)
             }
             
             if !normalTitles.isEmpty {

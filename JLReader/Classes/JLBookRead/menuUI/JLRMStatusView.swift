@@ -81,7 +81,7 @@ class JLRMStatusView: JLRMBaseView {
             
             timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(didChangeTime), userInfo: nil, repeats: true)
             
-            RunLoop.current.add(timer!, forMode: RunLoopMode.commonModes)
+            RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
         }
     }
     

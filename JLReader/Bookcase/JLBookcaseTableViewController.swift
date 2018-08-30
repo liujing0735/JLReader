@@ -9,6 +9,8 @@
 import UIKit
 
 class JLBookcaseTableViewController: JLBaseTableViewController {
+    
+    private var parsingHTML: JLParsingHTML!
 
     override func viewDidLoad() {
         super.viewDidLoad()

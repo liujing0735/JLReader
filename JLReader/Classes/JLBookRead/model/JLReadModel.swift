@@ -42,7 +42,7 @@ class JLReadModel: NSObject,NSCoding {
         
         if JLReadModel.IsExistReadModel(bookID: bookID) { // 存在
             
-            readModel = ReadKeyedUnarchiver(folderName: bookID, fileName: bookID) as! JLReadModel
+            readModel = ReadKeyedUnarchiver(folderName: bookID, fileName: bookID) as? JLReadModel
             
         }else{ // 不存在
             
@@ -204,7 +204,7 @@ class JLReadModel: NSObject,NSCoding {
         
         super.init()
         
-        bookID = aDecoder.decodeObject(forKey: "bookID") as! String
+        bookID = aDecoder.decodeObject(forKey: "bookID") as? String
         
         isLocalBook = aDecoder.decodeObject(forKey: "isLocalBook") as! NSNumber
         

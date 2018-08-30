@@ -108,23 +108,23 @@ class JLParsing80Txt: NSObject {
             print(bookDown!)
             dic["book_down"] = bookDown!
             
-            let bookState = book.query(".list_box")?.find(".title_box")?.find(".book_rg")?.find(".strong")?.first()?.text()
-            print(bookState!)
-            dic["book_state"] = bookState!
+            let updatedState = book.query(".list_box")?.find(".title_box")?.find(".book_rg")?.find(".strong")?.first()?.text()
+            print(updatedState!)
+            dic["book_updated_state"] = updatedState!
             
-            let bookLatestChapter = book.query(".list_box")?.find(".title_box")?.find(".book_rg")?.find("b")?.first()?.text()
-            print(bookLatestChapter!)
-            dic["book_latest_chapter"] = bookLatestChapter!
+            let latestChapter = book.query(".list_box")?.find(".title_box")?.find(".book_rg")?.find("b")?.first()?.text()
+            print(latestChapter!)
+            dic["book_latest_chapter"] = latestChapter!
             
-            let bookUpdatedDate = book.query(".list_box")?.find(".title_box")?.find(".book_rg")?.find(".newDate")?.first()?.text()
-            print(bookUpdatedDate!)
-            dic["book_updated_date"] = bookUpdatedDate!
+            let updatedDate = book.query(".list_box")?.find(".title_box")?.find(".book_rg")?.find(".newDate")?.first()?.text()
+            print(updatedDate!)
+            dic["book_updated_date"] = updatedDate!
             
-            var bookIntroduction: String = (book.query(".list_box")?.find(".book_jj")?.first()?.text())!
-            bookIntroduction = bookIntroduction.trimmingCharacters(in: .whitespacesAndNewlines)
-            bookIntroduction = bookIntroduction.replacing(pattern: " ", template: "")
-            print(bookIntroduction)
-            dic["book_introduction"] = bookIntroduction
+            var introduction: String = (book.query(".list_box")?.find(".book_jj")?.first()?.text())!
+            introduction = introduction.trimmingCharacters(in: .whitespacesAndNewlines)
+            introduction = introduction.replacing(pattern: " ", template: "")
+            print(introduction)
+            dic["book_introduction"] = introduction
             
             var bookCont: String = (book.query(".list_box")?.find(".book_cont")?.find(".parag_2013")?.first()?.text())!
             bookCont = bookCont.replacing(pattern: "\n", template: " ")
@@ -136,9 +136,9 @@ class JLParsing80Txt: NSObject {
             }
             let components2 = bookCont.components(separatedBy: "\n")
             if components2.count > 4 {
-                dic["book_today_downloads"] = components1[1]
-                dic["book_month_downloads"] = components1[2]
-                dic["book_total_downloads"] = components1[3]
+                dic["book_today_down"] = components1[1]
+                dic["book_month_down"] = components1[2]
+                dic["book_total_down"] = components1[3]
             }
             
             let bookImg = book.query(".book_pic")?.find("img")?.first()?.attr("src")
@@ -158,15 +158,80 @@ class JLParsing80Txt: NSObject {
         
         var dic = [String: String]()
         
+        let bookName = gumboDocument.query("#show_container")?.find("#soft_info_para")?.find("h1")?.first()?.text()
+        dic["book_name"] = bookName!.replacing(pattern: "TXT全集下载", template: "")
+        
         let detail = gumboDocument.query("#show_container")?.find(".soft_info_r")?.first()
         let bookImg = detail?.query("img")?.first()?.attr("src")
         dic["book_img"] = bookImg
         
         let lis = detail?.query("li") as! [OCGumboNode]
         for li in lis {
-            
+            let text: String = li.text() ?? ""
+            let author = "小说作者："
+            if text.contains(author) {
+                let range = text.range(of: author)
+                dic["book_author"] = String(text.suffix(from: (range?.upperBound)!))
+                dic["book_author_url"] = li.query("a")?.first()?.attr("href")
+            }
+            let size = "小说大小："
+            if text.contains(size) {
+                let range = text.range(of: size)
+                dic["book_size"] = String(text.suffix(from: (range?.upperBound)!))
+            }
+            let todayDown = "今日点击："
+            if text.contains(todayDown) {
+                let range = text.range(of: todayDown)
+                dic["book_today_down"] = String(text.suffix(from: (range?.upperBound)!))
+            }
+            let weekDown = "本周点击："
+            if text.contains(weekDown) {
+                let range = text.range(of: weekDown)
+                dic["book_week_down"] = String(text.suffix(from: (range?.upperBound)!))
+            }
+            let monthDown = "本月点击："
+            if text.contains(monthDown) {
+                let range = text.range(of: monthDown)
+                dic["book_month_downloads"] = String(text.suffix(from: (range?.upperBound)!))
+            }
+            let totalDown = "总点击数："
+            if text.contains(totalDown) {
+                let range = text.range(of: totalDown)
+                dic["book_total_down"] = String(text.suffix(from: (range?.upperBound)!))
+            }
+            let updatedState = "写作进度："
+            if text.contains(updatedState) {
+                let range = text.range(of: updatedState)
+                dic["book_updated_state"] = String(text.suffix(from: (range?.upperBound)!))
+            }
+            let updatedDate = "更新时间："
+            if text.contains(updatedDate) {
+                let range = text.range(of: updatedDate)
+                dic["book_updated_date"] = String(text.suffix(from: (range?.upperBound)!))
+            }
+            let recommend = "推荐信息："
+            if text.contains(recommend) {
+                let range = text.range(of: recommend)
+                dic["book_recommend"] = String(text.suffix(from: (range?.upperBound)!))
+                dic["book_recommend_url"] = li.query("a")?.first()?.attr("href")
+            }
+            let latestChapter = "最新章节："
+            if text.contains(latestChapter) {
+                let range = text.range(of: latestChapter)
+                dic["book_latest_chapter"] = String(text.suffix(from: (range?.upperBound)!))
+            }
         }
         
+        let intros = gumboDocument.query("#mainSoftIntro")?.find("p") as! [OCGumboNode]
+        for intro in intros {
+            let text = intro.text()
+            let introductions = text!.components(separatedBy: "\n")
+            if introductions.count >= 3 {
+                dic["book_introduction"] = introductions[1].replacing(pattern: " ", template: "")
+            }else {
+                dic["book_introduction"] = text?.replacing(pattern: " ", template: "")
+            }
+        }
         return dic
     }
     
@@ -229,7 +294,7 @@ class JLParsing80Txt: NSObject {
             }
             if page.attr("class") == "next" {
                 nextPageUrl = page.attr("href")
-                print("下一页：\(nextPageUrl)")
+                print("下一页：\(String(describing: nextPageUrl))")
             }
             if page.attr("class") == "last" {
                 lastPageUrl = page.attr("href")

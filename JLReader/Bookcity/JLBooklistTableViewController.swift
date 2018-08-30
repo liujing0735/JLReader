@@ -69,7 +69,7 @@ class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate 
         let dic: [String: String] = rowDatas[indexPath.row]
         let bookImage: String = dic["book_img"]!
         let bookName: String = dic["book_name"]!
-        let bookState: String = dic["book_state"]!
+        let bookState: String = dic["book_updated_state"]!
         let bookIntroduction: String = dic["book_introduction"]!
         let bookAuthor: String = dic["book_author"]!
         

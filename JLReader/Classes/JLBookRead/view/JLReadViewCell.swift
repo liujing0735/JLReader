@@ -33,13 +33,13 @@ class JLReadViewCell: UITableViewCell {
         
         if (cell == nil) {
             
-            cell = JLReadViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: ID)
+            cell = JLReadViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: ID)
         }
         
         return cell!
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         

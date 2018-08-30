@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import MJRefresh
+import Kingfisher
 
 class JLBookdetailTableViewController: JLBaseTableViewController {
 
     var controllerTitle: String!
     var urlString: String!
     private var parsingHTML: JLParsingHTML!
+    private var detailDic: [String: String]!
+    
+    private var headerView = UIImageView()
+    private var effectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    
+    func reloadData() {
+        let dic = detailDic
+        if dic != nil {
+            let bookImage: String = (dic?["book_img"])!
+            let bookName: String = (dic?["book_name"])!
+            let bookState: String = (dic?["book_updated_state"])!
+            let bookIntroduction: String = (dic?["book_introduction"])!
+            let bookAuthor: String = (dic?["book_author"])!
+            
+            headerView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +40,40 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         addLeftItem(title: "返回")
         // Do any additional setup after loading the view.
         parsingHTML = JLParsingHTML(website: .Web80txt, url: urlString)
-        
-        self.tableViewStyle = .grouped
-        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.01))
+        detailDic = parsingHTML.detail()
+
+        let frame = CGRect(x: 0, y: 0, width: screenWidth, height: 200)
+        effectView.frame = frame
+        headerView.frame = frame
+        headerView.contentMode = .scaleAspectFill
+        headerView.clipsToBounds = true
+        headerView.addSubview(effectView)
+        self.tableView.tableHeaderView = headerView
         self.tableView.separatorStyle = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let width = screenWidth
+        let yOffset = scrollView.contentOffset.y
+        if yOffset < 0 {
+            let offset = 200 + abs(yOffset)
+            let scale = offset / 200
+            effectView.frame = CGRect(x: 0, y: 0, width: width * scale, height: offset)
+            headerView.frame = CGRect(x: 0, y: yOffset, width: width * scale, height: offset)
+        }
     }
     
     // MARK: - UITableViewDelegate,UITableViewDataSource

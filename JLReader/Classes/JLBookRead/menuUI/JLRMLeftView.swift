@@ -74,7 +74,7 @@ class JLRMLeftView: JLRMBaseView,JLSegmentedControlDelegate,UITableViewDelegate,
                             // 更新UI
                             DispatchQueue.main.async { [weak self] ()->Void in
                                 
-                                self?.tableView.scrollToRow(at: IndexPath(row: i, section: 0), at: UITableViewScrollPosition.middle, animated: false)
+                                self?.tableView.scrollToRow(at: IndexPath(row: i, section: 0), at: UITableView.ScrollPosition.middle, animated: false)
                             }
 
                             return
@@ -206,10 +206,10 @@ class JLRMLeftView: JLRMBaseView,JLSegmentedControlDelegate,UITableViewDelegate,
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         let _ = readMenu.vc.readModel.removeMark(readMarkModel: nil, index: indexPath.row)
         
-        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
     }
 }

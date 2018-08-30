@@ -39,7 +39,7 @@ class JLReadRecordModel: NSObject,NSCoding {
         
         if JLReadRecordModel.IsExistReadRecordModel(bookID: bookID) { // 存在
             
-            readModel = ReadKeyedUnarchiver(folderName: bookID, fileName: (bookID + "ReadRecord")) as! JLReadRecordModel
+            readModel = ReadKeyedUnarchiver(folderName: bookID, fileName: (bookID + "ReadRecord")) as? JLReadRecordModel
             
             if isUpdateFont {readModel.updateFont(isSave: isSave)}
             
@@ -127,7 +127,7 @@ class JLReadRecordModel: NSObject,NSCoding {
         
         super.init()
         
-        bookID = aDecoder.decodeObject(forKey: "bookID") as! String
+        bookID = aDecoder.decodeObject(forKey: "bookID") as? String
         
         readChapterModel = aDecoder.decodeObject(forKey: "readChapterModel") as? JLReadChapterModel
         

@@ -86,7 +86,7 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
         self.baseNavigationBar.tintColor = UIColor.black
         self.baseNavigationBar.barTintColor = rgb(r: 249, g: 249, b: 249)
         self.baseNavigationBar.isTranslucent = false
-        self.baseNavigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.black,NSAttributedStringKey.font:UIFont.systemFont(ofSize: 21)]
+        self.baseNavigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 21)]
         
         self.baseNavigationItem = UINavigationItem()
         self.baseNavigationBar.pushItem(self.baseNavigationItem, animated: true)
@@ -107,7 +107,7 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
     
     /// 返回父视图控制器
     func backParentViewController() {
-        let controllers: [UIViewController]! = self.navigationController?.childViewControllers
+        let controllers: [UIViewController]! = self.navigationController?.children
         if controllers.count > 0 {
             self.navigationController?.popViewController(animated: true)
         }else {
@@ -119,7 +119,7 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
     
     /// 返回根视图控制器
     func backRootViewController() {
-        let controllers: [UIViewController]! = self.navigationController?.childViewControllers
+        let controllers: [UIViewController]! = self.navigationController?.children
         if controllers.count > 0 {
             self.navigationController?.popToRootViewController(animated: true)
         }else {
