@@ -45,7 +45,7 @@ class JLRMLightView: JLRMBaseView {
         slider.maximumValue = 1.0
         slider.tintColor = JLColor_2
         slider.setThumbImage(UIImage(named: "RM_3")!, for: .normal)
-        slider.addTarget(self, action: #selector(JLRMLightView.sliderChanged(_:)), for: UIControlEvents.valueChanged)
+        slider.addTarget(self, action: #selector(JLRMLightView.sliderChanged(_:)), for: UIControl.Event.valueChanged)
         slider.value = Float(UIScreen.main.brightness)
         addSubview(slider)
     }

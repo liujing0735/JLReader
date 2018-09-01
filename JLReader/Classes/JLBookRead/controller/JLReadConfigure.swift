@@ -104,7 +104,7 @@ class JLReadConfigure: NSObject {
     }
     
     /// 获得文字属性字典 (isPaging: 为YES的时候只需要返回跟分页相关的属性即可 注意: 包含 UIColor , 小数点相关的...不可返回,因为无法进行比较)
-    @objc func readAttribute(isPaging:Bool = false) ->[NSAttributedStringKey:Any] {
+    @objc func readAttribute(isPaging:Bool = false) ->[NSAttributedString.Key:Any] {
         
         // 段落配置
         let paragraphStyle = NSMutableParagraphStyle()
@@ -125,11 +125,11 @@ class JLReadConfigure: NSObject {
         if isPaging {
             
             // 只需要传回跟分页有关的属性即可
-            return [NSAttributedStringKey.font:readFont(), NSAttributedStringKey.paragraphStyle:paragraphStyle]
+            return [NSAttributedString.Key.font:readFont(), NSAttributedString.Key.paragraphStyle:paragraphStyle]
             
         }else{
             
-            return [NSAttributedStringKey.foregroundColor:textColor, NSAttributedStringKey.font:readFont(), NSAttributedStringKey.paragraphStyle:paragraphStyle]
+            return [NSAttributedString.Key.foregroundColor:textColor, NSAttributedString.Key.font:readFont(), NSAttributedString.Key.paragraphStyle:paragraphStyle]
         }
     }
     

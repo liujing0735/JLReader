@@ -41,17 +41,17 @@ class JLReadMarkModel: NSObject,NSCoding {
         
         super.init()
         
-        bookID = aDecoder.decodeObject(forKey: "bookID") as! String
+        bookID = aDecoder.decodeObject(forKey: "bookID") as? String
         
-        id = aDecoder.decodeObject(forKey: "id") as! String
+        id = aDecoder.decodeObject(forKey: "id") as? String
         
-        name = aDecoder.decodeObject(forKey: "name") as! String
+        name = aDecoder.decodeObject(forKey: "name") as? String
         
-        content = aDecoder.decodeObject(forKey: "content") as! String
+        content = aDecoder.decodeObject(forKey: "content") as? String
         
-        time = aDecoder.decodeObject(forKey: "time") as! Date
+        time = aDecoder.decodeObject(forKey: "time") as? Date
         
-        location = aDecoder.decodeObject(forKey: "location") as!NSNumber
+        location = aDecoder.decodeObject(forKey: "location") as? NSNumber
     }
     
     func encode(with aCoder: NSCoder) {

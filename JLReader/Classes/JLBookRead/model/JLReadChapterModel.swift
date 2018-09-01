@@ -41,7 +41,7 @@ class JLReadChapterModel: NSObject,NSCoding {
     // MARK: -- 更新字体
     
     /// 记录该章使用的字体属性
-    private var readAttribute:[NSAttributedStringKey:Any] = [:]
+    private var readAttribute:[NSAttributedString.Key:Any] = [:]
     
     /// 更新字体
     func updateFont(isSave:Bool = false) {
@@ -74,7 +74,7 @@ class JLReadChapterModel: NSObject,NSCoding {
         
         if JLReadChapterModel.IsExistReadChapterModel(bookID: bookID, chapterID: chapterID) { // 存在
             
-            readChapterModel = ReadKeyedUnarchiver(folderName: bookID, fileName: chapterID) as! JLReadChapterModel
+            readChapterModel = ReadKeyedUnarchiver(folderName: bookID, fileName: chapterID) as? JLReadChapterModel
             
             if isUpdateFont {readChapterModel.updateFont(isSave: true)}
             
@@ -148,25 +148,25 @@ class JLReadChapterModel: NSObject,NSCoding {
         
         super.init()
         
-        bookID = aDecoder.decodeObject(forKey: "bookID") as! String
+        bookID = aDecoder.decodeObject(forKey: "bookID") as? String
         
-        id = aDecoder.decodeObject(forKey: "id") as! String
+        id = aDecoder.decodeObject(forKey: "id") as? String
         
         lastChapterId = aDecoder.decodeObject(forKey: "lastChapterId") as? String
         
         nextChapterId = aDecoder.decodeObject(forKey: "nextChapterId") as? String
         
-        name = aDecoder.decodeObject(forKey: "name") as! String
+        name = aDecoder.decodeObject(forKey: "name") as? String
         
-        priority = aDecoder.decodeObject(forKey: "priority") as! NSNumber
+        priority = aDecoder.decodeObject(forKey: "priority") as? NSNumber
         
-        content = aDecoder.decodeObject(forKey: "content") as! String
+        content = aDecoder.decodeObject(forKey: "content") as? String
         
         pageCount = aDecoder.decodeObject(forKey: "pageCount") as! NSNumber
         
         rangeArray = aDecoder.decodeObject(forKey: "rangeArray") as! [NSRange]
         
-        readAttribute = aDecoder.decodeObject(forKey: "readAttribute") as! [NSAttributedStringKey:Any]
+        readAttribute = aDecoder.decodeObject(forKey: "readAttribute") as! [NSAttributedString.Key:Any]
     }
     
     func encode(with aCoder: NSCoder) {

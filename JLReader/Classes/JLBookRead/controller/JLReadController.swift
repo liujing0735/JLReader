@@ -220,7 +220,7 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
             
             pageViewController?.view.removeFromSuperview()
             
-            pageViewController?.removeFromParentViewController()
+            pageViewController?.removeFromParent()
             
             pageViewController = nil
         }
@@ -229,7 +229,7 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
             
             coverController?.view.removeFromSuperview()
             
-            coverController?.removeFromParentViewController()
+            coverController?.removeFromParent()
             
             coverController = nil
         }
@@ -237,9 +237,9 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
         // 创建
         if JLReadConfigure.shared().effectType == JLRMEffectType.simulation.rawValue { // 仿真
             
-            let options = [UIPageViewControllerOptionSpineLocationKey:NSNumber(value: UIPageViewControllerSpineLocation.min.rawValue as Int)]
+            let options = [convertFromUIPageViewControllerOptionsKey(UIPageViewController.OptionsKey.spineLocation):NSNumber(value: UIPageViewController.SpineLocation.min.rawValue as Int)]
             
-            pageViewController = UIPageViewController(transitionStyle:UIPageViewControllerTransitionStyle.pageCurl,navigationOrientation:UIPageViewControllerNavigationOrientation.horizontal,options: options)
+            pageViewController = UIPageViewController(transitionStyle:UIPageViewController.TransitionStyle.pageCurl,navigationOrientation:UIPageViewController.NavigationOrientation.horizontal,options: convertToOptionalUIPageViewControllerOptionsKeyDictionary(options))
             
             pageViewController!.delegate = self
             
@@ -250,9 +250,9 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
             
             view.insertSubview(pageViewController!.view, at: 0)
             
-            addChildViewController(pageViewController!)
+            addChild(pageViewController!)
             
-            pageViewController!.setViewControllers((displayController != nil ? [displayController!] : nil), direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+            pageViewController!.setViewControllers((displayController != nil ? [displayController!] : nil), direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
             
         }else{ // 无效果 覆盖 上下
             
@@ -262,7 +262,7 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
             
             view.insertSubview(coverController!.view, at: 0)
             
-            addChildViewController(coverController!)
+            addChild(coverController!)
             
             coverController!.setController(displayController)
             
@@ -289,7 +289,7 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
             
             if pageViewController != nil {
                 
-                let direction = isAbove ? UIPageViewControllerNavigationDirection.reverse : UIPageViewControllerNavigationDirection.forward
+                let direction = isAbove ? UIPageViewController.NavigationDirection.reverse : UIPageViewController.NavigationDirection.forward
                 
                 pageViewController?.setViewControllers([displayController!], direction: direction, animated: animated, completion: nil)
                 
@@ -434,4 +434,15 @@ class JLReadController: JLViewController,JLReadMenuDelegate,JLCoverControllerDel
         readModel = nil
         currentReadViewController = nil
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIPageViewControllerOptionsKey(_ input: UIPageViewController.OptionsKey) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalUIPageViewControllerOptionsKeyDictionary(_ input: [String: Any]?) -> [UIPageViewController.OptionsKey: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIPageViewController.OptionsKey(rawValue: key), value)})
 }

@@ -12,7 +12,7 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
     
     var tableView: UITableView!
     
-    var tableViewStyle: UITableViewStyle {
+    var tableViewStyle: UITableView.Style {
         set {
             if _tableViewStyle != newValue {
                 _tableViewStyle = newValue
@@ -24,7 +24,7 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
             return _tableViewStyle
         }
     }
-    var _tableViewStyle: UITableViewStyle = .plain
+    var _tableViewStyle: UITableView.Style = .plain
     
     func hideKeyboard() {
         //

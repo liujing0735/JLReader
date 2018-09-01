@@ -60,6 +60,18 @@ class JLParsingHTML: NSObject {
         return nil
     }
     
+    func detail() -> [String: String] {
+        switch website {
+        case .Web80txt:
+            do {
+                if parsing80Txt != nil {
+                    return parsing80Txt.detail()
+                }
+            }
+        }
+        return [:]
+    }
+    
     // 首页
     func firstLists() -> [[String: String]] {
         switch website {

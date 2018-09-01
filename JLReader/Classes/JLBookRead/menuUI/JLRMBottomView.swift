@@ -29,10 +29,10 @@ class JLRMBottomView: JLRMBaseView,ASValueTrackingSliderDelegate {
         // 创建按钮
         for i in 0 ..< funcIcons.count {
             
-            let button = UIButton(type:UIButtonType.custom)
-            button.setImage(UIImage(named: funcIcons[i]), for: UIControlState())
+            let button = UIButton(type:UIButton.ButtonType.custom)
+            button.setImage(UIImage(named: funcIcons[i]), for: UIControl.State())
             button.tag = i
-            button.addTarget(self, action: #selector(clickButton(_:)), for: UIControlEvents.touchUpInside)
+            button.addTarget(self, action: #selector(clickButton(_:)), for: UIControl.Event.touchUpInside)
             addSubview(button)
         }
         

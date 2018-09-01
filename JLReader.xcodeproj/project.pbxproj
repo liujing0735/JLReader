@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2232D5532103733E00BF0A36 /* char_ref.rl in Resources */ = {isa = PBXBuildFile; fileRef = 2232D5522103733E00BF0A36 /* char_ref.rl */; };
 		22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500820EDAA7B00CE2442 /* AppDelegate.swift */; };
-		22C3500B20EDAA7B00CE2442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500A20EDAA7B00CE2442 /* ViewController.swift */; };
 		22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C3500F20EDAA7E00CE2442 /* Assets.xcassets */; };
 		22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */; };
 		22C3509820EDB3A500CE2442 /* string_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C3507520EDB3A500CE2442 /* string_buffer.c */; };
@@ -82,36 +81,18 @@
 		22C3516A20F58E0900CE2442 /* JLBooklistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */; };
 		22C3516C20F58FED00CE2442 /* JLBooklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */; };
 		22D77B2E20F635B600EB02D7 /* JLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B2D20F635B600EB02D7 /* JLLabel.swift */; };
+		22EB6923212E86A800126494 /* JLBookdetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */; };
+		22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		22C3501A20EDAA7E00CE2442 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22C34FFD20EDAA7B00CE2442 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22C3500420EDAA7B00CE2442;
-			remoteInfo = JLReader;
-		};
-		22C3502520EDAA7E00CE2442 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22C34FFD20EDAA7B00CE2442 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22C3500420EDAA7B00CE2442;
-			remoteInfo = JLReader;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2232D5522103733E00BF0A36 /* char_ref.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char_ref.rl; sourceTree = "<group>"; };
 		22C3500520EDAA7B00CE2442 /* JLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C3500820EDAA7B00CE2442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22C3500A20EDAA7B00CE2442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22C3500F20EDAA7E00CE2442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C3501220EDAA7E00CE2442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C3501420EDAA7E00CE2442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C3506E20EDB38F00CE2442 /* JLReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JLReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		22C3507520EDB3A500CE2442 /* string_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string_buffer.c; sourceTree = "<group>"; };
 		22C3507620EDB3A500CE2442 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
@@ -210,6 +191,8 @@
 		22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBooklistTableViewController.swift; sourceTree = "<group>"; };
 		22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBooklistTableViewCell.swift; sourceTree = "<group>"; };
 		22D77B2D20F635B600EB02D7 /* JLLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLLabel.swift; sourceTree = "<group>"; };
+		22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewController.swift; sourceTree = "<group>"; };
+		22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewCell.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
 		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,20 +205,6 @@
 			files = (
 				22C350E020F08CB800CE2442 /* libxml2.tbd in Frameworks */,
 				6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3501620EDAA7E00CE2442 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3502120EDAA7E00CE2442 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				22C3500520EDAA7B00CE2442 /* JLReader.app */,
-				22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */,
-				22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,7 +237,6 @@
 				22C3515C20F4C80900CE2442 /* Base */,
 				22C3507220EDB3A500CE2442 /* Classes */,
 				22C3500820EDAA7B00CE2442 /* AppDelegate.swift */,
-				22C3500A20EDAA7B00CE2442 /* ViewController.swift */,
 				22C3500F20EDAA7E00CE2442 /* Assets.xcassets */,
 				22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */,
 				22C3501420EDAA7E00CE2442 /* Info.plist */,
@@ -560,6 +526,8 @@
 				22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */,
 				22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */,
 				22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */,
+				22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */,
+				22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */,
 			);
 			path = Bookcity;
 			sourceTree = "<group>";
@@ -604,42 +572,6 @@
 			productReference = 22C3500520EDAA7B00CE2442 /* JLReader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		22C3501820EDAA7E00CE2442 /* JLReaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22C3503020EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderTests" */;
-			buildPhases = (
-				22C3501520EDAA7E00CE2442 /* Sources */,
-				22C3501620EDAA7E00CE2442 /* Frameworks */,
-				22C3501720EDAA7E00CE2442 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22C3501B20EDAA7E00CE2442 /* PBXTargetDependency */,
-			);
-			name = JLReaderTests;
-			productName = JLReaderTests;
-			productReference = 22C3501920EDAA7E00CE2442 /* JLReaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		22C3502320EDAA7E00CE2442 /* JLReaderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22C3503320EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderUITests" */;
-			buildPhases = (
-				22C3502020EDAA7E00CE2442 /* Sources */,
-				22C3502120EDAA7E00CE2442 /* Frameworks */,
-				22C3502220EDAA7E00CE2442 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22C3502620EDAA7E00CE2442 /* PBXTargetDependency */,
-			);
-			name = JLReaderUITests;
-			productName = JLReaderUITests;
-			productReference = 22C3502420EDAA7E00CE2442 /* JLReaderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -652,15 +584,7 @@
 				TargetAttributes = {
 					22C3500420EDAA7B00CE2442 = {
 						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 0940;
-					};
-					22C3501820EDAA7E00CE2442 = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 22C3500420EDAA7B00CE2442;
-					};
-					22C3502320EDAA7E00CE2442 = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 22C3500420EDAA7B00CE2442;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -678,8 +602,6 @@
 			projectRoot = "";
 			targets = (
 				22C3500420EDAA7B00CE2442 /* JLReader */,
-				22C3501820EDAA7E00CE2442 /* JLReaderTests */,
-				22C3502320EDAA7E00CE2442 /* JLReaderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -693,20 +615,6 @@
 				2232D5532103733E00BF0A36 /* char_ref.rl in Resources */,
 				22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */,
 				22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3501720EDAA7E00CE2442 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3502220EDAA7E00CE2442 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,7 +688,6 @@
 				22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */,
 				22C3514C20F4582100CE2442 /* JLRMLightView.swift in Sources */,
 				22C3515420F4582100CE2442 /* JLReadView.swift in Sources */,
-				22C3500B20EDAA7B00CE2442 /* ViewController.swift in Sources */,
 				22C3514120F4582100CE2442 /* JLReadController.swift in Sources */,
 				22C3515020F4582100CE2442 /* JLReadMarkModel.swift in Sources */,
 				22C3512F20F4582100CE2442 /* JLSegmentedControl.swift in Sources */,
@@ -808,6 +715,7 @@
 				22C3512A20F4582100CE2442 /* UIView+Extension.swift in Sources */,
 				22C3513320F4582100CE2442 /* DZMGlobalProperty.swift in Sources */,
 				22C350A420EDB3A500CE2442 /* string_piece.c in Sources */,
+				22EB6923212E86A800126494 /* JLBookdetailTableViewController.swift in Sources */,
 				22C3512E20F4582100CE2442 /* UITableView+Extension.swift in Sources */,
 				22C3514320F4582100CE2442 /* JLRMColorView.swift in Sources */,
 				22C3515320F4582100CE2442 /* JLCursorView.swift in Sources */,
@@ -819,6 +727,7 @@
 				22C3513720F4582100CE2442 /* ASValueTrackingSlider.m in Sources */,
 				22C3514F20F4582100CE2442 /* JLReadChapterListModel.swift in Sources */,
 				22C3513C20F4582100CE2442 /* JLReadOperation.swift in Sources */,
+				22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */,
 				22C3514D20F4582100CE2442 /* JLReadRecordModel.swift in Sources */,
 				22C3513420F4582100CE2442 /* JLCoverController.m in Sources */,
 				22C3509B20EDB3A500CE2442 /* vector.c in Sources */,
@@ -833,34 +742,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22C3501520EDAA7E00CE2442 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C3502020EDAA7E00CE2442 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		22C3501B20EDAA7E00CE2442 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22C3500420EDAA7B00CE2442 /* JLReader */;
-			targetProxy = 22C3501A20EDAA7E00CE2442 /* PBXContainerItemProxy */;
-		};
-		22C3502620EDAA7E00CE2442 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22C3500420EDAA7B00CE2442 /* JLReader */;
-			targetProxy = 22C3502520EDAA7E00CE2442 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */ = {
@@ -1010,7 +892,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1036,86 +918,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		22C3503120EDAA7E00CE2442 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLReader.app/JLReader";
-			};
-			name = Debug;
-		};
-		22C3503220EDAA7E00CE2442 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLReader.app/JLReader";
-			};
-			name = Release;
-		};
-		22C3503420EDAA7E00CE2442 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JLReader;
-			};
-			name = Debug;
-		};
-		22C3503520EDAA7E00CE2442 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JLReaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JLReader;
 			};
 			name = Release;
 		};
@@ -1136,24 +940,6 @@
 			buildConfigurations = (
 				22C3502E20EDAA7E00CE2442 /* Debug */,
 				22C3502F20EDAA7E00CE2442 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		22C3503020EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22C3503120EDAA7E00CE2442 /* Debug */,
-				22C3503220EDAA7E00CE2442 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		22C3503320EDAA7E00CE2442 /* Build configuration list for PBXNativeTarget "JLReaderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22C3503420EDAA7E00CE2442 /* Debug */,
-				22C3503520EDAA7E00CE2442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

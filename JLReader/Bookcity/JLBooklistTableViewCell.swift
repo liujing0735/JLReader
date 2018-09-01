@@ -20,7 +20,7 @@ class JLBooklistTableViewCell: UITableViewCell {
         
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         bookImageView = UIImageView(frame: CGRect(x: 10, y: 19, width: 40, height: 50))
         self.addSubview(bookImageView)

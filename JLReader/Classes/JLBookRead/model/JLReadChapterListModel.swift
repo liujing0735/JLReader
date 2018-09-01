@@ -44,13 +44,13 @@ class JLReadChapterListModel: NSObject,NSCoding {
         
         super.init()
         
-        priority = aDecoder.decodeObject(forKey: "priority") as! NSNumber
+        priority = aDecoder.decodeObject(forKey: "priority") as? NSNumber
         
-        bookID = aDecoder.decodeObject(forKey: "bookID") as! String
+        bookID = aDecoder.decodeObject(forKey: "bookID") as? String
         
-        id = aDecoder.decodeObject(forKey: "id") as! String
+        id = aDecoder.decodeObject(forKey: "id") as? String
         
-        name = aDecoder.decodeObject(forKey: "name") as! String
+        name = aDecoder.decodeObject(forKey: "name") as? String
     }
     
     func encode(with aCoder: NSCoder) {
