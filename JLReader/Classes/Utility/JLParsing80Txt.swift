@@ -11,12 +11,12 @@ import UIKit
 class JLParsing80Txt: NSObject {
 
     private var gumboDocument: OCGumboDocument! = nil
-    private var firstPageUrl: String!
-    private var prevPageUrl: String!
-    private var nextPageUrl: String!
-    private var lastPageUrl: String!
-    private var currentPage: Int = 0
-    private var totalPage: Int = 0
+    private var firstPageUrl: String!   // 首页地址
+    private var prevPageUrl: String!    // 上一页地址
+    private var nextPageUrl: String!    // 下一页地址
+    private var lastPageUrl: String!    // 末页地址
+    private var currentPage: Int = 0    // 当前页
+    private var totalPage: Int = 0      // 总页数
     
     init(url: String) {
         super.init()
@@ -180,10 +180,18 @@ class JLParsing80Txt: NSObject {
         return nil
     }
     
+    /// 作品下载页地址
+    ///
+    /// - Parameter url: 作品详情页地址
+    /// - Returns: 作品下载页地址
     private func downUrl(url: String) -> String {
         return url.replacingOccurrences(of: ".html", with: "/down.html")
     }
-
+    
+    /// 作品阅读页地址
+    ///
+    /// - Parameter url: 作品详情页地址
+    /// - Returns: 作品阅读页地址
     private func readUrl(url: String) -> String {
         return url.replacingOccurrences(of: "/txtxz/", with: "/txtml_")
     }
