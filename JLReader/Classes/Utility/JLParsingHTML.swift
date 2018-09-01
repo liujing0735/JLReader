@@ -48,7 +48,7 @@ class JLParsingHTML: NSObject {
         }
     }
     
-    func menus() -> [[String: Any]]! {
+    func menus() -> [[String: Any]] {
         switch website {
         case .Web80txt:
             do {
@@ -57,7 +57,7 @@ class JLParsingHTML: NSObject {
                 }
             }
         }
-        return nil
+        return [[:]]
     }
     
     func detail() -> [String: String] {

@@ -42,8 +42,8 @@ class JLBooklistTableViewCell: UITableViewCell {
         self.addSubview(bookIntroductionLabel)
         
         bookAuthorLabel = JLLabel(frame: CGRect(x: 60, y: 68, width: screenWidth-60-10, height: 10))
-        bookAuthorLabel.textColor = .darkGray
-        bookAuthorLabel.font = UIFont.systemFont(ofSize: 13)
+        bookAuthorLabel.textColor = .purple
+        bookAuthorLabel.font = UIFont.systemFont(ofSize: 12)
         bookAuthorLabel.highlightedTextColor = .red
         self.addSubview(bookAuthorLabel)
     }

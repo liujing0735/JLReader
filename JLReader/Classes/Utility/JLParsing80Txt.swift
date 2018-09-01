@@ -23,9 +23,9 @@ class JLParsing80Txt: NSObject {
         gumboDocument = gumboDocument(url: url)
     }
     
-    func menus() -> [[String: Any]]! {
+    func menus() -> [[String: Any]] {
         if gumboDocument == nil {
-            return nil
+            return [[:]]
         }
         
         var array = [[String: Any]]()

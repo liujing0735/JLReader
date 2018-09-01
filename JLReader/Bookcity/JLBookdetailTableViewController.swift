@@ -17,8 +17,13 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
     private var parsingHTML: JLParsingHTML!
     private var detailDic: [String: String]!
     
-    private var headerView = UIImageView()
-    private var effectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    private var tableHeaderView: UIView!
+    private var headerImageView: UIImageView!
+    private var visualEffectView: UIVisualEffectView!
+    private var bookImageView: UIImageView!
+    private var bookNameLabel: UILabel!
+    private var bookAuthorLabel: UILabel!
+    private var bookStateLabel: UILabel!
     
     func reloadData() {
         let dic = detailDic
@@ -29,8 +34,45 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
             let bookIntroduction: String = (dic?["book_introduction"])!
             let bookAuthor: String = (dic?["book_author"])!
             
-            headerView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
+            headerImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
+            bookImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
+            bookNameLabel.text = bookName
+            bookAuthorLabel.text = bookAuthor
+            bookStateLabel.text = bookState
         }
+    }
+    
+    func createTableHeaderView() {
+        tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 160 + 50))
+        
+        let frame = CGRect(x: 0, y: 0, width: screenWidth, height: 160)
+        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        visualEffectView.frame = frame
+        
+        headerImageView = UIImageView()
+        headerImageView.frame = frame
+        headerImageView.contentMode = .scaleAspectFill
+        headerImageView.clipsToBounds = true
+        headerImageView.addSubview(visualEffectView)
+        tableHeaderView.addSubview(headerImageView)
+        
+        bookImageView = UIImageView()
+        bookImageView.frame = CGRect(x: 40, y: 50, width: 104, height: 128)
+        tableHeaderView.addSubview(bookImageView)
+        
+        bookNameLabel = UILabel()
+        bookNameLabel.frame = CGRect(x: 40 + 104 + 10, y: 50, width: screenWidth - (40 + 104 + 10 + 40), height: 21)
+        tableHeaderView.addSubview(bookNameLabel)
+        
+        bookAuthorLabel = UILabel()
+        bookAuthorLabel.frame = CGRect(x: 40 + 104 + 10, y: 50 + 40, width: screenWidth - (40 + 104 + 10 + 40), height: 21)
+        tableHeaderView.addSubview(bookAuthorLabel)
+        
+        bookStateLabel = UILabel()
+        bookStateLabel.frame = CGRect(x: 40 + 104 + 10, y: 50 + 40 + 40, width: screenWidth - (40 + 104 + 10 + 40), height: 21)
+        tableHeaderView.addSubview(bookStateLabel)
+        
+        self.tableView.tableHeaderView = tableHeaderView
     }
     
     override func viewDidLoad() {
@@ -42,13 +84,8 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         parsingHTML = JLParsingHTML(website: .Web80txt, url: urlString)
         detailDic = parsingHTML.detail()
 
-        let frame = CGRect(x: 0, y: 0, width: screenWidth, height: 200)
-        effectView.frame = frame
-        headerView.frame = frame
-        headerView.contentMode = .scaleAspectFill
-        headerView.clipsToBounds = true
-        headerView.addSubview(effectView)
-        self.tableView.tableHeaderView = headerView
+        createTableHeaderView()
+        
         self.tableView.separatorStyle = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -69,10 +106,10 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         let width = screenWidth
         let yOffset = scrollView.contentOffset.y
         if yOffset < 0 {
-            let offset = 200 + abs(yOffset)
-            let scale = offset / 200
-            effectView.frame = CGRect(x: 0, y: 0, width: width * scale, height: offset)
-            headerView.frame = CGRect(x: 0, y: yOffset, width: width * scale, height: offset)
+            let offset = 160 + abs(yOffset)
+            let scale = offset / 160
+            visualEffectView.frame = CGRect(x: 0, y: 0, width: width * scale, height: offset)
+            headerImageView.frame = CGRect(x: -(width * scale - width) / 2, y: yOffset, width: width * scale, height: offset)
         }
     }
     
