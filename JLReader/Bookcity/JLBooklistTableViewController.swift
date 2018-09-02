@@ -8,7 +8,7 @@
 
 import UIKit
 import MJRefresh
-import Kingfisher
+
 
 class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate {
 
@@ -67,18 +67,7 @@ class JLBooklistTableViewController: JLBaseTableViewController, JLLabelDelegate 
         cell.selectionStyle = .none
         
         let dic: [String: String] = rowDatas[indexPath.row]
-        let bookImage: String = dic["book_img"]!
-        let bookName: String = dic["book_name"]!
-        let bookState: String = dic["book_updated_state"]!
-        let bookIntroduction: String = dic["book_introduction"]!
-        let bookAuthor: String = dic["book_author"]!
-        
-        cell.bookImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
-        cell.bookNameLabel.text = bookName
-        cell.bookStateLabel.text = bookState
-        cell.bookIntroductionLabel.text = bookIntroduction
-        cell.bookAuthorLabel.text = bookAuthor.components(separatedBy: ":")[1]
-        cell.bookAuthorLabel.delegate = self
+        cell.reloadData(dic: dic, delegate: self)
         return cell
     }
     

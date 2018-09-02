@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class JLBooklistTableViewCell: UITableViewCell {
     
@@ -17,7 +18,24 @@ class JLBooklistTableViewCell: UITableViewCell {
     var bookAuthorLabel: JLLabel!
     
     func reloadData(dic: [String: Any]) -> Void {
+        reloadData(dic: dic, delegate: nil)
+    }
+    
+    func reloadData(dic: [String: Any], delegate: JLLabelDelegate!) -> Void {
+        let bookImage = dic["book_img"] as! String
+        let bookName = dic["book_name"] as! String
+        let bookState = dic["book_updated_state"] as! String
+        let bookIntroduction = dic["book_introduction"] as! String
+        let bookAuthor = dic["book_author"] as! String
         
+        bookImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
+        bookNameLabel.text = bookName
+        bookStateLabel.text = bookState
+        bookIntroductionLabel.text = bookIntroduction
+        bookAuthorLabel.text = bookAuthor.components(separatedBy: ":")[1]
+        if delegate != nil {
+            bookAuthorLabel.delegate = delegate
+        }
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

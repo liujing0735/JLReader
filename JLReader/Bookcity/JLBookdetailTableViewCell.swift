@@ -10,11 +10,21 @@ import UIKit
 
 class JLBookdetailTableViewCell: UITableViewCell {
 
-    var bookImageView: UIImageView!
-    var bookNameLabel: UILabel!
-    var bookStateLabel: UILabel!
     var bookIntroductionLabel: UILabel!
-    var bookAuthorLabel: UILabel!
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        bookIntroductionLabel = UILabel()
+        bookIntroductionLabel.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 200)
+        bookIntroductionLabel.textColor = .lightGray
+        bookIntroductionLabel.font = UIFont.systemFont(ofSize: 10)
+        self.addSubview(bookIntroductionLabel)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2232D5532103733E00BF0A36 /* char_ref.rl in Resources */ = {isa = PBXBuildFile; fileRef = 2232D5522103733E00BF0A36 /* char_ref.rl */; };
+		2269B0E4213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269B0E3213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift */; };
 		22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500820EDAA7B00CE2442 /* AppDelegate.swift */; };
 		22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C3500F20EDAA7E00CE2442 /* Assets.xcassets */; };
 		22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */; };
@@ -88,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		2232D5522103733E00BF0A36 /* char_ref.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char_ref.rl; sourceTree = "<group>"; };
+		2269B0E3213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailRecommendTableViewCell.swift; sourceTree = "<group>"; };
 		22C3500520EDAA7B00CE2442 /* JLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C3500820EDAA7B00CE2442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22C3500F20EDAA7E00CE2442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 				22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */,
 				22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */,
 				22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */,
+				2269B0E3213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift */,
 			);
 			path = Bookcity;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				22C3514020F4582100CE2442 /* JLReadAuxiliary.swift in Sources */,
 				22C3512D20F4582100CE2442 /* UIPageViewController+Extension.swift in Sources */,
 				22C350A220EDB3A500CE2442 /* parser.c in Sources */,
+				2269B0E4213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift in Sources */,
 				22C3514220F4582100CE2442 /* JLReadBGController.swift in Sources */,
 				22C3515220F4582100CE2442 /* JLReadViewCell.swift in Sources */,
 				22C3516C20F58FED00CE2442 /* JLBooklistTableViewCell.swift in Sources */,

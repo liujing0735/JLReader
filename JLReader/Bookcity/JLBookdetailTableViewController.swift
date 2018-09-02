@@ -66,10 +66,12 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         
         bookAuthorLabel = UILabel()
         bookAuthorLabel.frame = CGRect(x: 40 + 104 + 10, y: 50 + 40, width: screenWidth - (40 + 104 + 10 + 40), height: 21)
+        bookAuthorLabel.textColor = .purple
         tableHeaderView.addSubview(bookAuthorLabel)
         
         bookStateLabel = UILabel()
         bookStateLabel.frame = CGRect(x: 40 + 104 + 10, y: 50 + 40 + 40, width: screenWidth - (40 + 104 + 10 + 40), height: 21)
+        bookStateLabel.textColor = .blue
         tableHeaderView.addSubview(bookStateLabel)
         
         self.tableView.tableHeaderView = tableHeaderView
@@ -89,6 +91,8 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         self.tableView.separatorStyle = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.register(JLBookdetailTableViewCell.classForCoder(), forCellReuseIdentifier: "JLBookdetailTableViewCell")
+        self.tableView.register(JLBookdetailRecommendTableViewCell.classForCoder(), forCellReuseIdentifier: "JLBookdetailRecommendTableViewCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
