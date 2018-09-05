@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2232D5532103733E00BF0A36 /* char_ref.rl in Resources */ = {isa = PBXBuildFile; fileRef = 2232D5522103733E00BF0A36 /* char_ref.rl */; };
+		22537555213E318D0042C074 /* JLExtensionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537554213E318D0042C074 /* JLExtensionSwift.swift */; };
+		22537557213E31D50042C074 /* JLExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537556213E31D50042C074 /* JLExtensionInt.swift */; };
+		22537559213E325F0042C074 /* JLExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537558213E325F0042C074 /* JLExtensionString.swift */; };
+		2253755B213E32B90042C074 /* JLExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253755A213E32B90042C074 /* JLExtensionDictionary.swift */; };
+		2253755D213E333B0042C074 /* JLExtension+UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253755C213E333B0042C074 /* JLExtension+UINavigationBar.swift */; };
+		2253755F213E774F0042C074 /* JLExtension+CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253755E213E774F0042C074 /* JLExtension+CAGradientLayer.swift */; };
+		22537561213F614B0042C074 /* JLExtension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537560213F614B0042C074 /* JLExtension+UIImage.swift */; };
+		22537563213FA3E00042C074 /* JLExtension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537562213FA3E00042C074 /* JLExtension+UIView.swift */; };
+		22537565213FA47E0042C074 /* JLExtension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537564213FA47E0042C074 /* JLExtension+UIScrollView.swift */; };
 		2269B0E4213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269B0E3213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift */; };
 		22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500820EDAA7B00CE2442 /* AppDelegate.swift */; };
 		22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C3500F20EDAA7E00CE2442 /* Assets.xcassets */; };
@@ -28,9 +37,7 @@
 		22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C3509720EDB3A500CE2442 /* OCGumbo.m */; };
 		22C350E020F08CB800CE2442 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C350DF20F08CB800CE2442 /* libxml2.tbd */; };
 		22C3512920F4582100CE2442 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350E920F4582100CE2442 /* NSObject+Extension.swift */; };
-		22C3512A20F4582100CE2442 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EA20F4582100CE2442 /* UIView+Extension.swift */; };
 		22C3512B20F4582100CE2442 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EB20F4582100CE2442 /* String+Extension.swift */; };
-		22C3512C20F4582100CE2442 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EC20F4582100CE2442 /* UIScrollView+Extension.swift */; };
 		22C3512D20F4582100CE2442 /* UIPageViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350ED20F4582100CE2442 /* UIPageViewController+Extension.swift */; };
 		22C3512E20F4582100CE2442 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350EE20F4582100CE2442 /* UITableView+Extension.swift */; };
 		22C3512F20F4582100CE2442 /* JLSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C350F020F4582100CE2442 /* JLSegmentedControl.swift */; };
@@ -71,7 +78,6 @@
 		22C3515220F4582100CE2442 /* JLReadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512620F4582100CE2442 /* JLReadViewCell.swift */; };
 		22C3515320F4582100CE2442 /* JLCursorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512720F4582100CE2442 /* JLCursorView.swift */; };
 		22C3515420F4582100CE2442 /* JLReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3512820F4582100CE2442 /* JLReadView.swift */; };
-		22C3515720F4BD0700CE2442 /* JLExtensionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */; };
 		22C3515920F4BD4300CE2442 /* JLParsingHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */; };
 		22C3515B20F4C10600CE2442 /* JLParsing80Txt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */; };
 		22C3516020F4C80900CE2442 /* JLBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */; };
@@ -89,6 +95,15 @@
 
 /* Begin PBXFileReference section */
 		2232D5522103733E00BF0A36 /* char_ref.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char_ref.rl; sourceTree = "<group>"; };
+		22537554213E318D0042C074 /* JLExtensionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLExtensionSwift.swift; sourceTree = "<group>"; };
+		22537556213E31D50042C074 /* JLExtensionInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLExtensionInt.swift; sourceTree = "<group>"; };
+		22537558213E325F0042C074 /* JLExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLExtensionString.swift; sourceTree = "<group>"; };
+		2253755A213E32B90042C074 /* JLExtensionDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLExtensionDictionary.swift; sourceTree = "<group>"; };
+		2253755C213E333B0042C074 /* JLExtension+UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UINavigationBar.swift"; sourceTree = "<group>"; };
+		2253755E213E774F0042C074 /* JLExtension+CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+CAGradientLayer.swift"; sourceTree = "<group>"; };
+		22537560213F614B0042C074 /* JLExtension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UIImage.swift"; sourceTree = "<group>"; };
+		22537562213FA3E00042C074 /* JLExtension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UIView.swift"; sourceTree = "<group>"; };
+		22537564213FA47E0042C074 /* JLExtension+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UIScrollView.swift"; sourceTree = "<group>"; };
 		2269B0E3213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailRecommendTableViewCell.swift; sourceTree = "<group>"; };
 		22C3500520EDAA7B00CE2442 /* JLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C3500820EDAA7B00CE2442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,9 +148,7 @@
 		22C350DF20F08CB800CE2442 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		22C350E720F4582100CE2442 /* JLBookRead-Bridging-Pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLBookRead-Bridging-Pch.h"; sourceTree = "<group>"; };
 		22C350E920F4582100CE2442 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
-		22C350EA20F4582100CE2442 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		22C350EB20F4582100CE2442 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		22C350EC20F4582100CE2442 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		22C350ED20F4582100CE2442 /* UIPageViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+Extension.swift"; sourceTree = "<group>"; };
 		22C350EE20F4582100CE2442 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		22C350F020F4582100CE2442 /* JLSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLSegmentedControl.swift; sourceTree = "<group>"; };
@@ -182,7 +195,6 @@
 		22C3512620F4582100CE2442 /* JLReadViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLReadViewCell.swift; sourceTree = "<group>"; };
 		22C3512720F4582100CE2442 /* JLCursorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLCursorView.swift; sourceTree = "<group>"; };
 		22C3512820F4582100CE2442 /* JLReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLReadView.swift; sourceTree = "<group>"; };
-		22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLExtensionSwift.swift; sourceTree = "<group>"; };
 		22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLParsingHTML.swift; sourceTree = "<group>"; };
 		22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLParsing80Txt.swift; sourceTree = "<group>"; };
 		22C3515D20F4C80900CE2442 /* JLBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBaseTableViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +225,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22537553213E318D0042C074 /* JLExtension-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				22537554213E318D0042C074 /* JLExtensionSwift.swift */,
+				22537556213E31D50042C074 /* JLExtensionInt.swift */,
+				22537558213E325F0042C074 /* JLExtensionString.swift */,
+				2253755A213E32B90042C074 /* JLExtensionDictionary.swift */,
+				2253755C213E333B0042C074 /* JLExtension+UINavigationBar.swift */,
+				2253755E213E774F0042C074 /* JLExtension+CAGradientLayer.swift */,
+				22537560213F614B0042C074 /* JLExtension+UIImage.swift */,
+				22537562213FA3E00042C074 /* JLExtension+UIView.swift */,
+				22537564213FA47E0042C074 /* JLExtension+UIScrollView.swift */,
+			);
+			path = "JLExtension-Swift";
+			sourceTree = "<group>";
+		};
 		22C34FFC20EDAA7B00CE2442 = {
 			isa = PBXGroup;
 			children = (
@@ -336,9 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				22C350E920F4582100CE2442 /* NSObject+Extension.swift */,
-				22C350EA20F4582100CE2442 /* UIView+Extension.swift */,
 				22C350EB20F4582100CE2442 /* String+Extension.swift */,
-				22C350EC20F4582100CE2442 /* UIScrollView+Extension.swift */,
 				22C350ED20F4582100CE2442 /* UIPageViewController+Extension.swift */,
 				22C350EE20F4582100CE2442 /* UITableView+Extension.swift */,
 			);
@@ -496,7 +522,7 @@
 		22C3515520F4BD0700CE2442 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				22C3515620F4BD0700CE2442 /* JLExtensionSwift.swift */,
+				22537553213E318D0042C074 /* JLExtension-Swift */,
 				22C3515820F4BD4300CE2442 /* JLParsingHTML.swift */,
 				22C3515A20F4C10600CE2442 /* JLParsing80Txt.swift */,
 				22D77B2D20F635B600EB02D7 /* JLLabel.swift */,
@@ -674,7 +700,6 @@
 				22D77B2E20F635B600EB02D7 /* JLLabel.swift in Sources */,
 				22C3516220F4C80900CE2442 /* JLBaseTabBarController.swift in Sources */,
 				22C3514920F4582100CE2442 /* JLReadMenu.swift in Sources */,
-				22C3515720F4BD0700CE2442 /* JLExtensionSwift.swift in Sources */,
 				22C3513620F4582100CE2442 /* ASValuePopUpView.m in Sources */,
 				22C3513520F4582100CE2442 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				22C3514420F4582100CE2442 /* JLRMSettingView.swift in Sources */,
@@ -686,6 +711,7 @@
 				22C3513B20F4582100CE2442 /* JLViewController.swift in Sources */,
 				22C3513A20F4582100CE2442 /* JLBatteryView.swift in Sources */,
 				22C3513D20F4582100CE2442 /* JLReadParser.swift in Sources */,
+				22537557213E31D50042C074 /* JLExtensionInt.swift in Sources */,
 				22C3514B20F4582100CE2442 /* JLRMBaseView.swift in Sources */,
 				22C3515B20F4C10600CE2442 /* JLParsing80Txt.swift in Sources */,
 				22C350A520EDB3A500CE2442 /* OCGumbo+Query.m in Sources */,
@@ -697,6 +723,8 @@
 				22C3513F20F4582100CE2442 /* JLReadConfigure.swift in Sources */,
 				22C3514A20F4582100CE2442 /* JLRMTopView.swift in Sources */,
 				22C3514020F4582100CE2442 /* JLReadAuxiliary.swift in Sources */,
+				22537565213FA47E0042C074 /* JLExtension+UIScrollView.swift in Sources */,
+				22537555213E318D0042C074 /* JLExtensionSwift.swift in Sources */,
 				22C3512D20F4582100CE2442 /* UIPageViewController+Extension.swift in Sources */,
 				22C350A220EDB3A500CE2442 /* parser.c in Sources */,
 				2269B0E4213B8D56005DBB57 /* JLBookdetailRecommendTableViewCell.swift in Sources */,
@@ -706,20 +734,22 @@
 				22C350A320EDB3A500CE2442 /* tokenizer.c in Sources */,
 				22C3513020F4582100CE2442 /* JLHaloButton.swift in Sources */,
 				22C3514620F4582100CE2442 /* JLRMBottomView.swift in Sources */,
-				22C3512C20F4582100CE2442 /* UIScrollView+Extension.swift in Sources */,
 				22C3509920EDB3A500CE2442 /* util.c in Sources */,
 				22C3515120F4582100CE2442 /* JLReadChapterModel.swift in Sources */,
 				22C3512B20F4582100CE2442 /* String+Extension.swift in Sources */,
 				22C3509D20EDB3A500CE2442 /* char_ref.c in Sources */,
 				22C3516A20F58E0900CE2442 /* JLBooklistTableViewController.swift in Sources */,
 				22C3513220F4582100CE2442 /* DZMGlobalMethod.swift in Sources */,
+				2253755D213E333B0042C074 /* JLExtension+UINavigationBar.swift in Sources */,
 				22C3509F20EDB3A500CE2442 /* error.c in Sources */,
 				22C3509C20EDB3A500CE2442 /* attribute.c in Sources */,
 				22C3512920F4582100CE2442 /* NSObject+Extension.swift in Sources */,
-				22C3512A20F4582100CE2442 /* UIView+Extension.swift in Sources */,
 				22C3513320F4582100CE2442 /* DZMGlobalProperty.swift in Sources */,
 				22C350A420EDB3A500CE2442 /* string_piece.c in Sources */,
 				22EB6923212E86A800126494 /* JLBookdetailTableViewController.swift in Sources */,
+				2253755B213E32B90042C074 /* JLExtensionDictionary.swift in Sources */,
+				22537559213E325F0042C074 /* JLExtensionString.swift in Sources */,
+				22537561213F614B0042C074 /* JLExtension+UIImage.swift in Sources */,
 				22C3512E20F4582100CE2442 /* UITableView+Extension.swift in Sources */,
 				22C3514320F4582100CE2442 /* JLRMColorView.swift in Sources */,
 				22C3515320F4582100CE2442 /* JLCursorView.swift in Sources */,
@@ -729,6 +759,7 @@
 				22C3515920F4BD4300CE2442 /* JLParsingHTML.swift in Sources */,
 				22C3516820F4C93100CE2442 /* JLBookcityTableViewController.swift in Sources */,
 				22C3513720F4582100CE2442 /* ASValueTrackingSlider.m in Sources */,
+				2253755F213E774F0042C074 /* JLExtension+CAGradientLayer.swift in Sources */,
 				22C3514F20F4582100CE2442 /* JLReadChapterListModel.swift in Sources */,
 				22C3513C20F4582100CE2442 /* JLReadOperation.swift in Sources */,
 				22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */,
@@ -736,6 +767,7 @@
 				22C3513420F4582100CE2442 /* JLCoverController.m in Sources */,
 				22C3509B20EDB3A500CE2442 /* vector.c in Sources */,
 				22C3514720F4582100CE2442 /* JLRMStatusView.swift in Sources */,
+				22537563213FA3E00042C074 /* JLExtension+UIView.swift in Sources */,
 				22C350A620EDB3A500CE2442 /* OCGumbo.m in Sources */,
 				22C3514E20F4582100CE2442 /* JLReadModel.swift in Sources */,
 				22C3509E20EDB3A500CE2442 /* utf8.c in Sources */,

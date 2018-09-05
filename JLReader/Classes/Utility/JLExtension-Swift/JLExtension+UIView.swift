@@ -1,8 +1,8 @@
 //
-//  UIView+Extension.swift
+//  JLExtension+UIView.swift
 //  JLReader
 //
-//  Created by JasonLiu on 2018/5/11.
+//  Created by JasonLiu on 2018/9/5.
 //  Copyright © 2018年 JasonLiu. All rights reserved.
 //
 
@@ -13,9 +13,7 @@ import UIKit
 
 extension UIView{
     
-    
     // MARK: -- 扩展属性使用
-    
     public var x: CGFloat{
         get{
             return self.frame.origin.x
@@ -108,7 +106,7 @@ extension UIView{
             self.frame = r
         }
     }
-
+    
     public var bottomY: CGFloat{
         get{
             return self.y + self.height

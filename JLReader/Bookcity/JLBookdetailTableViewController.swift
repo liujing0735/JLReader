@@ -31,7 +31,7 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
             let bookImage: String = (dic?["book_img"])!
             let bookName: String = (dic?["book_name"])!
             let bookState: String = (dic?["book_updated_state"])!
-            let bookIntroduction: String = (dic?["book_introduction"])!
+            //let bookIntroduction: String = (dic?["book_introduction"])!
             let bookAuthor: String = (dic?["book_author"])!
             
             headerImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
