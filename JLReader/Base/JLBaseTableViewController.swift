@@ -10,8 +10,22 @@ import UIKit
 
 class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITableViewDataSource {
     
-    var tableView: UITableView!
+    var barAnimation: Bool {
+        set {
+            _barAnimation = newValue
+            if _barAnimation {
+                self.baseNavigationBar.clearColor()
+                self.view.bringSubviewToFront(self.baseNavigationBar)
+            }
+            updateTableViewFrame()
+        }
+        get {
+            return _barAnimation
+        }
+    }
+    private var _barAnimation: Bool = false
     
+    var tableView: UITableView!
     var tableViewStyle: UITableView.Style {
         set {
             if _tableViewStyle != newValue {
@@ -24,7 +38,7 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
             return _tableViewStyle
         }
     }
-    var _tableViewStyle: UITableView.Style = .plain
+    private var _tableViewStyle: UITableView.Style = .plain
     
     func hideKeyboard() {
         //
@@ -53,23 +67,26 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
     
     private func updateTableViewFrame() {
         if #available(iOS 11.0, *) {
-            let top = self.view.safeAreaInsets.top
-            let bottom = self.view.safeAreaInsets.bottom
-            let left = self.view.safeAreaInsets.left
-            let right = self.view.safeAreaInsets.right
-            
-            if isIPhoneX {
-                self.tableView.frame = CGRect(x: left, y: 44 + 44 + top, width: screenWidth - left - right, height: screenHeight - (44 + 44 + top) - bottom)
-            }else {
-                self.tableView.frame = CGRect(x: left, y: 20 + 44 + top, width: screenWidth - left - right, height: screenHeight - (20 + 44 + top) - bottom)
+            var y: CGFloat = 0
+            if !barAnimation {
+                if isIPhoneX {
+                    y = 44 + 44
+                }else {
+                    y = 20 + 44
+                }
             }
+            self.tableView.frame = CGRect(x: 0, y: y, width: screenWidth, height: screenHeight - y)
         }else {
-            let parent: AnyObject! = self.parent
-            if parent != nil && parent is UITabBarController {
-                self.tableView.frame = CGRect(x: 0, y: 20 + 44, width: screenWidth, height: screenHeight - (20 + 44 + 49))
-            }else {
-                self.tableView.frame = CGRect(x: 0, y: 20 + 44, width: screenWidth, height: screenHeight - (20 + 44))
+            var y: CGFloat = 0
+            var h: CGFloat = 0
+            if !barAnimation {
+                y = 20 + 44
+                h = y
+                if self.parent is UITabBarController {
+                    h = y + 49
+                }
             }
+            self.tableView.frame = CGRect(x: 0, y: y, width: screenWidth, height: screenHeight - h)
         }
     }
 
@@ -84,6 +101,15 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if barAnimation {
+            let y = scrollView.contentOffset.y
+            if y >= 0 {
+                self.barAlpha = min(1, y/160)
+            }
+        }
     }
     
     // MARK: - UITableViewDelegate,UITableViewDataSource

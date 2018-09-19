@@ -17,9 +17,6 @@ class JLBookcaseTableViewController: JLBaseTableViewController {
 
         // Do any additional setup after loading the view.
         self.title = "书架"
-        let topColor: UIColor = UIColor.green
-        let buttomColor: UIColor = UIColor.purple
-        self.baseNavigationBar.gradient(colors: [topColor.cgColor, buttomColor.cgColor])
     }
 
     override func didReceiveMemoryWarning() {

@@ -85,6 +85,11 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         // Do any additional setup after loading the view.
         parsingHTML = JLParsingHTML(website: .Web80txt, url: urlString)
         detailDic = parsingHTML.detail()
+        
+        self.baseNavigationBar.gradientColors = [.blue, .purple]
+        self.baseNavigationBar.titleColor = .clear
+        self.baseNavigationBar.gradientAlpha = 0.0
+        self.barAnimation = true
 
         createTableHeaderView()
         
@@ -106,7 +111,9 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        super.scrollViewDidScroll(scrollView)
+        
         let width = screenWidth
         let yOffset = scrollView.contentOffset.y
         if yOffset < 0 {

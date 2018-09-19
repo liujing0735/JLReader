@@ -16,9 +16,50 @@ import UIKit
 
 class JLBaseViewController: UIViewController,JLBaseDelegate {
     
-    var statusBarView: UIView!
-    var baseNavigationBar: UINavigationBar!
+    var itemTitleColor: UIColor = UIColor.black
+    
+    var barTintColor: UIColor = UIColor.black
+    var barTitleColor: UIColor = UIColor.black
+    var barBackgroundColor: UIColor = rgb(r: 249, g: 249, b: 249)
+    var barAlpha: CGFloat {
+        set {
+            _barAlpha = newValue
+            if baseNavigationBar != nil {
+                baseNavigationBar.gradientAlpha = newValue
+            }
+            if _leftButton != nil {
+                _leftButton.setTitleColor(itemTitleColor.withAlphaComponent(newValue), for: .normal)
+            }
+            if _rightButton != nil {
+                _rightButton.setTitleColor(itemTitleColor.withAlphaComponent(newValue), for: .normal)
+            }
+        }
+        get {
+            return _barAlpha
+        }
+    }
+    private var _barAlpha: CGFloat = 1.0
+    
+    var baseNavigationBar: JLNavigationBar!
     var baseNavigationItem: UINavigationItem!
+    private var leftButton: UIButton {
+        get {
+            if _leftButton == nil {
+                _leftButton = leftItemButton()
+            }
+            return _leftButton
+        }
+    }
+    private var rightButton: UIButton {
+        get {
+            if _rightButton == nil {
+                _rightButton = rightItemButton()
+            }
+            return _rightButton
+        }
+    }
+    private var _leftButton: UIButton!
+    private var _rightButton: UIButton!
 
     override var title: String? {
         set {
@@ -31,45 +72,13 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
     }
     var _title: String!
     
-    var navigationBarWidth: CGFloat {
-        get {
-            if baseNavigationBar != nil {
-                return baseNavigationBar.frame.width
-            }
-            return 0
-        }
-    }
-    
-    var navigationBarHeight: CGFloat {
-        get {
-            if baseNavigationBar != nil {
-                if #available(iOS 11.0, *) {
-                    if isIPhoneX {
-                        return 44 + 44
-                    }
-                }
-                return 20 + 44
-            }
-            return 0
-        }
-    }
-    
     private func updateViewFrame() {
         if #available(iOS 11.0, *) {
-            let top = self.view.safeAreaInsets.top
-            let left = self.view.safeAreaInsets.left
-            let right = self.view.safeAreaInsets.right
-            
             if isIPhoneX {
-                self.statusBarView.frame = CGRect(x: left, y: 0, width: screenWidth - left - right, height: 44 + top)
-                self.baseNavigationBar.frame = CGRect(x: left, y: 44 + top, width: screenWidth - left - right, height: 44)
+                self.baseNavigationBar.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 44 + 44)
             }else {
-                self.statusBarView.frame = CGRect(x: left, y: 0, width: screenWidth - left - right, height: 20 + top)
-                self.baseNavigationBar.frame = CGRect(x: left, y: 20 + top, width: screenWidth - left - right, height: 44)
+                self.baseNavigationBar.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 44 + 20)
             }
-        }else {
-            self.statusBarView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 20)
-            self.baseNavigationBar.frame = CGRect(x: 0, y: 20, width: screenWidth, height: 44)
         }
     }
 
@@ -77,17 +86,12 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.statusBarView = UIView()
-        self.statusBarView.backgroundColor = rgb(r: 249, g: 249, b: 249)
-        self.view.addSubview(self.statusBarView)
-        
         self.view.backgroundColor = UIColor.white
-        self.baseNavigationBar = UINavigationBar()
-        self.baseNavigationBar.tintColor = UIColor.black
-        self.baseNavigationBar.barTintColor = rgb(r: 249, g: 249, b: 249)
-        self.baseNavigationBar.isTranslucent = false
-        self.baseNavigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 21)]
-        
+        self.baseNavigationBar = JLNavigationBar()
+        self.baseNavigationBar.tintColor = barTintColor
+        self.baseNavigationBar.barTintColor = barBackgroundColor
+        self.baseNavigationBar.titleColor = barTitleColor
+        self.baseNavigationBar.titleFont = UIFont.systemFont(ofSize: 21)
         self.baseNavigationItem = UINavigationItem()
         self.baseNavigationBar.pushItem(self.baseNavigationItem, animated: true)
         self.view.addSubview(self.baseNavigationBar)
@@ -137,36 +141,60 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
         //
     }
     
+    private func leftItemButton() -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        button.setTitleColor(itemTitleColor, for: .normal)
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.addTarget(self, action: #selector(leftItemClick(sender:)), for: .touchUpInside)
+        return button
+    }
+    
+    private func rightItemButton() -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        button.setTitleColor(itemTitleColor, for: .normal)
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.addTarget(self, action: #selector(rightItemClick(sender:)), for: .touchUpInside)
+        return button
+    }
+    
     func addLeftItem(title: String) {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        btn.setTitle(title, for: .normal)
-        btn.setTitleColor(UIColor.black, for: .normal)
-        btn.titleLabel?.adjustsFontSizeToFitWidth = true
-        btn.addTarget(self, action: #selector(leftItemClick(sender:)), for: .touchUpInside)
-        self.baseNavigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+        leftButton.setTitle(title, for: .normal)
+        if leftButton.currentImage != nil {
+            leftButton.setImage(nil, for: .normal)
+        }
+        if self.baseNavigationItem.leftBarButtonItem == nil {
+            self.baseNavigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        }
     }
     
     func addRightItem(title: String) {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        btn.setTitle(title, for: .normal)
-        btn.setTitleColor(UIColor.black, for: .normal)
-        btn.titleLabel?.adjustsFontSizeToFitWidth = true
-        btn.addTarget(self, action: #selector(rightItemClick(sender:)), for: .touchUpInside)
-        self.baseNavigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
+        rightButton.setTitle(title, for: .normal)
+        if rightButton.currentImage != nil {
+            rightButton.setImage(nil, for: .normal)
+        }
+        if self.baseNavigationItem.rightBarButtonItem == nil {
+            self.baseNavigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+        }
     }
     
     func addLeftItem(img: UIImage) {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        btn.setImage(img, for: .normal)
-        btn.addTarget(self, action: #selector(leftItemClick(sender:)), for: .touchUpInside)
-        self.baseNavigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+        leftButton.setImage(img, for: .normal)
+        if leftButton.currentTitle != nil {
+            leftButton.setTitle(nil, for: .normal)
+        }
+        if self.baseNavigationItem.leftBarButtonItem == nil {
+            self.baseNavigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        }
     }
     
     func addRightItem(img: UIImage) {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        btn.setImage(img, for: .normal)
-        btn.addTarget(self, action: #selector(rightItemClick(sender:)), for: .touchUpInside)
-        self.baseNavigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
+        rightButton.setImage(img, for: .normal)
+        if rightButton.currentTitle != nil {
+            rightButton.setTitle(nil, for: .normal)
+        }
+        if self.baseNavigationItem.rightBarButtonItem == nil {
+            self.baseNavigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+        }
     }
     
     func removeLeftItem() {

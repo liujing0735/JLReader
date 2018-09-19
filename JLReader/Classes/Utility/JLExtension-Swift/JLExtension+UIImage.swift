@@ -12,14 +12,14 @@ extension UIImage {
     
 }
 
-func JLImage(size: CGSize, colors: [Any], locations: [NSNumber]! = nil, startPoint: CGPoint = CGPoint(x: 0.5, y: 0), endPoint: CGPoint = CGPoint(x: 0.5, y: 1)) -> UIImage? {
+func JLGradientImage(size: CGSize, cgColors: [Any], locations: [NSNumber]! = nil, startPoint: CGPoint = CGPoint(x: 0.5, y: 0), endPoint: CGPoint = CGPoint(x: 0.5, y: 1)) -> UIImage? {
     let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-    let layer = CAGradientLayer(colors: colors, locations: locations, startPoint: startPoint, endPoint: endPoint)
+    let layer = CAGradientLayer(cgColors: cgColors, locations: locations, startPoint: startPoint, endPoint: endPoint)
     layer.frame = frame
-    return JLImage(layer: layer)
+    return JLGradientImage(layer: layer)
 }
 
-func JLImage(layer: CALayer) -> UIImage {
+func JLGradientImage(layer: CALayer) -> UIImage {
     UIGraphicsBeginImageContext(layer.frame.size)
     layer.render(in: UIGraphicsGetCurrentContext()!)
     let outputImage = UIGraphicsGetImageFromCurrentImageContext()

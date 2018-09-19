@@ -15,9 +15,9 @@ extension CAGradientLayer {
         self.frame = frame
     }
     
-    convenience init(colors: [Any], locations: [NSNumber]! = nil, startPoint: CGPoint = CGPoint(x: 0.5, y: 0), endPoint: CGPoint = CGPoint(x: 0.5, y: 1)) {
+    convenience init(cgColors: [Any], locations: [NSNumber]! = nil, startPoint: CGPoint = CGPoint(x: 0.5, y: 0), endPoint: CGPoint = CGPoint(x: 0.5, y: 1)) {
         self.init()
-        self.colors = colors
+        self.colors = cgColors
         self.locations = locations
         self.startPoint = startPoint
         self.endPoint = endPoint
