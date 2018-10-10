@@ -60,7 +60,7 @@ class JLReadViewController: UIViewController,UITableViewDelegate,UITableViewData
         topStatusView.lineBreakMode = .byTruncatingMiddle
         topStatusView.textColor = JLColor_4
         topStatusView.font = JLFont_12
-        topStatusView.frame = CGRect(x: JLSpace_1, y: (isX ? TopLiuHeight : 0), width: view.width - 2 * JLSpace_1, height: JLSpace_2)
+        topStatusView.frame = CGRect(x: JLSpace_1, y: (isIPhoneXAll ? TopLiuHeight : 0), width: view.width - 2 * JLSpace_1, height: JLSpace_2)
         view.addSubview(topStatusView)
         
         // BottomStatusView

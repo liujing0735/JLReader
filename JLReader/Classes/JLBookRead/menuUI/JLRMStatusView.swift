@@ -59,7 +59,7 @@ class JLRMStatusView: JLRMBaseView {
         super.layoutSubviews()
         
         // 适配间距
-        let space = isX ? JLSpace_1 : 0
+        let space = isIPhoneXAll ? JLSpace_1 : 0
         
         // 电池
         batteryView.origin = CGPoint(x: width - JLBatterySize.width - space, y: (height - JLBatterySize.height)/2)

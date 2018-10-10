@@ -17,7 +17,7 @@ var navigationBarWidth: CGFloat {
 var navigationBarHeight: CGFloat {
     get {
         if #available(iOS 11.0, *) {
-            if isIPhoneX {
+            if isIPhoneXAll {
                 return 44 + 44
             }
         }
@@ -44,7 +44,7 @@ class JLNavigationBar: UINavigationBar {
                 if className.contains("UIBarBackground") {
                     var frame = subview.frame
                     frame.origin.y = 0
-                    if isIPhoneX {
+                    if isIPhoneXAll {
                         frame.size.height = 44 + 44
                     }else {
                         frame.size.height = 20 + 44
@@ -52,7 +52,7 @@ class JLNavigationBar: UINavigationBar {
                     subview.frame = frame
                 }else if className.contains("UINavigationBarContentView") {
                     var frame = subview.frame
-                    if isIPhoneX {
+                    if isIPhoneXAll {
                         frame.origin.y = 44
                     }else {
                         frame.origin.y = 20

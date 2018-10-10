@@ -69,7 +69,7 @@ class JLBaseTableViewController: JLBaseViewController,UITableViewDelegate,UITabl
         if #available(iOS 11.0, *) {
             var y: CGFloat = 0
             if !barAnimation {
-                if isIPhoneX {
+                if isIPhoneXAll {
                     y = 44 + 44
                 }else {
                     y = 20 + 44

@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         
+        //log("宽：\(screenWidth) , 高：\(screenHeight)")
+        
         return true
     }
 

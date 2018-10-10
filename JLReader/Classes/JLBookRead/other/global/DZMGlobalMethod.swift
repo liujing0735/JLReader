@@ -22,11 +22,11 @@ func RGBA(_ r:CGFloat,g:CGFloat,b:CGFloat,a:CGFloat) -> UIColor {
 
 // MARK: -- 尺寸计算 以iPhone6为比例
 func JLSizeW(_ size:CGFloat) ->CGFloat {
-    return size * (ScreenWidth / 375)
+    return size * (screenWidth / 375)
 }
 
 func JLSizeH(_ size:CGFloat) ->CGFloat{
-    return size * (ScreenHeight / 667)
+    return size * (screenHeight / 667)
 }
 
 // MARK: 截屏
@@ -93,21 +93,21 @@ func GetCurrentTimeIntervalSince1970String() -> String {
 /// 阅读TableView的位置
 func GetReadTableViewFrame() ->CGRect {
     
-    if isX {
+    if isIPhoneXAll {
         
         // Y = 刘海高度 + 状态View高 + 间距
         let y =  TopLiuHeight + JLSpace_2 + JLSpace_6
         
         let bottomHeight = TopLiuHeight
         
-        return CGRect(x: JLSpace_1, y: y, width: ScreenWidth - 2 * JLSpace_1, height: ScreenHeight - y - bottomHeight)
+        return CGRect(x: JLSpace_1, y: y, width: screenWidth - 2 * JLSpace_1, height: screenHeight - y - bottomHeight)
         
     }else{
         
         // Y =  状态View高 + 间距
         let y =  JLSpace_2 + JLSpace_6
         
-        return CGRect(x: JLSpace_1, y: y, width: ScreenWidth - 2 * JLSpace_1, height: ScreenHeight - 2 * y)
+        return CGRect(x: JLSpace_1, y: y, width: screenWidth - 2 * JLSpace_1, height: screenHeight - 2 * y)
     }
 }
 

@@ -40,7 +40,7 @@ class JLRMColorView: JLRMBaseView {
 //
 //        let PublicButtonWH:CGFloat = 40
 //        
-//        let spaceW:CGFloat = (ScreenWidth - 2 * JLSpace_1 - CGFloat(count) * PublicButtonWH) / CGFloat(count - 1)
+//        let spaceW:CGFloat = (screenWidth - 2 * JLSpace_1 - CGFloat(count) * PublicButtonWH) / CGFloat(count - 1)
 //        
 //        for i in 0..<count {
 //            
@@ -102,7 +102,7 @@ class JLRMColorView: JLRMBaseView {
 
         let PublicButtonWH:CGFloat = JLHaloButton.HaloButtonSize(CGSize(width: 39, height: 39)).width
         
-        let spaceW:CGFloat = (ScreenWidth - 2 * JLSpace_1 - CGFloat(count) * PublicButtonWH) / CGFloat(count - 1)
+        let spaceW:CGFloat = (screenWidth - 2 * JLSpace_1 - CGFloat(count) * PublicButtonWH) / CGFloat(count - 1)
         
         for i in 0..<count {
             

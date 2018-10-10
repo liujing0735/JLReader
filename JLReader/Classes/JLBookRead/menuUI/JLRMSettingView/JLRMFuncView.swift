@@ -74,7 +74,7 @@ class JLRMFuncView: JLRMBaseView {
         
         // 布局
         let tempX:CGFloat = titleLabel.frame.maxX + JLSizeW(50)
-        let contentW:CGFloat = ScreenWidth - tempX
+        let contentW:CGFloat = screenWidth - tempX
         
         if funcType == .font || funcType == .effect {
             

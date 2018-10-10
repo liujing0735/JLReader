@@ -106,7 +106,7 @@ class JLRMLeftView: JLRMBaseView,JLSegmentedControlDelegate,UITableViewDelegate,
         contentView.frame = CGRect(x: -contentViewW, y: 0, width: contentViewW, height: height)
         
         // topView
-        let topViewY:CGFloat = isX ? TopLiuHeight : 0
+        let topViewY:CGFloat = isIPhoneXAll ? TopLiuHeight : 0
         let topViewH:CGFloat = 33
         topView.frame = CGRect(x: 0, y: topViewY, width: contentViewW, height: topViewH)
         

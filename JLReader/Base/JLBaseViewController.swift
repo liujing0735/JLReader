@@ -74,7 +74,7 @@ class JLBaseViewController: UIViewController,JLBaseDelegate {
     
     private func updateViewFrame() {
         if #available(iOS 11.0, *) {
-            if isIPhoneX {
+            if isIPhoneXAll {
                 self.baseNavigationBar.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 44 + 44)
             }else {
                 self.baseNavigationBar.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 44 + 20)

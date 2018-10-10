@@ -14,8 +14,20 @@ let screenWidth: CGFloat = UIScreen.main.bounds.size.width
 // 设备屏幕高
 let screenHeight: CGFloat = UIScreen.main.bounds.size.height
 
+// iPhone X 刘海系列
+let isIPhoneXAll: Bool = ((Int)((screenHeight/screenWidth)*100) == 216)
+
 // iPhone X
 let isIPhoneX: Bool = (screenWidth == 375 && screenHeight == 812)
+
+// iPhone XS
+let isIPhoneXS: Bool = (screenWidth == 375 && screenHeight == 812)
+
+// iPhone XR
+let isIPhoneXR: Bool = (screenWidth == 414 && screenHeight == 896)
+
+// iPhone XS Max
+let isIPhoneXSMax: Bool = (screenWidth == 414 && screenHeight == 896)
 
 // 时间戳
 var timeStampInt: Int  = Int(Date().timeIntervalSince1970)

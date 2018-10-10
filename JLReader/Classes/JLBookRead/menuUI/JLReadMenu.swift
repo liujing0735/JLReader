@@ -109,16 +109,16 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
     private var novelsSettingView:JLRMSettingView!
     
     /// BottomView 高
-    private let BottomViewH:CGFloat = isX ? 150 : 112
+    private let BottomViewH:CGFloat = isIPhoneXAll ? 150 : 112
     
     /// LightView 高
-    private let LightViewH:CGFloat = isX ? 80 : 64
+    private let LightViewH:CGFloat = isIPhoneXAll ? 80 : 64
     
     /// LightButton 宽高
     private let lightButtonWH:CGFloat = 84
     
     /// NovelsSettingView 高
-    private let NovelsSettingViewH:CGFloat = isX ? 250 : 218
+    private let NovelsSettingViewH:CGFloat = isIPhoneXAll ? 250 : 218
     
     /// 初始化
     class func readMenu(vc:JLReadController,delegate:JLReadMenuDelegate) ->JLReadMenu {
@@ -235,7 +235,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
     /// 初始化LeftView
     private func initLeftView() {
         
-        leftView = JLRMLeftView(frame:CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight),readMenu:self)
+        leftView = JLRMLeftView(frame:CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight),readMenu:self)
         
         leftView.isHidden = true
         
@@ -258,7 +258,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
     /// 初始化NovelsSettingView
     private func initNovelsSettingView() {
         
-        novelsSettingView = JLRMSettingView(frame:CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: NovelsSettingViewH),readMenu:self)
+        novelsSettingView = JLRMSettingView(frame:CGRect(x: 0, y: screenHeight, width: screenWidth, height: NovelsSettingViewH),readMenu:self)
         
         novelsSettingView.isHidden = true
         
@@ -296,7 +296,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         
         vc.view.addSubview(lightView)
         
-        lightView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: LightViewH)
+        lightView.frame = CGRect(x: 0, y: screenHeight, width: screenWidth, height: LightViewH)
     }
     
     // MARK: -- LightButton
@@ -304,7 +304,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
     /// 初始化LightButton
     private func initLightButton() {
         
-        lightButton = JLHaloButton(CGRect(x: ScreenWidth - lightButtonWH - JLSpace_1, y: ScreenHeight, width: lightButtonWH, height: lightButtonWH), haloColor:UIColor.black.withAlphaComponent(0.75))
+        lightButton = JLHaloButton(CGRect(x: screenWidth - lightButtonWH - JLSpace_1, y: screenHeight, width: lightButtonWH, height: lightButtonWH), haloColor:UIColor.black.withAlphaComponent(0.75))
         
         lightButton.nomalImage = UIImage(named:"RM_14")
         
@@ -353,7 +353,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         
         vc.view.addSubview(topView)
         
-        topView.frame = CGRect(x: 0, y: -NavgationBarHeight, width: ScreenWidth, height: NavgationBarHeight)
+        topView.frame = CGRect(x: 0, y: -NavgationBarHeight, width: screenWidth, height: NavgationBarHeight)
         
         topView.back.addTarget(self, action: #selector(JLReadMenu.clickBack), for: .touchUpInside)
     }
@@ -373,7 +373,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         
         vc.view.addSubview(bottomView)
         
-        bottomView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: BottomViewH)
+        bottomView.frame = CGRect(x: 0, y: screenHeight, width: screenWidth, height: BottomViewH)
     }
     
     
@@ -475,11 +475,11 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
             
             if isShow {
                 
-                self?.topView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: NavgationBarHeight)
+                self?.topView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: NavgationBarHeight)
                 
             }else{
                 
-                self?.topView.frame = CGRect(x: 0, y: -NavgationBarHeight, width: ScreenWidth, height: NavgationBarHeight)
+                self?.topView.frame = CGRect(x: 0, y: -NavgationBarHeight, width: screenWidth, height: NavgationBarHeight)
             }
             
         }) {[weak self] (isOK) in
@@ -501,11 +501,11 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
             
             if isShow {
                 
-                self?.bottomView.frame = CGRect(x: 0, y: ScreenHeight - self!.BottomViewH, width: ScreenWidth, height: self!.BottomViewH)
+                self?.bottomView.frame = CGRect(x: 0, y: screenHeight - self!.BottomViewH, width: screenWidth, height: self!.BottomViewH)
                 
             }else{
                 
-                self?.bottomView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: self!.BottomViewH)
+                self?.bottomView.frame = CGRect(x: 0, y: screenHeight, width: screenWidth, height: self!.BottomViewH)
             }
             
         }) {[weak self] (isOK) in
@@ -525,11 +525,11 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
             
             if isShow {lightButton.isHidden = false}
             
-            lightButton.frame = CGRect(x: ScreenWidth - lightButtonWH - JLSpace_1, y: ScreenHeight, width: lightButtonWH, height: lightButtonWH)
+            lightButton.frame = CGRect(x: screenWidth - lightButtonWH - JLSpace_1, y: screenHeight, width: lightButtonWH, height: lightButtonWH)
             
             UIView.animate(withDuration: animateDuration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: { [weak self] ()->Void in
                 
-                self?.lightButton.frame = CGRect(x: ScreenWidth - self!.lightButtonWH - JLSpace_1, y: ScreenHeight - self!.BottomViewH - self!.lightButtonWH - JLSpace_1, width: self!.lightButtonWH, height: self!.lightButtonWH)
+                self?.lightButton.frame = CGRect(x: screenWidth - self!.lightButtonWH - JLSpace_1, y: screenHeight - self!.BottomViewH - self!.lightButtonWH - JLSpace_1, width: self!.lightButtonWH, height: self!.lightButtonWH)
                 
                 }, completion: { (isOK) in
                     
@@ -540,7 +540,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
             
             UIView.animate(withDuration: animateDuration, animations: { [weak self] ()->Void in
                 
-                self?.lightButton.frame = CGRect(x: ScreenWidth, y: self!.lightButton.y, width: self!.lightButtonWH, height: self!.lightButtonWH)
+                self?.lightButton.frame = CGRect(x: screenWidth, y: self!.lightButton.y, width: self!.lightButtonWH, height: self!.lightButtonWH)
                 
             }) {[weak self] (isOK) in
                 
@@ -556,7 +556,7 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
         
         UIView.animate(withDuration: animateDuration) { [weak self] ()->Void in
             
-            self?.lightButton.frame = CGRect(x: self!.lightButton.x, y: ScreenHeight - view.height - self!.lightButtonWH - JLSpace_1, width: self!.lightButtonWH, height: self!.lightButtonWH)
+            self?.lightButton.frame = CGRect(x: self!.lightButton.x, y: screenHeight - view.height - self!.lightButtonWH - JLSpace_1, width: self!.lightButtonWH, height: self!.lightButtonWH)
         }
     }
     
@@ -571,11 +571,11 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
             
             if isShow {
                 
-                self?.lightView.frame = CGRect(x: 0, y: ScreenHeight - self!.LightViewH, width: ScreenWidth, height: self!.LightViewH)
+                self?.lightView.frame = CGRect(x: 0, y: screenHeight - self!.LightViewH, width: screenWidth, height: self!.LightViewH)
                 
             }else{
                 
-                self?.lightView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: self!.LightViewH)
+                self?.lightView.frame = CGRect(x: 0, y: screenHeight, width: screenWidth, height: self!.LightViewH)
             }
             
         }) {[weak self] (isOK) in
@@ -597,11 +597,11 @@ class JLReadMenu: NSObject,UIGestureRecognizerDelegate {
             
             if isShow {
                 
-                self?.novelsSettingView.frame = CGRect(x: 0, y: ScreenHeight - self!.NovelsSettingViewH, width: ScreenWidth, height: self!.NovelsSettingViewH)
+                self?.novelsSettingView.frame = CGRect(x: 0, y: screenHeight - self!.NovelsSettingViewH, width: screenWidth, height: self!.NovelsSettingViewH)
                 
             }else{
                 
-                self?.novelsSettingView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: self!.NovelsSettingViewH)
+                self?.novelsSettingView.frame = CGRect(x: 0, y: screenHeight, width: screenWidth, height: self!.NovelsSettingViewH)
             }
             
         }) {[weak self] (isOK) in
