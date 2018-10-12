@@ -25,14 +25,18 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
     private var bookAuthorLabel: UILabel!
     private var bookStateLabel: UILabel!
     
+    private var tableFooterView: UIView!
+    private var bookcaseButton: UIButton!
+    private var readingButton: UIButton!
+    private var downloadButton: UIButton!
+    
     func reloadData() {
-        let dic = detailDic
-        if dic != nil {
-            let bookImage: String = (dic?["book_img"])!
-            let bookName: String = (dic?["book_name"])!
-            let bookState: String = (dic?["book_updated_state"])!
+        if let dic = detailDic {
+            let bookImage: String = (dic["book_img"])!
+            let bookName: String = (dic["book_name"])!
+            let bookState: String = (dic["book_updated_state"])!
             //let bookIntroduction: String = (dic?["book_introduction"])!
-            let bookAuthor: String = (dic?["book_author"])!
+            let bookAuthor: String = (dic["book_author"])!
             
             headerImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
             bookImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: bookImage)!, cacheKey: bookImage.md5))
@@ -77,6 +81,30 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         self.tableView.tableHeaderView = tableHeaderView
     }
     
+    func createTableFooterView() {
+        tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 64))
+        
+        bookcaseButton = UIButton(frame: CGRect(x: 0, y: 0, width: screenWidth/4, height: 64))
+        bookcaseButton.setTitle("加入书架", for: .normal)
+        bookcaseButton.setTitleColor(rgb(r: 255, g: 180, b: 0), for: .normal)
+        bookcaseButton.backgroundColor = .white
+        tableFooterView.addSubview(bookcaseButton)
+        
+        readingButton = UIButton(frame: CGRect(x: screenWidth/4, y: 0, width: screenWidth/2, height: 64))
+        readingButton.setTitle("立即阅读", for: .normal)
+        readingButton.setTitleColor(.white, for: .normal)
+        readingButton.backgroundColor = rgb(r: 255, g: 180, b: 0)
+        tableFooterView.addSubview(readingButton)
+        
+        downloadButton = UIButton(frame: CGRect(x: screenWidth*3/4, y: 0, width: screenWidth/4, height: 64))
+        downloadButton.setTitle("全本缓存", for: .normal)
+        downloadButton.setTitleColor(rgb(r: 255, g: 180, b: 0), for: .normal)
+        downloadButton.backgroundColor = .white
+        tableFooterView.addSubview(downloadButton)
+        
+        self.tableView.tableFooterView = tableFooterView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -92,12 +120,12 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         self.barAnimation = true
 
         createTableHeaderView()
+        createTableFooterView()
         
         self.tableView.separatorStyle = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(JLBookdetailTableViewCell.classForCoder(), forCellReuseIdentifier: "JLBookdetailTableViewCell")
-        self.tableView.register(JLBookdetailRecommendTableViewCell.classForCoder(), forCellReuseIdentifier: "JLBookdetailRecommendTableViewCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -130,7 +158,7 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -138,10 +166,11 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = "TableViewCell"
+
+        let identifier = "JLBookdetailTableViewCell"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: identifier)
+            cell = JLBookdetailTableViewCell(style: .default, reuseIdentifier: identifier)
         }
         cell?.selectionStyle = .none
         
