@@ -121,6 +121,18 @@ class JLParsingHTML: NSObject {
         return [[String: String]]()
     }
     
+    func downloadUrl() -> [String: String]! {
+        switch website {
+        case .Web80txt:
+            do {
+                if parsing80Txt != nil {
+                    return parsing80Txt.downloadUrl()
+                }
+            }
+        }
+        return [String: String]()
+    }
+    
     func downloadFile(url: String) {
         
         let destination: DownloadRequest.DownloadFileDestination = { _, response in
@@ -145,7 +157,9 @@ class JLParsingHTML: NSObject {
                 }
                 if let filePath = response.destinationURL?.path {
                     print("文件路径 str：\(filePath)")
-                    //self.readTXT(path: filePath)
+                    JLReadParser.ParserLocalURL(url: URL(string: filePath)!, complete: { (readModel) in
+                        
+                    })
                 }
         }
     }

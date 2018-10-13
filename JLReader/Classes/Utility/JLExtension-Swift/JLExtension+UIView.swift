@@ -12,10 +12,8 @@ import Foundation
 import UIKit
 
 extension UIView{
-    
-    
-    
-    // MARK: -- 扩展属性使用
+
+    // MARK: -- 扩展属性
     public var x: CGFloat{
         get{
             return self.frame.origin.x
@@ -124,66 +122,46 @@ extension UIView{
     
     /// 开启允许父视图监听Touch事件
     var openTouch:Bool {
-        
         get{
-            
             return (objc_getAssociatedObject(self, &IsOpenTouch) as? Bool) ?? false
         }
-        
         set{
-            
             objc_setAssociatedObject(self, &IsOpenTouch, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
         }
     }
     
     /// 开始触摸
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         if openTouch {
-            
             next?.touchesBegan(touches, with: event)
-            
         }else{
-            
             super.touchesBegan(touches, with: event)
         }
     }
     
     /// 触摸移动
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         if openTouch {
-            
             next?.touchesMoved(touches, with: event)
-            
         }else{
-            
             super.touchesMoved(touches, with: event)
         }
     }
     
     /// 触摸结束
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         if openTouch {
-            
             next?.touchesEnded(touches, with: event)
-            
         }else{
-            
             super.touchesEnded(touches, with: event)
         }
     }
     
     /// 触摸取消
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         if openTouch {
-            
             next?.touchesCancelled(touches, with: event)
-            
         }else{
-            
             super.touchesCancelled(touches, with: event)
         }
     }
@@ -193,22 +171,58 @@ extension UIView{
     
     /// 获得视图控制器
     func viewController() ->UIViewController? {
-        
         // 通过响应者链，取得此视图所在的视图控制器
         var next = self.next
-        
         repeat{
-            
             // 判断响应者对象是否是视图控制器类型
             if next!.isKind(of: UIViewController.classForCoder()) {
-                
                 return next as? UIViewController
             }
-            
             next = next!.next
-            
         }while next != nil
-        
         return nil
+    }
+    
+    /// 圆角
+    func cornerRadius() {
+        cornerRadius(radius: 7.0)
+    }
+    
+    func cornerRadius(radius: CGFloat) {
+        cornerRadius(radius: radius, color: .clear)
+    }
+    
+    func cornerRadius(radius: CGFloat, color: UIColor) {
+        cornerRadius(radius: radius, color: color, width: 1.0)
+    }
+    
+    func cornerRadius(radius: CGFloat, color: UIColor, width: CGFloat) {
+        if self.backgroundColor == nil {
+            self.backgroundColor = .white
+        }
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = radius
+        self.layer.borderWidth = width
+        self.layer.borderColor = color.cgColor
+    }
+    
+    /// 阴影
+    func shadowColor() {
+        shadowColor(color: .black)
+    }
+
+    func shadowColor(color: UIColor) {
+        shadowColor(color: color, offset: CGSize(width: 1.0, height: 1.0))
+    }
+    
+    func shadowColor(color: UIColor, offset:CGSize) {
+        shadowColor(color: color, opacity: 0.7, offset: offset, radius: 2.0)
+    }
+    
+    func shadowColor(color: UIColor, opacity:Float, offset:CGSize, radius:CGFloat) {
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowOffset = offset
+        self.layer.shadowRadius = radius
     }
 }

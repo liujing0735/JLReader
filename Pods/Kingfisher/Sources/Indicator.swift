@@ -133,9 +133,9 @@ final class ActivityIndicator: Indicator {
             #if os(tvOS)
                 let indicatorStyle = UIActivityIndicatorViewStyle.white
             #else
-                let indicatorStyle = UIActivityIndicatorView.Style.gray
+                let indicatorStyle = UIActivityIndicatorViewStyle.gray
             #endif
-            activityIndicatorView = UIActivityIndicatorView(style:indicatorStyle)
+            activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle:indicatorStyle)
             activityIndicatorView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin, .flexibleTopMargin]
         #endif
     }

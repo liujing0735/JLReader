@@ -22,7 +22,7 @@ class JLBooklistTableViewCell: UITableViewCell {
     }
     
     func reloadData(dic: [String: Any], delegate: JLLabelDelegate!) -> Void {
-        let bookImage = dic["book_img"] as! String
+        let bookImage = dic["book_cover_img"] as! String
         let bookName = dic["book_name"] as! String
         let bookState = dic["book_updated_state"] as! String
         let bookIntroduction = dic["book_introduction"] as! String

@@ -88,6 +88,8 @@
 		22E08DBC216DE59A00329B05 /* JLExtension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E08DBB216DE59900329B05 /* JLExtension+UITableView.swift */; };
 		22EB6923212E86A800126494 /* JLBookdetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */; };
 		22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */; };
+		22FE29142171E01900EF21E1 /* JLSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE29122171E01900EF21E1 /* JLSQLiteManager.swift */; };
+		22FE29152171E01900EF21E1 /* JLLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE29132171E01900EF21E1 /* JLLocalNotificationManager.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +207,8 @@
 		22E08DBB216DE59900329B05 /* JLExtension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UITableView.swift"; sourceTree = "<group>"; };
 		22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewController.swift; sourceTree = "<group>"; };
 		22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewCell.swift; sourceTree = "<group>"; };
+		22FE29122171E01900EF21E1 /* JLSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLSQLiteManager.swift; sourceTree = "<group>"; };
+		22FE29132171E01900EF21E1 /* JLLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLocalNotificationManager.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
 		BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69B9AA563BB1C0ABB954EE4 /* Pods-JLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 		22537553213E318D0042C074 /* JLExtension-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				22FE29112171E01900EF21E1 /* JLManager */,
 				22537554213E318D0042C074 /* JLExtensionSwift.swift */,
 				22537556213E31D50042C074 /* JLExtensionInt.swift */,
 				22537558213E325F0042C074 /* JLExtensionString.swift */,
@@ -557,6 +562,15 @@
 			path = Bookcity;
 			sourceTree = "<group>";
 		};
+		22FE29112171E01900EF21E1 /* JLManager */ = {
+			isa = PBXGroup;
+			children = (
+				22FE29122171E01900EF21E1 /* JLSQLiteManager.swift */,
+				22FE29132171E01900EF21E1 /* JLLocalNotificationManager.swift */,
+			);
+			path = JLManager;
+			sourceTree = "<group>";
+		};
 		B3345690989A7A4FF465CA17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,12 +671,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -716,6 +732,7 @@
 				22C3515420F4582100CE2442 /* JLReadView.swift in Sources */,
 				22C3514120F4582100CE2442 /* JLReadController.swift in Sources */,
 				22C3515020F4582100CE2442 /* JLReadMarkModel.swift in Sources */,
+				22FE29152171E01900EF21E1 /* JLLocalNotificationManager.swift in Sources */,
 				22C3512F20F4582100CE2442 /* JLSegmentedControl.swift in Sources */,
 				22C3513F20F4582100CE2442 /* JLReadConfigure.swift in Sources */,
 				22C3514A20F4582100CE2442 /* JLRMTopView.swift in Sources */,
@@ -729,6 +746,7 @@
 				22C3516C20F58FED00CE2442 /* JLBooklistTableViewCell.swift in Sources */,
 				22C350A320EDB3A500CE2442 /* tokenizer.c in Sources */,
 				22C3513020F4582100CE2442 /* JLHaloButton.swift in Sources */,
+				22FE29142171E01900EF21E1 /* JLSQLiteManager.swift in Sources */,
 				22C3514620F4582100CE2442 /* JLRMBottomView.swift in Sources */,
 				22C3509920EDB3A500CE2442 /* util.c in Sources */,
 				22C3515120F4582100CE2442 /* JLReadChapterModel.swift in Sources */,

@@ -9,8 +9,9 @@ inhibit_all_warnings!
 
 def common_pods
     # -- Swift -- #
-	pod 'Alamofire', '~> 4.7'
-    pod 'Kingfisher', '~> 4.8.0' #图片加载、缓存
+	pod 'Alamofire', '~> 4.7.3'
+    pod 'Kingfisher', '~> 4.8.1' #图片加载、缓存
+    pod 'PKHUD', '~> 5.1.0' # HUD
     #pod 'Segmentio', '~> 3.0' #滑动分段选择器
     #pod 'SlideMenuControllerSwift'
     #pod 'IQKeyboardManagerSwift'

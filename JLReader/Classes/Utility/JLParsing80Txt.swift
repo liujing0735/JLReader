@@ -143,7 +143,7 @@ class JLParsing80Txt: NSObject {
             
             let bookImg = book.query(".book_pic")?.find("img")?.first()?.attr("src")
             print(bookImg!)
-            dic["book_img"] = bookImg!
+            dic["book_cover_img"] = bookImg!
             
             books.append(dic)
         }
@@ -163,7 +163,7 @@ class JLParsing80Txt: NSObject {
         
         let detail = gumboDocument.query("#show_container")?.find(".soft_info_r")?.first()
         let bookImg = detail?.query("img")?.first()?.attr("src")
-        dic["book_img"] = bookImg
+        dic["book_cover_img"] = bookImg
         
         let lis = detail?.query("li") as! [OCGumboNode]
         for li in lis {
@@ -220,6 +220,14 @@ class JLParsing80Txt: NSObject {
                 let range = text.range(of: latestChapter)
                 dic["book_latest_chapter"] = String(text.suffix(from: (range?.upperBound)!))
             }
+            let downList = "TXT下载列表"
+            if text.contains(downList) {
+                dic["book_down_list"] = li.query("a")?.first()?.attr("href")
+            }
+            let readOnline = "在线阅读_目录"
+            if text.contains(readOnline) {
+                dic["book_read_online"] = li.query("a")?.last()?.attr("href")
+            }
         }
         
         let intros = gumboDocument.query("#mainSoftIntro")?.find("p") as! [OCGumboNode]
@@ -238,7 +246,7 @@ class JLParsing80Txt: NSObject {
     // http://www.80txt.com/txtxz/52314.html
     // http://www.80txt.com/txtxz/52314/down.html
     // http://www.80txt.com/txtml_52314.html
-    func downs() -> [String: String]! {
+    func downloadUrl() -> [String: String]! {
         if gumboDocument == nil {
             return nil
         }
@@ -256,7 +264,7 @@ class JLParsing80Txt: NSObject {
                 }
             }
         }
-        
+    
         return dic
     }
     

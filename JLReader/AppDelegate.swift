@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        firstLaunch()
+        
         let bookcaseTable = JLBookcaseTableViewController()
         bookcaseTable.tabBarItem.title = "书架"
         bookcaseTable.tabBarItem.image = UIImage(named: "item_book_case")
@@ -59,7 +61,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    private func firstLaunch() {
+        if !UserDefaults.standard.bool(forKey: "firstLaunch") {
+            UserDefaults.standard.set(true, forKey: "firstLaunch")
+            
+            createBookInfoTable()
+        }
+    }
 
-
+    private func createBookInfoTable() {
+        let sqlMgr = JLSQLiteManager.shared
+        if sqlMgr.open() {
+            let column: [String: JLSQLiteDataType] = [
+                "book_id": .Integer,
+                "book_name": .Text,
+                "book_author": .Text,
+                "book_cover_img": .Text,
+                "book_latest_chapter": .Text,
+                "book_updated_state": .Text,
+                "book_updated_date": .Text,
+                "book_online_url": .Text,
+                "book_local_url": .Text,
+                "update_time": .Real]
+            let constraint: [String: [JLSQLiteConstraint]] = [
+                "book_id": [.AutoPrimaryKey],
+                "update_time": [.DefaultTimestamp]]
+            sqlMgr.createTable(tbName: "book_info_table", tbColumn: column, tbConstraint: constraint) { (error) in
+                
+                if error != nil {
+                    log((error?.errmsg)!)
+                }
+            }
+            sqlMgr.close()
+        }
+    }
 }
 

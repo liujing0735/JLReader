@@ -32,7 +32,7 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
     
     func reloadData() {
         if let dic = detailDic {
-            let bookImage: String = (dic["book_img"])!
+            let bookImage: String = (dic["book_cover_img"])!
             let bookName: String = (dic["book_name"])!
             let bookState: String = (dic["book_updated_state"])!
             //let bookIntroduction: String = (dic?["book_introduction"])!
@@ -82,27 +82,59 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
     }
     
     func createTableFooterView() {
-        tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 64))
+        tableFooterView = UIView(frame: CGRect(x: 0, y: screenHeight - 44, width: screenWidth, height: 44))
+        //tableFooterView
         
-        bookcaseButton = UIButton(frame: CGRect(x: 0, y: 0, width: screenWidth/4, height: 64))
+        bookcaseButton = UIButton(frame: CGRect(x: 0, y: 0, width: screenWidth/4, height: 44))
         bookcaseButton.setTitle("加入书架", for: .normal)
-        bookcaseButton.setTitleColor(rgb(r: 255, g: 180, b: 0), for: .normal)
+        bookcaseButton.setTitleColor(rgb(r: 97, g: 141, b: 240), for: .normal)
         bookcaseButton.backgroundColor = .white
+        bookcaseButton.addTarget(self, action: #selector(touchUpInside(sender:)), for: .touchUpInside)
         tableFooterView.addSubview(bookcaseButton)
         
-        readingButton = UIButton(frame: CGRect(x: screenWidth/4, y: 0, width: screenWidth/2, height: 64))
+        readingButton = UIButton(frame: CGRect(x: screenWidth/4, y: 0, width: screenWidth/2, height: 44))
         readingButton.setTitle("立即阅读", for: .normal)
         readingButton.setTitleColor(.white, for: .normal)
-        readingButton.backgroundColor = rgb(r: 255, g: 180, b: 0)
+        readingButton.backgroundColor = rgb(r: 97, g: 141, b: 240)
+        readingButton.addTarget(self, action: #selector(touchUpInside(sender:)), for: .touchUpInside)
         tableFooterView.addSubview(readingButton)
         
-        downloadButton = UIButton(frame: CGRect(x: screenWidth*3/4, y: 0, width: screenWidth/4, height: 64))
+        downloadButton = UIButton(frame: CGRect(x: screenWidth*3/4, y: 0, width: screenWidth/4, height: 44))
         downloadButton.setTitle("全本缓存", for: .normal)
-        downloadButton.setTitleColor(rgb(r: 255, g: 180, b: 0), for: .normal)
+        downloadButton.setTitleColor(rgb(r: 97, g: 141, b: 240), for: .normal)
         downloadButton.backgroundColor = .white
+        downloadButton.addTarget(self, action: #selector(touchUpInside(sender:)), for: .touchUpInside)
         tableFooterView.addSubview(downloadButton)
         
-        self.tableView.tableFooterView = tableFooterView
+        //self.tableView.tableFooterView = tableFooterView
+        self.view.addSubview(tableFooterView)
+    }
+    
+    @objc func touchUpInside(sender: UIButton) {
+        switch sender {
+        case bookcaseButton:
+            do {
+                
+            }
+        case readingButton:
+            do {
+                if let dic = detailDic {
+                    let bookReadOnline: String = (dic["book_read_online"])!
+                }
+            }
+        case downloadButton:
+            do {
+                if let dic = detailDic {
+                    let bookDownList: String = (dic["book_down_list"])!
+                    let downParsingHTML = JLParsingHTML(website: .Web80txt, url: bookDownList)
+                    let downUrl = downParsingHTML.downloadUrl()
+                    let url = downUrl!["网盘合作"]
+                    downParsingHTML.downloadFile(url: url!)
+                }
+            }
+        default:
+            break
+        }
     }
     
     override func viewDidLoad() {
@@ -122,6 +154,7 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         createTableHeaderView()
         createTableFooterView()
         
+        self.tableView.height = self.tableView.frame.size.height - 44
         self.tableView.separatorStyle = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
