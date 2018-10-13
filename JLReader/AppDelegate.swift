@@ -77,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 "book_id": .Integer,
                 "book_name": .Text,
                 "book_author": .Text,
+                "book_identifier": .Text,
                 "book_cover_img": .Text,
                 "book_latest_chapter": .Text,
                 "book_updated_state": .Text,
@@ -86,6 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 "update_time": .Real]
             let constraint: [String: [JLSQLiteConstraint]] = [
                 "book_id": [.AutoPrimaryKey],
+                "book_identifier": [.NotNullUnique],
                 "update_time": [.DefaultTimestamp]]
             sqlMgr.createTable(tbName: "book_info_table", tbColumn: column, tbConstraint: constraint) { (error) in
                 

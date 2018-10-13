@@ -114,7 +114,22 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
         switch sender {
         case bookcaseButton:
             do {
-                
+                if let dic = detailDic {
+                    var data = dic
+                    data["book_identifier"] = String(dic["book_name"]! + dic["book_author"]!).md5
+                    data["book_online_url"] = urlString
+                    
+                    let sqlMgr = JLSQLiteManager.shared
+                    if sqlMgr.open() {
+                        sqlMgr.insert(tbName: "book_info_table", data: data) { (error) in
+                            
+                        }
+                        sqlMgr.select(tbName: "book_info_table") { (result, error) in
+                            log(result)
+                        }
+                        sqlMgr.close()
+                    }
+                }
             }
         case readingButton:
             do {
@@ -129,7 +144,10 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
                     let downParsingHTML = JLParsingHTML(website: .Web80txt, url: bookDownList)
                     let downUrl = downParsingHTML.downloadUrl()
                     let url = downUrl!["网盘合作"]
-                    downParsingHTML.downloadFile(url: url!)
+                    downParsingHTML.downloadFile(url: url!, complete: { (filePath, readModel) in
+                        
+                        
+                    })
                 }
             }
         default:

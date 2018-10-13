@@ -226,14 +226,20 @@ class JLSQLiteManager: NSObject {
     ///   - data: 待插入的数据字典
     ///   - block: 执行结果回调
     func insert(tbName: String, data: [String: Any], block: ((JLSQLiteError?) ->())) {
+        let columnNames = tbColumnNames(tbName: tbName)
+        
         var mutKey = ""
         var mutValue = ""
         for (key, value) in data {
-            mutKey.append("\(key),")
-            mutValue.append("\"\(value)\",")
+            if columnNames.contains(key) {
+                mutKey.append("\(key),")
+                mutValue.append("\"\(value)\",")
+            }
         }
-        mutKey.remove(at: mutKey.index(before: mutKey.endIndex))
-        mutValue.remove(at: mutValue.index(before: mutValue.endIndex))
+        if mutKey.count > 0 {
+            mutKey.remove(at: mutKey.index(before: mutKey.endIndex))
+            mutValue.remove(at: mutValue.index(before: mutValue.endIndex))
+        }
         
         let sql = "insert into \(tbName)(\(mutKey)) values(\(mutValue))"
         execSQL(sql: sql) { (error) in
@@ -265,9 +271,13 @@ class JLSQLiteManager: NSObject {
     ///   - rowWhere: where子句，规定选择的标准
     ///   - block: 执行结果回调
     func update(tbName: String, data: [String: Any], rowWhere: String! = nil, block: ((JLSQLiteError?) ->())) {
+        let columnNames = tbColumnNames(tbName: tbName)
+        
         var sql = "update \(tbName) set "
         for (key, value) in data {
-            sql.append("\(key)=\"\(value)\",")
+            if columnNames.contains(key) {
+                sql.append("\(key)=\"\(value)\",")
+            }
         }
         if data.count > 0 {
             sql.remove(at: sql.index(before: sql.endIndex))
@@ -315,7 +325,7 @@ class JLSQLiteManager: NSObject {
     /// - Parameters:
     ///   - sql: sql语句
     ///   - block: 执行结果回调
-    func execSQL(sql: String, block: ((JLSQLiteError?) ->())) {
+    private func execSQL(sql: String, block: ((JLSQLiteError?) ->())) {
         let code = sqlite3_exec(dbBase, sql.cString(using: String.Encoding.utf8), nil, nil, nil)
         if code != SQLITE_OK {
             print(sql)
@@ -330,7 +340,7 @@ class JLSQLiteManager: NSObject {
     /// - Parameters:
     ///   - sql: sql语句
     ///   - block: 执行结果回调
-    func selectSQL(sql: String, block: (([[String: Any]], JLSQLiteError?) ->())) {
+    private func selectSQL(sql: String, block: (([[String: Any]], JLSQLiteError?) ->())) {
         
         var dicts = [[String: Any]]()
         var stmt: OpaquePointer? = nil
@@ -378,5 +388,25 @@ class JLSQLiteManager: NSObject {
             sqlite3_finalize(stmt)
             block(dicts, nil)
         }
+    }
+    
+    /// 查询表的字段名
+    ///
+    /// - Parameter tbName: 表名
+    /// - Returns: 表的字段名数组
+    private func tbColumnNames(tbName: String) -> [String] {
+        let sql = "PRAGMA table_info(\(tbName))"
+        var names = [String]()
+        var stmt: OpaquePointer? = nil
+        if sqlite3_prepare_v2(dbBase, sql.cString(using: String.Encoding.utf8), -1, &stmt, nil) == SQLITE_OK {
+
+            while sqlite3_step(stmt) == SQLITE_ROW {
+                let cName = String.init(cString: sqlite3_column_text(stmt, 1))
+                let name = String(cString: cName, encoding: String.Encoding.utf8)!
+                names.append(name)
+            }
+            sqlite3_finalize(stmt)
+        }
+        return names
     }
 }

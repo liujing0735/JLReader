@@ -133,7 +133,7 @@ class JLParsingHTML: NSObject {
         return [String: String]()
     }
     
-    func downloadFile(url: String) {
+    func downloadFile(url: String, complete:((_ filePath: String, _ readModel: JLReadModel) ->Void)?) {
         
         let destination: DownloadRequest.DownloadFileDestination = { _, response in
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -158,7 +158,7 @@ class JLParsingHTML: NSObject {
                 if let filePath = response.destinationURL?.path {
                     print("文件路径 str：\(filePath)")
                     JLReadParser.ParserLocalURL(url: URL(string: filePath)!, complete: { (readModel) in
-                        
+                        if complete != nil {complete!(filePath, readModel)}
                     })
                 }
         }
