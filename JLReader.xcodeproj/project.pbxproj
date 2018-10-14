@@ -17,6 +17,10 @@
 		22537561213F614B0042C074 /* JLExtension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537560213F614B0042C074 /* JLExtension+UIImage.swift */; };
 		22537563213FA3E00042C074 /* JLExtension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537562213FA3E00042C074 /* JLExtension+UIView.swift */; };
 		22537565213FA47E0042C074 /* JLExtension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22537564213FA47E0042C074 /* JLExtension+UIScrollView.swift */; };
+		227C626D2173543C00ED5698 /* JLBookdetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C626B2173543C00ED5698 /* JLBookdetailTableViewCell.swift */; };
+		227C626E2173543C00ED5698 /* JLBookdetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C626C2173543C00ED5698 /* JLBookdetailTableViewController.swift */; };
+		227C627121735A5E00ED5698 /* JLBookcache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C627021735A5E00ED5698 /* JLBookcache.swift */; };
+		227C627321735AD700ED5698 /* JLDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C627221735AD700ED5698 /* JLDownloadManager.swift */; };
 		22A80D862172301E005ECE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22A80D882172301E005ECE66 /* InfoPlist.strings */; };
 		22A80D8C2172471E005ECE66 /* JLBookcaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A80D8B2172471E005ECE66 /* JLBookcaseTableViewCell.swift */; };
 		22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500820EDAA7B00CE2442 /* AppDelegate.swift */; };
@@ -88,8 +92,6 @@
 		22C3516C20F58FED00CE2442 /* JLBooklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */; };
 		22D77B2E20F635B600EB02D7 /* JLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B2D20F635B600EB02D7 /* JLLabel.swift */; };
 		22E08DBC216DE59A00329B05 /* JLExtension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E08DBB216DE59900329B05 /* JLExtension+UITableView.swift */; };
-		22EB6923212E86A800126494 /* JLBookdetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */; };
-		22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */; };
 		22FE29142171E01900EF21E1 /* JLSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE29122171E01900EF21E1 /* JLSQLiteManager.swift */; };
 		22FE29152171E01900EF21E1 /* JLLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE29132171E01900EF21E1 /* JLLocalNotificationManager.swift */; };
 		6EC52B9793F7B9472314C199 /* Pods_JLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF332BC3F17251BFF0CABA16 /* Pods_JLReader.framework */; };
@@ -106,6 +108,10 @@
 		22537560213F614B0042C074 /* JLExtension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UIImage.swift"; sourceTree = "<group>"; };
 		22537562213FA3E00042C074 /* JLExtension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UIView.swift"; sourceTree = "<group>"; };
 		22537564213FA47E0042C074 /* JLExtension+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UIScrollView.swift"; sourceTree = "<group>"; };
+		227C626B2173543C00ED5698 /* JLBookdetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewCell.swift; sourceTree = "<group>"; };
+		227C626C2173543C00ED5698 /* JLBookdetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewController.swift; sourceTree = "<group>"; };
+		227C627021735A5E00ED5698 /* JLBookcache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookcache.swift; sourceTree = "<group>"; };
+		227C627221735AD700ED5698 /* JLDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDownloadManager.swift; sourceTree = "<group>"; };
 		227DFAF5216DA6DD002AA2A6 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		22A80D8421723005005ECE66 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		22A80D852172300E005ECE66 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -213,8 +219,6 @@
 		22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBooklistTableViewCell.swift; sourceTree = "<group>"; };
 		22D77B2D20F635B600EB02D7 /* JLLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLLabel.swift; sourceTree = "<group>"; };
 		22E08DBB216DE59900329B05 /* JLExtension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JLExtension+UITableView.swift"; sourceTree = "<group>"; };
-		22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewController.swift; sourceTree = "<group>"; };
-		22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookdetailTableViewCell.swift; sourceTree = "<group>"; };
 		22FE29122171E01900EF21E1 /* JLSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLSQLiteManager.swift; sourceTree = "<group>"; };
 		22FE29132171E01900EF21E1 /* JLLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLocalNotificationManager.swift; sourceTree = "<group>"; };
 		8B76BD095F0320D1D593E5AB /* Pods-JLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLReader/Pods-JLReader.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +256,23 @@
 			path = "JLExtension-Swift";
 			sourceTree = "<group>";
 		};
+		227C626A2173543C00ED5698 /* Bookdetail */ = {
+			isa = PBXGroup;
+			children = (
+				227C626B2173543C00ED5698 /* JLBookdetailTableViewCell.swift */,
+				227C626C2173543C00ED5698 /* JLBookdetailTableViewController.swift */,
+			);
+			path = Bookdetail;
+			sourceTree = "<group>";
+		};
+		227C626F2173582E00ED5698 /* Bookcache */ = {
+			isa = PBXGroup;
+			children = (
+				227C627021735A5E00ED5698 /* JLBookcache.swift */,
+			);
+			path = Bookcache;
+			sourceTree = "<group>";
+		};
 		22C34FFC20EDAA7B00CE2442 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +296,8 @@
 			children = (
 				22C3516320F4C8E100CE2442 /* Bookcase */,
 				22C3516420F4C8E100CE2442 /* Bookcity */,
+				227C626A2173543C00ED5698 /* Bookdetail */,
+				227C626F2173582E00ED5698 /* Bookcache */,
 				22C3515C20F4C80900CE2442 /* Base */,
 				22C3507220EDB3A500CE2442 /* Classes */,
 				22C3500820EDAA7B00CE2442 /* AppDelegate.swift */,
@@ -566,8 +589,6 @@
 				22C3516720F4C93100CE2442 /* JLBookcityTableViewController.swift */,
 				22C3516920F58E0900CE2442 /* JLBooklistTableViewController.swift */,
 				22C3516B20F58FED00CE2442 /* JLBooklistTableViewCell.swift */,
-				22EB6922212E86A800126494 /* JLBookdetailTableViewController.swift */,
-				22EB6924212EAA6B00126494 /* JLBookdetailTableViewCell.swift */,
 			);
 			path = Bookcity;
 			sourceTree = "<group>";
@@ -577,6 +598,7 @@
 			children = (
 				22FE29122171E01900EF21E1 /* JLSQLiteManager.swift */,
 				22FE29132171E01900EF21E1 /* JLLocalNotificationManager.swift */,
+				227C627221735AD700ED5698 /* JLDownloadManager.swift */,
 			);
 			path = JLManager;
 			sourceTree = "<group>";
@@ -722,6 +744,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227C627121735A5E00ED5698 /* JLBookcache.swift in Sources */,
 				22D77B2E20F635B600EB02D7 /* JLLabel.swift in Sources */,
 				22C3516220F4C80900CE2442 /* JLBaseTabBarController.swift in Sources */,
 				22C3514920F4582100CE2442 /* JLReadMenu.swift in Sources */,
@@ -749,6 +772,7 @@
 				22C3513F20F4582100CE2442 /* JLReadConfigure.swift in Sources */,
 				22C3514A20F4582100CE2442 /* JLRMTopView.swift in Sources */,
 				22C3514020F4582100CE2442 /* JLReadAuxiliary.swift in Sources */,
+				227C626E2173543C00ED5698 /* JLBookdetailTableViewController.swift in Sources */,
 				22537565213FA47E0042C074 /* JLExtension+UIScrollView.swift in Sources */,
 				22537555213E318D0042C074 /* JLExtensionSwift.swift in Sources */,
 				22C3512D20F4582100CE2442 /* UIPageViewController+Extension.swift in Sources */,
@@ -760,6 +784,7 @@
 				22C3513020F4582100CE2442 /* JLHaloButton.swift in Sources */,
 				22FE29142171E01900EF21E1 /* JLSQLiteManager.swift in Sources */,
 				22C3514620F4582100CE2442 /* JLRMBottomView.swift in Sources */,
+				227C626D2173543C00ED5698 /* JLBookdetailTableViewCell.swift in Sources */,
 				22C3509920EDB3A500CE2442 /* util.c in Sources */,
 				22C3515120F4582100CE2442 /* JLReadChapterModel.swift in Sources */,
 				22C3512B20F4582100CE2442 /* String+Extension.swift in Sources */,
@@ -772,7 +797,6 @@
 				22C3512920F4582100CE2442 /* NSObject+Extension.swift in Sources */,
 				22C3513320F4582100CE2442 /* DZMGlobalProperty.swift in Sources */,
 				22C350A420EDB3A500CE2442 /* string_piece.c in Sources */,
-				22EB6923212E86A800126494 /* JLBookdetailTableViewController.swift in Sources */,
 				2253755B213E32B90042C074 /* JLExtensionDictionary.swift in Sources */,
 				22537559213E325F0042C074 /* JLExtensionString.swift in Sources */,
 				22537561213F614B0042C074 /* JLExtension+UIImage.swift in Sources */,
@@ -781,6 +805,7 @@
 				22A80D8C2172471E005ECE66 /* JLBookcaseTableViewCell.swift in Sources */,
 				22C3514520F4582100CE2442 /* JLRMFuncView.swift in Sources */,
 				22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */,
+				227C627321735AD700ED5698 /* JLDownloadManager.swift in Sources */,
 				22C3513920F4582100CE2442 /* JLMagnifierView.m in Sources */,
 				22C3515920F4BD4300CE2442 /* JLParsingHTML.swift in Sources */,
 				22C3516820F4C93100CE2442 /* JLBookcityTableViewController.swift in Sources */,
@@ -788,7 +813,6 @@
 				2253755F213E774F0042C074 /* JLExtension+CAGradientLayer.swift in Sources */,
 				22C3514F20F4582100CE2442 /* JLReadChapterListModel.swift in Sources */,
 				22C3513C20F4582100CE2442 /* JLReadOperation.swift in Sources */,
-				22EB6925212EAA6B00126494 /* JLBookdetailTableViewCell.swift in Sources */,
 				22C3514D20F4582100CE2442 /* JLReadRecordModel.swift in Sources */,
 				22C3513420F4582100CE2442 /* JLCoverController.m in Sources */,
 				22C3509B20EDB3A500CE2442 /* vector.c in Sources */,

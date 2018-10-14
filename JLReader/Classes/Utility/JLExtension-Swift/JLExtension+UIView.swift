@@ -212,7 +212,7 @@ extension UIView{
     }
 
     func shadowColor(color: UIColor) {
-        shadowColor(color: color, offset: CGSize(width: 1.0, height: 1.0))
+        shadowColor(color: color, offset: CGSize(width: 0.5, height: 0.5))
     }
     
     func shadowColor(color: UIColor, offset:CGSize) {

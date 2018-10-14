@@ -83,7 +83,7 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
     
     func createTableFooterView() {
         tableFooterView = UIView(frame: CGRect(x: 0, y: screenHeight - 44, width: screenWidth, height: 44))
-        //tableFooterView
+        tableFooterView.shadowColor()
         
         bookcaseButton = UIButton(frame: CGRect(x: 0, y: 0, width: screenWidth/4, height: 44))
         bookcaseButton.setTitle("加入书架", for: .normal)

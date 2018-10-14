@@ -13,12 +13,6 @@ enum JLWebsite: String {
     case Web80txt = "https://www.80txt.com"
 }
 
-protocol JLParsingHTMLDelegate {
-    func downloadProgress(parsing: JLParsingHTML, completed: Int64, total: Int64) -> Void
-    func downloadSuccess(parsing: JLParsingHTML, fileURL: URL) -> Void
-    func downloadFailure(parsing: JLParsingHTML, fileURL: URL) -> Void
-}
-
 class JLParsingHTML: NSObject {
     
     private var website: JLWebsite = .Web80txt
