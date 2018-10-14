@@ -9,5 +9,13 @@
 import UIKit
 
 class JLDownloadManager: NSObject {
-
+    
+    static let shared: JLDownloadManager = {
+        let sharedInstance = JLDownloadManager.init()
+        return sharedInstance
+    }()
+    private override init() {
+        super.init()
+    }
+    
 }

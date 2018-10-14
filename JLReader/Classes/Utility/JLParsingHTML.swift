@@ -128,32 +128,30 @@ class JLParsingHTML: NSObject {
     }
     
     func downloadFile(url: String, complete:((_ filePath: String, _ readModel: JLReadModel) ->Void)?) {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        //let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
+        let fileName: String = url.components(separatedBy: "/").last!
+        let fileURL = documentsURL.appendingPathComponent("txt/" + fileName)
         
         let destination: DownloadRequest.DownloadFileDestination = { _, response in
-            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            //let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
-            let fileName: String = "txt/" + (url.components(separatedBy: "/").last)!
-            let fileURL = documentsURL.appendingPathComponent(fileName)
-            
             return (fileURL, [.createIntermediateDirectories, .removePreviousFile])
         }
         
-        let urlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let urlRequest = URLRequest(url: URL(string: urlString!)!)
+        let urlRequest = URLRequest(url: url.toURL)
         Alamofire.download(urlRequest, to: destination)
             .downloadProgress { progress in
-                print("已下载：\(progress.completedUnitCount/1024)KB")
-                print("总大小：\(progress.totalUnitCount/1024)KB")
+                print("\(fileName)已下载：\(progress.completedUnitCount/1024)KB")
+                print("\(fileName)总大小：\(progress.totalUnitCount/1024)KB")
             }
             .response { response in
                 if response.error != nil {
                     print("download failure: \(String(describing: response.error?.localizedDescription))")
                 }
-                if let filePath = response.destinationURL?.path {
+                if let filePath = response.destinationURL?.absoluteString {
                     print("文件路径 str：\(filePath)")
-                    JLReadParser.ParserLocalURL(url: URL(string: filePath)!, complete: { (readModel) in
+                    JLReadParser.ParserLocalURL(url: URL(string: filePath)!) {(readModel) in
                         if complete != nil {complete!(filePath, readModel)}
-                    })
+                    }
                 }
         }
     }

@@ -259,8 +259,8 @@
 		227C626A2173543C00ED5698 /* Bookdetail */ = {
 			isa = PBXGroup;
 			children = (
-				227C626B2173543C00ED5698 /* JLBookdetailTableViewCell.swift */,
 				227C626C2173543C00ED5698 /* JLBookdetailTableViewController.swift */,
+				227C626B2173543C00ED5698 /* JLBookdetailTableViewCell.swift */,
 			);
 			path = Bookdetail;
 			sourceTree = "<group>";

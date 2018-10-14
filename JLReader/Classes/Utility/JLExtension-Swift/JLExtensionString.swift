@@ -10,6 +10,11 @@ import UIKit
 
 extension String {
     
+    var toURL: URL {
+        let urlString = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return URL(string: urlString!)!
+    }
+    
     var toInt: Int {
         return Int(self)!
     }

@@ -91,7 +91,8 @@ class JLReadParser: NSObject {
         var readChapterListModels:[JLReadChapterListModel] = []
         
         // 正则
-        let parten = "第[0-9一二三四五六七八九十百千]*[章回].*"
+        //let parten = "第[0-9一二三四五六七八九十百千]*[章回].*"
+        let parten = "[第]?([0-9]|[一二三四五六七八九十百千])+[章回节]+.*"
         
         // 搜索
         var results:[NSTextCheckingResult] = []

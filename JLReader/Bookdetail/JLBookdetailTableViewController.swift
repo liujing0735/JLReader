@@ -144,9 +144,11 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
                     let downParsingHTML = JLParsingHTML(website: .Web80txt, url: bookDownList)
                     let downUrl = downParsingHTML.downloadUrl()
                     let url = downUrl!["网盘合作"]
-                    downParsingHTML.downloadFile(url: url!, complete: { (filePath, readModel) in
+                    downParsingHTML.downloadFile(url: url!, complete: {[weak self] (filePath, readModel) in
                         
-                        
+                        let controller = JLReadController()
+                        controller.readModel = readModel
+                        self!.navigationController?.pushViewController(controller, animated: true)
                     })
                 }
             }
