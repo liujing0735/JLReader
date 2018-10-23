@@ -1,14 +1,14 @@
 PODS:
   - Alamofire (4.7.3)
-  - Kingfisher (4.8.1)
-  - MJRefresh (3.1.15.3)
+  - Kingfisher (4.10.0)
+  - MJRefresh (3.1.15.7)
   - PKHUD (5.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
-  - Kingfisher (~> 4.8.0)
+  - Alamofire (~> 4.7.3)
+  - Kingfisher (~> 4.10.0)
   - MJRefresh
-  - PKHUD (~> 5.0)
+  - PKHUD (~> 5.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -19,10 +19,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
-  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
 
-PODFILE CHECKSUM: 55f43657fb9f2dc2778d96a7f5c0489e6de6d1ff
+PODFILE CHECKSUM: 7a503134ea9fbce0b883e2f4315ad47440b68d2e
 
 COCOAPODS: 1.5.3

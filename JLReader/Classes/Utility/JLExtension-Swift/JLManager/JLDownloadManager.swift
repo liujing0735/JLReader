@@ -18,4 +18,5 @@ class JLDownloadManager: NSObject {
         super.init()
     }
     
+    
 }

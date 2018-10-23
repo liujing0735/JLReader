@@ -17,65 +17,65 @@ struct JLSQLiteError {
             case SQLITE_ERROR:
                 return "SQL数据库错误或者丢失"
             case SQLITE_INTERNAL:
-                return "SQL内部逻辑错误 "
+                return "SQL内部逻辑错误"
             case SQLITE_PERM:
-                return "没有访问权限 "
+                return "没有访问权限"
             case SQLITE_ABORT:
-                return "回调请求终止 "
+                return "回调请求终止"
             case SQLITE_BUSY:
-                return "数据库文件被锁定 "
+                return "数据库文件被锁定"
             case SQLITE_LOCKED:
-                return "数据库中有表被锁定 "
+                return "数据库中有表被锁定"
             case SQLITE_NOMEM:
-                return "分配空间失败 "
+                return "分配空间失败"
             case SQLITE_READONLY:
-                return "企图向只读属性的数据库中做写操作 "
+                return "企图向只读属性的数据库中做写操作"
             case SQLITE_INTERRUPT:
                 return "通过sqlite3_interrupt()方法终止操作"
             case SQLITE_IOERR:
-                return "磁盘发生错误 "
+                return "磁盘发生错误"
             case SQLITE_CORRUPT:
-                return "数据库磁盘格式不正确 "
+                return "数据库磁盘格式不正确"
             case SQLITE_NOTFOUND:
-                return "调用位置操作码 "
+                return "调用位置操作码"
             case SQLITE_FULL:
-                return "由于数据库已满造成的添加数据失败 "
+                return "由于数据库已满造成的添加数据失败"
             case SQLITE_CANTOPEN:
-                return "无法打开数据库文件 "
+                return "无法打开数据库文件"
             case SQLITE_PROTOCOL:
-                return "数据库锁协议错误 "
+                return "数据库锁协议错误"
             case SQLITE_EMPTY:
-                return "数据库为空 "
+                return "数据库为空"
             case SQLITE_SCHEMA:
-                return "数据库模式更改 "
+                return "数据库模式更改"
             case SQLITE_TOOBIG:
-                return "字符或者二进制数据超出长度 "
+                return "字符或者二进制数据超出长度"
             case SQLITE_CONSTRAINT:
-                return "违反协议终止 "
+                return "违反协议终止"
             case SQLITE_MISMATCH:
-                return "数据类型不匹配 "
+                return "数据类型不匹配"
             case SQLITE_MISUSE:
-                return "库使用不当 "
+                return "库使用不当"
             case SQLITE_NOLFS:
-                return "使用不支持的操作系统 "
+                return "使用不支持的操作系统"
             case SQLITE_AUTH:
-                return "授权拒绝 "
+                return "授权拒绝"
             case SQLITE_FORMAT:
-                return "辅助数据库格式错误 "
+                return "辅助数据库格式错误"
             case SQLITE_RANGE:
-                return "sqlite3_bind 第二个参数超出范围 "
+                return "sqlite3_bind 第二个参数超出范围"
             case SQLITE_NOTADB:
-                return "打开不是数据库的文件 "
+                return "打开不是数据库的文件"
             case SQLITE_NOTICE:
-                return "来自sqlite3_log()的通知 "
+                return "来自sqlite3_log() 的通知"
             case SQLITE_WARNING:
                 return "来自sqlite3_log() 的警告"
             case SQLITE_ROW:
-                return "sqlite3_step() 方法准备好了一行数据 "
+                return "sqlite3_step() 方法准备好了一行数据"
             case SQLITE_DONE:
                 return "sqlite3_step() 已完成执行"
             default:
-                return ""
+                return "未知错误"
             }
         }
     }

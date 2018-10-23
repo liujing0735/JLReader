@@ -135,6 +135,7 @@ class JLBookdetailTableViewController: JLBaseTableViewController {
             do {
                 if let dic = detailDic {
                     let bookReadOnline: String = (dic["book_read_online"])!
+                    log(bookReadOnline)
                 }
             }
         case downloadButton:
