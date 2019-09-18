@@ -23,6 +23,7 @@
 		227C627321735AD700ED5698 /* JLDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C627221735AD700ED5698 /* JLDownloadManager.swift */; };
 		22A80D862172301E005ECE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22A80D882172301E005ECE66 /* InfoPlist.strings */; };
 		22A80D8C2172471E005ECE66 /* JLBookcaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A80D8B2172471E005ECE66 /* JLBookcaseTableViewCell.swift */; };
+		22BF647D21804C5E00ED5F8B /* JLFileCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF647C21804C5E00ED5F8B /* JLFileCacheManager.swift */; };
 		22C3500920EDAA7B00CE2442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3500820EDAA7B00CE2442 /* AppDelegate.swift */; };
 		22C3501020EDAA7E00CE2442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C3500F20EDAA7E00CE2442 /* Assets.xcassets */; };
 		22C3501320EDAA7E00CE2442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3501120EDAA7E00CE2442 /* LaunchScreen.storyboard */; };
@@ -119,6 +120,7 @@
 		22A80D8921723021005ECE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22A80D8A21723022005ECE66 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		22A80D8B2172471E005ECE66 /* JLBookcaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBookcaseTableViewCell.swift; sourceTree = "<group>"; };
+		22BF647C21804C5E00ED5F8B /* JLFileCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLFileCacheManager.swift; sourceTree = "<group>"; };
 		22C3500520EDAA7B00CE2442 /* JLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C3500820EDAA7B00CE2442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22C3500F20EDAA7E00CE2442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 				22FE29122171E01900EF21E1 /* JLSQLiteManager.swift */,
 				22FE29132171E01900EF21E1 /* JLLocalNotificationManager.swift */,
 				227C627221735AD700ED5698 /* JLDownloadManager.swift */,
+				22BF647C21804C5E00ED5F8B /* JLFileCacheManager.swift */,
 			);
 			path = JLManager;
 			sourceTree = "<group>";
@@ -656,7 +659,7 @@
 				TargetAttributes = {
 					22C3500420EDAA7B00CE2442 = {
 						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -668,6 +671,7 @@
 				en,
 				Base,
 				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = 22C34FFC20EDAA7B00CE2442;
 			productRefGroup = 22C3500620EDAA7B00CE2442 /* Products */;
@@ -744,6 +748,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BF647D21804C5E00ED5F8B /* JLFileCacheManager.swift in Sources */,
 				227C627121735A5E00ED5698 /* JLBookcache.swift in Sources */,
 				22D77B2E20F635B600EB02D7 /* JLLabel.swift in Sources */,
 				22C3516220F4C80900CE2442 /* JLBaseTabBarController.swift in Sources */,
@@ -994,7 +999,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1021,7 +1026,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trudian.JLReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JLReader/JLReader-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

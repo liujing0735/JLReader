@@ -145,7 +145,7 @@ class JLReadModel: NSObject,NSCoding {
             
             if readMarkModel != nil && readMarkModels.contains(readMarkModel!) {
                 
-                readMarkModels.remove(at: readMarkModels.index(of: readMarkModel!)!)
+                readMarkModels.remove(at: readMarkModels.firstIndex(of: readMarkModel!)!)
                 
                 save()
                 

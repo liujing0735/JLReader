@@ -11,7 +11,7 @@ def common_pods
     # -- Swift -- #
 	pod 'Alamofire', '~> 4.7.3'
     pod 'Kingfisher', '~> 4.10.0' #图片加载、缓存
-    pod 'PKHUD', '~> 5.1.0' # HUD
+    pod 'PKHUD', '~> 5.1.0' #HUD
     #pod 'Segmentio', '~> 3.0' #滑动分段选择器
     #pod 'SlideMenuControllerSwift'
     #pod 'IQKeyboardManagerSwift'

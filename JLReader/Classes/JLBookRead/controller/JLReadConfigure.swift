@@ -136,7 +136,7 @@ class JLReadConfigure: NSObject {
     /// 获得颜色
     @objc func readColor() ->UIColor {
         
-        if colorIndex == JLReadBGColors.index(of: JLReadBGColor_4) { // 牛皮黄
+        if colorIndex == JLReadBGColors.firstIndex(of: JLReadBGColor_4) { // 牛皮黄
             
             return UIColor(patternImage:UIImage(named: "read_bg_0")!)
             

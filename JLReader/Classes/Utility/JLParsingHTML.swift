@@ -153,7 +153,7 @@ class JLParsingHTML: NSObject {
                         if complete != nil {complete!(filePath, readModel)}
                     }
                 }
-        }
+            }
     }
 }
 
